@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Daily scheduled runs test the live site; everything else tests the code in the repo.
-      BASE_URL: ${{ github.event_name == schedule && https://testershub.in || http://localhost:4173 }}
+      BASE_URL: ${{ github.event_name == 'schedule' && 'https://testershub.in' || 'http://localhost:4173' }}  # FIXED
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,7 +33,7 @@ jobs:
 
   lighthouse:
     name: Lighthouse audit
-    if: github.event_name != schedule
+    if: github.event_name != 'schedule'  # FIXED
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
   deploy:
     name: Deploy to Netlify
     # Only deploy from main, and only when every test has passed.
-    if: github.event_name == push && github.ref == refs/heads/main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # FIXED
     needs: [playwright, lighthouse]
     runs-on: ubuntu-latest
     steps:
