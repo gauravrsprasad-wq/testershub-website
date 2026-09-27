@@ -457,9 +457,9 @@ details p{padding:0 0 22px;color:var(--ink-2)}
       <li><a href="#process">How we work</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li class="menu-cta"><a class="btn btn-primary" href="#contact">Start your free trial</a></li>
+      <li class="menu-cta"><a class="btn btn-primary" href="#contact-form">Start your free trial</a></li>
     </ul>
-    <a class="btn btn-primary" href="#contact">Start your free trial</a>
+    <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -475,7 +475,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
       <h1>Find the bugs before your users do.</h1>
       <p class="lead">Independent testing for web applications, mobile apps and APIs. We test like your customers, automate what you repeat every release, and report issues your developers can fix the same day.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Start your free trial</a>
+        <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
         <a class="btn btn-ghost" href="#offers">See packages</a>
       </div>
       <ul class="trust">
@@ -505,7 +505,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <li>Real-device checks on budget and flagship phones</li>
           <li>Prioritised bug report and one free retest</li>
         </ul>
-        <a class="btn" href="#contact">Plan my launch test</a>
+        <a class="btn" href="#contact-form">Plan my launch test</a>
       </article>
       <article class="offer">
         <span class="for-who">For EU, UK and US-facing products</span>
@@ -516,7 +516,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <li>Fix guidance for your developers</li>
           <li>Evidence for compliance and procurement</li>
         </ul>
-        <a class="btn btn-ghost" href="#contact">Request an audit</a>
+        <a class="btn btn-ghost" href="#contact-form">Request an audit</a>
       </article>
       <article class="offer">
         <span class="for-who">For teams releasing often</span>
@@ -527,7 +527,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <li>Postman or REST Assured for APIs</li>
           <li>Wired into your CI/CD pipeline</li>
         </ul>
-        <a class="btn btn-ghost" href="#contact">Start automating</a>
+        <a class="btn btn-ghost" href="#contact-form">Start automating</a>
       </article>
     </div>
   </div>
@@ -615,7 +615,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
         <li>Screenshots, screen recordings and API logs</li>
         <li>Logged straight into Jira, Linear or GitHub Issues</li>
       </ul>
-      <a class="btn btn-primary" href="#contact">Try it free</a>
+      <a class="btn btn-primary" href="#contact-form">Try it free</a>
     </div>
     <article class="bug" aria-label="Example bug report">
       <header class="bug-head">
@@ -807,21 +807,21 @@ details p{padding:0 0 22px;color:var(--ink-2)}
         <p>See the quality of our work before you pay anything.</p>
         <div class="price">$0 <small>one time</small></div>
         <ul><li>One key user flow, such as sign-up or checkout</li><li>Web, mobile or API</li><li>Full bug report with evidence</li><li>One free trial per company</li></ul>
-        <a class="btn btn-primary" href="#contact">Start your free trial</a>
+        <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
       </article>
       <article class="plan">
         <h3>Test pack</h3>
         <p>Web, mobile, API and accessibility testing. Add as many packs as you need.</p>
         <div class="price">$10 <small>for 20 test cases</small></div>
         <ul><li>20 test cases written and run</li><li>Bugs logged with steps and evidence</li><li>Free retests of every fix</li><li>Clients in India billed in INR</li></ul>
-        <a class="btn btn-ghost" href="#contact">Order a test pack</a>
+        <a class="btn btn-ghost" href="#contact-form">Order a test pack</a>
       </article>
       <article class="plan">
         <h3>Custom projects</h3>
         <p>Automation setup, dedicated QA and ongoing work.</p>
         <div class="price custom">Custom quote</div>
         <ul><li>Playwright or Appium suite in your repo</li><li>A tester in your sprints</li><li>CI/CD integration</li><li>Fixed quote before we start</li></ul>
-        <a class="btn btn-ghost" href="#contact">Get a quote</a>
+        <a class="btn btn-ghost" href="#contact-form">Get a quote</a>
       </article>
     </div>
     <div class="tc-note">
@@ -1065,7 +1065,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
   clear.addEventListener('click',function(){chips.forEach(function(c){c.setAttribute('aria-pressed','false');});update();});
   request.addEventListener('click',function(){
     field.value=selected().join(', ');
-    document.getElementById('contact').scrollIntoView();
+    document.getElementById('contact-form').scrollIntoView();
     document.querySelector('#contact-form input[name="name"]').focus({preventScroll:true});
   });
 
