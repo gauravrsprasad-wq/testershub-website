@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TestersHub | Web, Mobile &amp; API Testing Services in India</title>
+<meta name="description" content="Independent QA for web applications, mobile apps and APIs. Pre-launch testing for startups and AI-built apps, WCAG accessibility audits, and Playwright, Appium and API automation. Try it free, then $10 for 20 test cases.">
+<meta name="keywords" content="software testing services India, web application testing, mobile app testing, API testing services, accessibility audit, Playwright automation, QA for startups">
+<link rel="canonical" href="https://testershub.in/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TestersHub | Web, Mobile &amp; API Testing Services">
+<meta property="og:description" content="Find the bugs before your users do. Independent QA for web apps, mobile apps and APIs.">
+<meta property="og:url" content="https://testershub.in/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14233A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314233A'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%23FFD84D' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "TestersHub",
+  "description": "Web application, mobile app and API testing services.",
+  "url": "https://testershub.in/",
+  "email": "gauravprasad@testershub.in",
+  "areaServed": "Worldwide",
+  "priceRange": "$10 for 20 test cases",
+  "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What's included in the free trial?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We agree on one important flow in your product, such as sign-up or checkout, write and run the test cases for it, and send you a full report of what we find, with steps to reproduce. It's free, with no obligation, and available once per company."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you do manual or automated testing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Both. Manual and exploratory testing finds the issues scripts miss; automation keeps your regression checks fast. Most projects use a mix."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Our app was built with AI coding tools. Can you test it?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and it's worth doing. AI-generated code often works on the happy path but fails on edge cases, permissions and security. Our pre-launch QA package is designed for exactly this."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you test on real phones?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We test on real Android and iOS devices and use a device cloud when you need wider model and OS coverage."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will you work with our tools and pipeline?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We log bugs in your tracker and run automated suites in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or whatever you already use."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you sign an NDA?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We're happy to sign your NDA before we see your product or test environment."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What do you need from us to get started?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A link to your app or a test build, test accounts, and a description of what to test. That can be a Jira ticket, a Figma design, a screen recording or a few sentences. No formal specification needed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do we know when we're ready to release?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Every test cycle ends with a release readiness report: results for every test case, open bugs by severity, anything we couldn't test, and a clear go or no-go recommendation with the reasons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can I pay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Online by UPI, debit or credit card, net banking or wallet through Razorpay, or by PayPal for international clients. Each invoice includes a secure payment link. See our payment page for terms."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does testing cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "$10 for 20 test cases. One test case is one scenario checked from start to finish, such as \"a user can apply a promo code at checkout\". Need more than 20? Each extra pack of 20 is another $10, so 45 test cases cost $30. We send you the list and the total before we start. Automation setup and dedicated QA get a custom quote. See how test packs work."
+   }
+  }
+ ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#14233A;
+  --ink-2:#2B3C55;
+  --muted:#51607A;
+  --paper:#FFFFFF;
+  --mist:#EEF2F7;
+  --line:#D5DCE6;
+  --blue:#1F5FD1;
+  --blue-dark:#1848A3;
+  --mark:#FFD84D;
+  --flag:#C2361F;
+  --ok:#1D7A4E;
+  --display:'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --body:'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:var(--blue)}
+a:hover{color:var(--blue-dark)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-0.02em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-dark);color:#fff}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink);text-decoration:none}
+.logo:hover{color:var(--ink)}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--blue)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:48px;height:48px;cursor:pointer;color:var(--ink)}
+@media (max-width:900px){
+  .nav-links,.nav .btn{display:none}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .nav-open .nav-links{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;padding:12px 24px 24px;border-bottom:1px solid var(--line);gap:4px}
+  .nav-open .nav-links a{display:block;padding:12px 0;font-size:18px}
+}
+
+/* hero */
+.hero{padding:72px 0 112px;border-bottom:1px solid var(--line)}
+.hero-grid{display:block}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:800;max-width:16ch;text-wrap:balance}
+.hero .lead{font-size:20px;color:var(--ink-2);margin-top:22px;max-width:52ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-note{margin-top:22px;color:var(--muted);font-size:15px}
+
+
+
+/* sections */
+section{padding:96px 0}
+.section-head{max-width:760px;margin-bottom:48px}
+.section-head h2{font-size:clamp(32px,4.2vw,50px);font-weight:800}
+.section-head p{font-size:19px;color:var(--ink-2);margin-top:16px}
+
+/* offers */
+.offers{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px}
+.offer{border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;background:#fff}
+.offer.lead-offer{background:var(--ink);color:#fff;border-color:var(--ink)}
+.offer.lead-offer p,.offer.lead-offer li{color:#D3DBE8}
+.offer h3{font-size:26px}
+.offer p{color:var(--ink-2)}
+.offer ul{margin:4px 0 0;padding-left:20px;color:var(--ink-2)}
+.offer li{margin-bottom:6px}
+.offer .btn{margin-top:auto;align-self:flex-start}
+.offer.lead-offer .btn{background:var(--mark);color:var(--ink)}
+.offer.lead-offer .btn:hover{background:#FFE580}
+.for-who{font-size:15px;font-weight:600;color:var(--blue)}
+.lead-offer .for-who{color:var(--mark)}
+@media (max-width:980px){.offers{grid-template-columns:1fr}}
+
+/* services tabs */
+.services{background:var(--mist)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.tab{min-height:48px;padding:10px 22px;border-radius:10px;border:1px solid var(--line);background:#fff;font:600 17px var(--body);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.panel[hidden]{display:none}
+.panel h3{font-size:32px;margin-bottom:14px}
+.panel p{color:var(--ink-2)}
+.meta{margin-top:22px}
+.meta dt{font-size:14px;font-weight:600;color:var(--muted)}
+.meta dd{margin:2px 0 14px;font-weight:500}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.checks svg{flex:none;margin-top:3px;color:var(--ok)}
+@media (max-width:860px){.panel{grid-template-columns:1fr;padding:28px;gap:28px}}
+
+/* testing types */
+.types{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.type{background:#fff;padding:26px}
+.type h3{font-size:20px;margin-bottom:6px}
+.type p{font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.types{grid-template-columns:1fr}}
+
+/* process */
+.process{background:var(--ink);color:#fff}
+.process .section-head p{color:#C5CFDD}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:step}
+.steps li{counter-increment:step;border-top:3px solid var(--mark);padding-top:20px}
+.steps li::before{content:"Step " counter(step);display:block;color:var(--mark);font-weight:600;font-size:15px;margin-bottom:8px}
+.steps h3{font-size:24px;margin-bottom:10px}
+.steps p{color:#C5CFDD;font-size:16px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* tools */
+.tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px}
+.tools-grid h3{font-size:17px;font-family:var(--body);font-weight:600;color:var(--muted);letter-spacing:0;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:500;font-size:16px}
+@media (max-width:700px){.tools-grid{grid-template-columns:1fr}}
+
+/* pricing */
+.pricing{background:var(--mist)}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:12px}
+.plan h3{font-size:24px}
+.plan .price{font-family:var(--display);font-weight:800;font-size:34px}
+.plan .price.custom{font-size:26px}
+.plan .price small{font-family:var(--body);font-size:16px;font-weight:500;color:var(--muted)}
+.plan p{color:var(--ink-2)}
+.plan ul{padding-left:20px;margin:4px 0 8px;color:var(--ink-2)}
+.plan .btn{margin-top:auto}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.quote{border-left:4px solid var(--mark);padding:6px 0 6px 22px}
+.quote p{font-size:18px}
+.quote footer{margin-top:14px;color:var(--muted);font-size:15px}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:26px;color:var(--blue);font-weight:400}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 22px;color:var(--ink-2)}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:24px}}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(34px,4.5vw,52px);font-weight:800}
+.contact .intro{color:#C5CFDD;font-size:19px;margin-top:16px}
+.contact-list{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column;gap:12px;font-size:18px}
+.contact-list a{color:#fff}
+.contact-list a:hover{color:var(--mark)}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:32px;display:grid;gap:16px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+.form input,.form select,.form textarea{font:inherit;font-weight:400;border:1px solid #B9C3D1;border-radius:10px;padding:12px 14px;min-height:48px;background:#fff;color:var(--ink)}
+.form textarea{resize:vertical;min-height:120px}
+.form .hp{position:absolute;left:-9999px}
+.form-status{font-weight:500;min-height:1.6em}
+.form-status.ok{color:var(--ok)}
+.form-status.err{color:var(--flag)}
+.small{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.form .row{grid-template-columns:1fr}.form{padding:22px}}
+
+/* trust list */
+.trust{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:8px;color:var(--ink-2);font-size:16px}
+.trust li{display:flex;align-items:center;gap:10px}
+.trust svg{color:var(--ok);flex:none}
+.menu-cta{display:none}
+@media (max-width:900px){.nav-open .menu-cta{display:block;margin-top:10px}.nav-open .menu-cta .btn{display:flex;color:#fff;width:100%}}
+
+/* sample report */
+.report-sec{background:var(--ink);color:#fff}
+.report-sec .section-head p{color:#C5CFDD}
+.report-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.report-grid .section-head{margin-bottom:0}
+.report-points{margin:24px 0 30px;padding-left:20px;color:#DCE3EE;font-size:17px}
+.report-points li{margin-bottom:8px}
+.report-sec .btn-primary{background:var(--mark);color:var(--ink)}
+.report-sec .btn-primary:hover{background:#FFE580;color:var(--ink)}
+.bug{background:#fff;color:var(--ink);border-radius:18px;padding:30px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.bug-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.bug-id{font-weight:600;color:var(--muted);font-size:15px}
+.sev{font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px}
+.sev-high{background:#FBE3DF;color:#9E2A17}
+.bug h3{font-size:22px;line-height:1.25;margin-bottom:16px}
+.bug h4{font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);margin:16px 0 6px}
+.bug ol{margin:0;padding-left:20px;font-size:16px}
+.bug-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:14px;background:var(--mist);border-radius:10px}
+.bug-meta dt{font-size:13px;color:var(--muted);font-weight:600}
+.bug-meta dd{margin:2px 0 0;font-size:15px}
+.bug-cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bug-cmp p{font-size:15px}
+.bug-fix{margin-top:16px;padding:12px 14px;border-left:4px solid var(--mark);background:#FFFBEA;font-size:15px}
+.bug-ev{margin-top:12px;font-size:14px;color:var(--muted)}
+@media (max-width:980px){.report-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.bug{padding:22px}.bug-meta,.bug-cmp{grid-template-columns:1fr}}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.why .section-head{margin-bottom:0}
+.ind-h{font-family:var(--body);font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0;margin:28px 0 12px}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.promise{border:1px solid var(--line);border-radius:14px;padding:24px}
+.promise h3{font-size:20px;margin-bottom:8px}
+.promise p{font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.promises{grid-template-columns:1fr}}
+
+/* contact next steps */
+.next-h{font-family:var(--body);font-size:16px;font-weight:600;color:var(--mark);letter-spacing:0;margin:36px 0 12px}
+.next-steps{margin:0;padding-left:22px;color:#DCE3EE;font-size:17px}
+.next-steps li{margin-bottom:8px}
+
+.plan.featured{border:2px solid var(--ink)}
+.tc-note{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px}
+.tc-note p{color:var(--ink-2);font-size:16px}
+.tc-note p+p{margin-top:10px}
+
+/* sample work */
+.work{background:var(--mist)}
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.work-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.work-target{font-size:14px;font-weight:600;color:var(--muted)}
+.work-card h3{font-size:24px}
+.work-stack li{font-size:14px;padding:5px 12px}
+.work-stat{font-weight:600;color:var(--ink);border-left:4px solid var(--mark);padding-left:12px}
+.work-points{margin:0;padding-left:20px;color:var(--ink-2);font-size:15px}
+.work-points li{margin-bottom:6px}
+.work-link{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;color:var(--ink);min-height:44px}
+.work-link:hover{color:var(--blue)}
+.work-link span{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:980px){.work-grid{grid-template-columns:1fr}}
+
+/* six-step process */
+.steps.steps-6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
+.opt{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);background:var(--mark);border-radius:999px;padding:2px 9px;vertical-align:middle;letter-spacing:0}
+@media (max-width:900px){.steps.steps-6{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps.steps-6{grid-template-columns:1fr}}
+
+/* test depth */
+.depth{padding-bottom:40px}
+.depth-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.depth-card{border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;background:#fff}
+.depth-card h3{font-size:22px}
+.depth-card p{font-size:15px;color:var(--ink-2)}
+.depth-card dl{margin:auto 0 0;padding-top:12px;border-top:1px dashed var(--line);display:grid;gap:8px}
+.depth-card dt{font-size:13px;font-weight:600;color:var(--muted)}
+.depth-card dd{margin:0;font-size:15px;font-weight:500}
+.depth-note{margin-top:18px;font-size:15px;color:var(--muted)}
+@media (max-width:980px){.depth-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.depth-grid{grid-template-columns:1fr}}
+
+/* release readiness */
+.ready-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.ready-grid .section-head{margin-bottom:0}
+.report-points.dark{color:var(--ink-2)}
+.ready-card{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;box-shadow:0 24px 48px -32px rgba(20,35,58,.45)}
+.ready-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.ready-kicker{font-size:13px;font-weight:600;color:var(--muted)}
+.ready-card h3{font-size:22px;margin-top:2px}
+.verdict{font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;flex:none}
+.verdict-hold{background:#FDECC8;color:#7A4B00}
+.ready-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 14px}
+.ready-stats div{background:var(--mist);border-radius:10px;padding:12px}
+.ready-stats dt{font-size:13px;color:var(--muted);font-weight:600}
+.ready-stats dd{margin:2px 0 0;font-family:var(--display);font-size:28px;font-weight:800}
+.ready-stats .ok{color:var(--ok)}.ready-stats .bad{color:#9E2A17}.ready-stats .warn{color:#7A4B00}
+.ready-bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--mist)}
+.ready-bar .seg.ok{background:var(--ok)}.ready-bar .seg.bad{background:#C2361F}.ready-bar .seg.warn{background:#E0A100}
+.ready-card h4{font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);margin:18px 0 8px}
+.bug-counts{list-style:none;display:flex;flex-wrap:wrap;gap:18px;padding:0;margin:0;font-weight:500}
+.bug-counts li{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot.bad{background:#C2361F}.dot.warn{background:#E0A100}.dot.minor{background:#8A96A8}
+.ready-rec{margin-top:18px;padding:12px 14px;border-left:4px solid var(--mark);background:#FFFBEA;font-size:15px}
+@media (max-width:980px){.ready-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.ready-stats{grid-template-columns:1fr 1fr}.ready-card{padding:22px}}
+
+/* selectable tools */
+.tools-hint{margin-top:10px;font-size:17px;font-weight:600;color:var(--ink)}
+.chips.selectable li{border:0;padding:0}
+.chip-btn{font:500 16px var(--body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;min-height:40px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip-btn:hover{border-color:var(--ink)}
+.chip-btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip-btn[aria-pressed="true"]::before{content:"";width:14px;height:14px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10.5l4 4 8-9' stroke='%23FFD84D' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.tool-bar{margin-top:32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--mist)}
+.tool-bar p{font-weight:500;color:var(--ink-2)}
+.tool-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.form .optional{font-weight:400;color:var(--muted)}
+
+/* footer */
+.site-footer{background:#0E1A2C;color:#AEB9C9;padding:56px 0 32px;font-size:15px}
+.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.foot h2{font-size:22px;color:#fff;margin-bottom:8px}
+.foot nav{display:flex;gap:56px;flex-wrap:wrap}
+.foot nav h3{font-family:var(--body);font-size:15px;color:#fff;letter-spacing:0;margin-bottom:10px}
+.foot nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.foot a{color:#AEB9C9;text-decoration:none}
+.foot a:hover{color:#fff}
+.legal{border-top:1px solid #243349;margin-top:40px;padding-top:20px}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav" id="nav">
+    <a class="logo" href="#top" aria-label="TestersHub home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14233A"/><path d="M9 16.5l4.5 4.5L23 11" stroke="#FFD84D" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      TestersHub
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#work">Our work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#report">Sample report</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="menu-cta"><a class="btn btn-primary" href="#contact">Start your free trial</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contact">Start your free trial</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Find the bugs before your users do.</h1>
+      <p class="lead">Independent testing for web applications, mobile apps and APIs. We test like your customers, automate what you repeat every release, and report issues your developers can fix the same day.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Start your free trial</a>
+        <a class="btn btn-ghost" href="#offers">See packages</a>
+      </div>
+      <ul class="trust">
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>NDA signed before we see your product</li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Fixed quote before any work starts</li>
+        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Free retest of every fix</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERS -->
+<section id="offers" aria-labelledby="offers-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="offers-h">Three ways to start.</h2>
+      <p>Clear scope, a fixed price and a written report. Pick the one that matches where your product is today.</p>
+    </div>
+    <div class="offers">
+      <article class="offer lead-offer">
+        <span class="for-who">For startups and AI-built apps</span>
+        <h3>Pre-launch QA</h3>
+        <p>Built your app fast with AI tools or a small team? We test it end to end before real users and real money touch it.</p>
+        <ul>
+          <li>Web, mobile and API functional testing</li>
+          <li>Security basics: login, permissions, exposed keys and data</li>
+          <li>Real-device checks on budget and flagship phones</li>
+          <li>Prioritised bug report and one free retest</li>
+        </ul>
+        <a class="btn" href="#contact">Plan my launch test</a>
+      </article>
+      <article class="offer">
+        <span class="for-who">For EU, UK and US-facing products</span>
+        <h3>Accessibility audit</h3>
+        <p>Manual testing against WCAG 2.2 with screen readers and keyboard-only use, the issues automated scanners miss.</p>
+        <ul>
+          <li>Key pages and user journeys</li>
+          <li>Fix guidance for your developers</li>
+          <li>Evidence for compliance and procurement</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Request an audit</a>
+      </article>
+      <article class="offer">
+        <span class="for-who">For teams releasing often</span>
+        <h3>Automation setup</h3>
+        <p>A maintainable test suite in your repository that runs on every build. You own every line.</p>
+        <ul>
+          <li>Playwright for web, Appium for mobile</li>
+          <li>Postman or REST Assured for APIs</li>
+          <li>Wired into your CI/CD pipeline</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Start automating</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="services-h">What we test</h2>
+      <p>One QA partner for every surface your product runs on. Bugs land straight in Jira, Linear, GitHub Issues or whatever tracker you use.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Testing services">
+      <button class="tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true">Web apps</button>
+      <button class="tab" role="tab" id="tab-mobile" aria-controls="panel-mobile" aria-selected="false" tabindex="-1">Mobile apps</button>
+      <button class="tab" role="tab" id="tab-api" aria-controls="panel-api" aria-selected="false" tabindex="-1">APIs</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-web" aria-labelledby="tab-web">
+      <div>
+        <h3>Web application testing</h3>
+        <p>We test your web app the way real users use it: across browsers, screen sizes and complete journeys. Then we automate the flows you check every release, so regressions are caught in minutes.</p>
+        <dl class="meta">
+          <dt>Tools</dt><dd>Playwright, Selenium, Cypress, BrowserStack</dd>
+          <dt>You receive</dt><dd>Test plan, bug reports in your tracker, and an automated suite in your repository</dd>
+        </dl>
+      </div>
+      <ul class="checks">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Functional and end-to-end user journeys</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cross-browser and responsive layouts</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Regression automation with Playwright, including Selenium migrations</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Accessibility testing against WCAG 2.2</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Page speed and load checks on key pages</li>
+      </ul>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" hidden>
+      <div>
+        <h3>Mobile app testing</h3>
+        <p>Native, hybrid, React Native or Flutter. We test on real Android and iOS devices, including the budget phones and patchy networks many of your users actually have.</p>
+        <dl class="meta">
+          <dt>Tools</dt><dd>Appium, Espresso, XCUITest, real-device cloud</dd>
+          <dt>You receive</dt><dd>Device coverage matrix, screen recordings for every bug, and an automated regression pack</dd>
+        </dl>
+      </div>
+      <ul class="checks">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Real devices across Android and iOS versions</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Slow network, offline, calls and app-switch interruptions</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Payments, OTP login and fintech user flows</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Permissions, push notifications and app updates</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Battery, memory and performance on low-end phones</li>
+      </ul>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" hidden>
+      <div>
+        <h3>API testing</h3>
+        <p>Your APIs are the contract every app depends on. We check each endpoint for correct data, safe access and behaviour under load, before a broken response reaches production.</p>
+        <dl class="meta">
+          <dt>Tools</dt><dd>Postman, REST Assured, Playwright API testing, k6, JMeter</dd>
+          <dt>You receive</dt><dd>API test collection, a CI-ready test suite, and a security and load summary</dd>
+        </dl>
+      </div>
+      <ul class="checks">
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Schema and response validation for REST and GraphQL</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Security checks based on the OWASP API Security Top 10</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Authentication, permissions and rate limits</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Invalid, missing and edge-case data</li>
+        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Load testing on your busiest endpoints</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE REPORT -->
+<section class="report-sec" id="report" aria-labelledby="report-h">
+  <div class="wrap report-grid">
+    <div class="section-head">
+      <h2 id="report-h">See exactly what you'll get</h2>
+      <p>Every issue we find is logged like this: clear steps, evidence, how serious it is, and where to look in the code. Your developers can fix it without a single follow-up question.</p>
+      <ul class="report-points">
+        <li>Severity and priority, so you fix what matters first</li>
+        <li>Steps anyone on your team can repeat</li>
+        <li>Screenshots, screen recordings and API logs</li>
+        <li>Logged straight into Jira, Linear or GitHub Issues</li>
+      </ul>
+      <a class="btn btn-primary" href="#contact">Try it free</a>
+    </div>
+    <article class="bug" aria-label="Example bug report">
+      <header class="bug-head">
+        <span class="bug-id">TH-042</span>
+        <span class="sev sev-high">High severity</span>
+      </header>
+      <h3>Promo code applied twice when "Pay now" is double-tapped</h3>
+      <dl class="bug-meta">
+        <div><dt>Platform</dt><dd>Android 14, Redmi Note 12, app v2.3.1</dd></div>
+        <div><dt>Area</dt><dd>Checkout, payments API</dd></div>
+      </dl>
+      <h4>Steps to reproduce</h4>
+      <ol>
+        <li>Add any item over ₹999 to the cart.</li>
+        <li>Apply promo code SAVE20.</li>
+        <li>Double-tap "Pay now" quickly on a slow 3G connection.</li>
+      </ol>
+      <div class="bug-cmp">
+        <div><h4>Expected</h4><p>One discount, one order.</p></div>
+        <div><h4>Actual</h4><p>40% discount applied; two POST /orders requests sent.</p></div>
+      </div>
+      <p class="bug-fix"><b>Suggested fix:</b> disable the button after the first tap and make the order endpoint idempotent.</p>
+      <p class="bug-ev">Evidence: screen recording, network log</p>
+    </article>
+  </div>
+</section>
+
+<!-- RELEASE READINESS -->
+<section class="ready" id="readiness" aria-labelledby="ready-h">
+  <div class="wrap ready-grid">
+    <div class="section-head">
+      <h2 id="ready-h">Know when it's safe to ship</h2>
+      <p>Every test cycle ends with a release readiness report. Not just pass or fail, but a clear recommendation you can take into your release meeting.</p>
+      <ul class="report-points dark">
+        <li>Results for every test case you approved</li>
+        <li>Open bugs grouped by severity</li>
+        <li>What wasn't tested, and why</li>
+        <li>A go or no-go recommendation, with the reasons</li>
+      </ul>
+    </div>
+    <article class="ready-card" aria-label="Example release readiness report">
+      <header class="ready-head">
+        <div><p class="ready-kicker">Sample report</p><h3>Release readiness: Checkout v2.4</h3></div>
+        <span class="verdict verdict-hold">Hold</span>
+      </header>
+      <dl class="ready-stats">
+        <div><dt>Test cases</dt><dd>40</dd></div>
+        <div><dt>Passed</dt><dd class="ok">34</dd></div>
+        <div><dt>Failed</dt><dd class="bad">4</dd></div>
+        <div><dt>Blocked</dt><dd class="warn">2</dd></div>
+      </dl>
+      <div class="ready-bar" role="img" aria-label="34 passed, 4 failed, 2 blocked out of 40">
+        <span class="seg ok" style="width:85%"></span><span class="seg bad" style="width:10%"></span><span class="seg warn" style="width:5%"></span>
+      </div>
+      <h4>Open bugs</h4>
+      <ul class="bug-counts">
+        <li><span class="dot bad"></span>1 critical</li>
+        <li><span class="dot warn"></span>2 major</li>
+        <li><span class="dot minor"></span>1 minor</li>
+      </ul>
+      <p class="ready-rec"><strong>Recommendation:</strong> fix TH-042 (promo code applied twice) before release. The 2 blocked tests need the test login restored; everything else is ready to ship.</p>
+    </article>
+  </div>
+</section>
+
+<!-- TESTING TYPES -->
+<section aria-labelledby="types-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="types-h">Testing we cover</h2>
+    </div>
+    <div class="types">
+      <div class="type"><h3>Functional</h3><p>Every feature does what it's meant to.</p></div>
+      <div class="type"><h3>Regression</h3><p>New releases don't break what already worked.</p></div>
+      <div class="type"><h3>Automation</h3><p>Repeatable tests that run on every build.</p></div>
+      <div class="type"><h3>Performance</h3><p>Speed and stability under real traffic.</p></div>
+      <div class="type"><h3>Security basics</h3><p>Login, permissions and exposed data.</p></div>
+      <div class="type"><h3>Cross-browser</h3><p>Chrome, Safari, Firefox and Edge behave alike.</p></div>
+      <div class="type"><h3>Usability</h3><p>The confusing moments real users hit.</p></div>
+      <div class="type"><h3>Accessibility</h3><p>Screen readers, keyboard use and contrast.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="process-h">From requirement to release, in six steps</h2>
+      <p>You approve what we test and what it costs. We tell you when it's safe to ship.</p>
+    </div>
+    <ol class="steps steps-6">
+      <li><h3>Share</h3><p>Send whatever you have: a Jira ticket, a Figma design, a screen recording or a plain description. No formal spec needed.</p></li>
+      <li><h3>Plan</h3><p>We write the test cases and pick the depth: smoke, feature, regression or full regression. You approve the list and the price.</p></li>
+      <li><h3>Test</h3><p>We run every test case on real browsers and devices. Bugs go into your tracker as we find them, with steps and evidence.</p></li>
+      <li><h3>Report</h3><p>You get a release readiness report: what passed, what failed, what's still open, and our go or no-go recommendation.</p></li>
+      <li><h3>Retest</h3><p>Your team fixes the bugs, we retest every fix free, and we update the report until you're ready to ship.</p></li>
+      <li><h3>Automate <span class="opt">optional</span></h3><p>Turn your approved test cases into Playwright, Selenium or Appium scripts that run on every commit in your CI/CD pipeline.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools" aria-labelledby="tools-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="tools-h">Works with the tools you already use</h2>
+      <p>Automated tests live in your repository and run in your pipeline. Bugs and reports land where your team already looks.</p>
+      <p class="tools-hint">Select the tools your team uses, and we'll plan your testing around them.</p>
+    </div>
+    <div class="tools-grid">
+      <div><h3>Test automation</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Playwright">Playwright</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Selenium">Selenium</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Cypress">Cypress</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Appium">Appium</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Espresso">Espresso</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="XCUITest">XCUITest</button></li></ul></div>
+      <div><h3>API and performance</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Postman">Postman</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="REST Assured">REST Assured</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="k6">k6</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="JMeter">JMeter</button></li></ul></div>
+      <div><h3>CI/CD pipelines</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitHub Actions">GitHub Actions</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitLab CI">GitLab CI</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Jenkins">Jenkins</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Azure DevOps">Azure DevOps</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="CircleCI">CircleCI</button></li></ul></div>
+      <div><h3>Bug tracking and projects</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Jira">Jira</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Linear">Linear</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitHub Issues">GitHub Issues</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Azure Boards">Azure Boards</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Trello">Trello</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="ClickUp">ClickUp</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="monday.com">monday.com</button></li></ul></div>
+      <div><h3>Team chat and reports</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Slack">Slack</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Microsoft Teams">Microsoft Teams</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Google Chat">Google Chat</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Email">Email</button></li></ul></div>
+      <div><h3>Browsers and devices</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Chrome">Chrome</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Safari">Safari</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Firefox">Firefox</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Edge">Edge</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Real Android and iOS devices">Real Android and iOS devices</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="BrowserStack">BrowserStack</button></li></ul></div>
+      <div><h3>Apps built with AI coding tools</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Claude Code">Claude Code</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Cursor">Cursor</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Codex">Codex</button></li></ul></div>
+    </div>
+    <div class="tool-bar" id="tool-bar">
+      <p id="tool-summary" aria-live="polite">No tools selected yet.</p>
+      <div class="tool-actions">
+        <button type="button" class="btn btn-ghost" id="tool-clear" disabled>Clear</button>
+        <button type="button" class="btn btn-primary" id="tool-request" disabled>Request testing with these tools</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST DEPTH -->
+<section class="depth" id="depth" aria-labelledby="depth-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="depth-h">Pick how deep to test</h2>
+      <p>Every order starts with one of four test plans, priced in packs of 20 test cases for $10.</p>
+    </div>
+    <div class="depth-grid">
+      <article class="depth-card">
+        <h3>Smoke</h3>
+        <p>Critical paths only: sign-up, login, checkout and payment. The fastest check that nothing major is broken.</p>
+        <dl>
+          <div><dt>Typical size</dt><dd>10 to 20 test cases</dd></div>
+          <div><dt>Price</dt><dd>1 pack · $10</dd></div>
+          <div><dt>Best for</dt><dd>Every release and hotfix</dd></div>
+        </dl>
+      </article>
+      <article class="depth-card">
+        <h3>Feature</h3>
+        <p>One new feature tested end to end, including edge cases and error messages.</p>
+        <dl>
+          <div><dt>Typical size</dt><dd>20 to 40 test cases</dd></div>
+          <div><dt>Price</dt><dd>1 to 2 packs · $10 to $20</dd></div>
+          <div><dt>Best for</dt><dd>A new feature before launch</dd></div>
+        </dl>
+      </article>
+      <article class="depth-card">
+        <h3>Regression</h3>
+        <p>All your key user flows retested, so a new release doesn't break what already worked.</p>
+        <dl>
+          <div><dt>Typical size</dt><dd>40 to 100 test cases</dd></div>
+          <div><dt>Price</dt><dd>2 to 5 packs · $20 to $50</dd></div>
+          <div><dt>Best for</dt><dd>Major releases</dd></div>
+        </dl>
+      </article>
+      <article class="depth-card">
+        <h3>Full regression</h3>
+        <p>Every flow, edge case and error path, across your agreed browsers and devices.</p>
+        <dl>
+          <div><dt>Typical size</dt><dd>100+ test cases</dd></div>
+          <div><dt>Price</dt><dd>5+ packs · from $50</dd></div>
+          <div><dt>Best for</dt><dd>Big launches and redesigns</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="depth-note">Sizes are typical. We confirm the exact list of test cases and the number of packs with you before we start.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing" aria-labelledby="pricing-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="pricing-h">Simple, transparent pricing</h2>
+      <p>One simple price: $10 for 20 test cases. Try us free first: one free trial per company.</p>
+    </div>
+    <div class="plans">
+      <article class="plan featured">
+        <h3>Free trial</h3>
+        <p>See the quality of our work before you pay anything.</p>
+        <div class="price">$0 <small>one time</small></div>
+        <ul><li>One key user flow, such as sign-up or checkout</li><li>Web, mobile or API</li><li>Full bug report with evidence</li><li>One free trial per company</li></ul>
+        <a class="btn btn-primary" href="#contact">Start your free trial</a>
+      </article>
+      <article class="plan">
+        <h3>Test pack</h3>
+        <p>Web, mobile, API and accessibility testing. Add as many packs as you need.</p>
+        <div class="price">$10 <small>for 20 test cases</small></div>
+        <ul><li>20 test cases written and run</li><li>Bugs logged with steps and evidence</li><li>Free retests of every fix</li><li>Clients in India billed in INR</li></ul>
+        <a class="btn btn-ghost" href="#contact">Order a test pack</a>
+      </article>
+      <article class="plan">
+        <h3>Custom projects</h3>
+        <p>Automation setup, dedicated QA and ongoing work.</p>
+        <div class="price custom">Custom quote</div>
+        <ul><li>Playwright or Appium suite in your repo</li><li>A tester in your sprints</li><li>CI/CD integration</li><li>Fixed quote before we start</li></ul>
+        <a class="btn btn-ghost" href="#contact">Get a quote</a>
+      </article>
+    </div>
+    <div class="tc-note">
+      <p><strong>How test packs work:</strong> one test case is one scenario checked from start to finish, for example "a user can apply a promo code at checkout". Need more than 20? Add packs: 45 test cases need 3 packs, which is $30. You approve the list and the total before we start. <a href="pricing.html#packs">See how test packs work</a>.</p>
+      <p>Pay online by UPI, card, net banking or PayPal. <a href="pay.html">See payment options</a> or read the <a href="pricing.html">full pricing details</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE WORK -->
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="work-h">Our work, in the open</h2>
+      <p>Before you trust us with your product, see how we build test automation. These projects are public on GitHub, and each one runs automatically on every change.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card">
+        <p class="work-target">Sauce Demo e-commerce app</p>
+        <h3>Playwright UI framework</h3>
+        <ul class="chips work-stack" aria-label="Tools used"><li>Playwright</li><li>TypeScript</li><li>GitHub Actions</li></ul>
+        <p class="work-stat">33 tests on Chromium, run on every push and every night</p>
+        <ul class="work-points"><li>Page objects injected through typed fixtures</li><li>Logs in once and reuses the session in every test</li><li>Smoke and regression tags for fast or full runs</li></ul>
+        <a class="work-link" href="https://github.com/gauravrsprasad-wq/playwright-saucedemo-framework" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>View code on GitHub</span></a>
+      </article>
+      <article class="work-card">
+        <p class="work-target">testershub.in</p>
+        <h3>This website's quality pipeline</h3>
+        <ul class="chips work-stack" aria-label="Tools used"><li>Playwright</li><li>axe</li><li>Lighthouse</li><li>Postman</li></ul>
+        <p class="work-stat">Every change is tested before it goes live</p>
+        <ul class="work-points"><li>Browser tests on desktop, Android and iPhone</li><li>Accessibility, speed and SEO checked on every release</li><li>Live site checked every morning</li></ul>
+        <a class="work-link" href="https://github.com/gauravrsprasad-wq/testershub-website" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>View code on GitHub</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap why-grid">
+    <div class="section-head">
+      <h2 id="why-h">Why teams choose TestersHub</h2>
+      <p>You work directly with the engineer testing your product. No account managers, no hand-offs, no surprises on the invoice.</p>
+      <h3 class="ind-h">Products we test</h3>
+      <ul class="chips">
+        <li>SaaS platforms</li><li>Fintech and payments</li><li>E-commerce</li><li>EdTech</li><li>HealthTech</li><li>Apps built with AI coding tools</li>
+      </ul>
+    </div>
+    <div class="promises">
+      <div class="promise"><h3>One clear price</h3><p>$10 for 20 test cases. You approve the list and the total before we start.</p></div>
+      <div class="promise"><h3>Your code stays yours</h3><p>Every automated test we write lives in your repository. No lock-in, ever.</p></div>
+      <div class="promise"><h3>Confidential by default</h3><p>We sign your NDA before we see your product, and only use the test accounts you give us.</p></div>
+      <div class="promise"><h3>Fixes verified</h3><p>We retest every fix for free, so you ship knowing it's actually resolved.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="section-head"><h2 id="faq-h">Common questions</h2></div>
+    <div>
+      <details open><summary>What's included in the free trial?</summary><p>We agree on one important flow in your product, such as sign-up or checkout, write and run the test cases for it, and send you a full report of what we find, with steps to reproduce. It's free, with no obligation, and available once per company.</p></details>
+      <details><summary>Do you do manual or automated testing?</summary><p>Both. Manual and exploratory testing finds the issues scripts miss; automation keeps your regression checks fast. Most projects use a mix.</p></details>
+      <details><summary>Our app was built with AI coding tools. Can you test it?</summary><p>Yes, and it's worth doing. AI-generated code often works on the happy path but fails on edge cases, permissions and security. Our pre-launch QA package is designed for exactly this.</p></details>
+      <details><summary>Do you test on real phones?</summary><p>Yes. We test on real Android and iOS devices and use a device cloud when you need wider model and OS coverage.</p></details>
+      <details><summary>Will you work with our tools and pipeline?</summary><p>Yes. We log bugs in your tracker and run automated suites in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or whatever you already use.</p></details>
+      <details><summary>Can you sign an NDA?</summary><p>Yes. We're happy to sign your NDA before we see your product or test environment.</p></details>
+      <details><summary>What do you need from us to get started?</summary><p>A link to your app or a test build, test accounts, and a description of what to test. That can be a Jira ticket, a Figma design, a screen recording or a few sentences. No formal specification needed.</p></details>
+      <details><summary>How do we know when we're ready to release?</summary><p>Every test cycle ends with a release readiness report: results for every test case, open bugs by severity, anything we couldn't test, and a clear go or no-go recommendation with the reasons.</p></details>
+      <details><summary>How can I pay?</summary><p>Online by UPI, debit or credit card, net banking or wallet through Razorpay, or by PayPal for international clients. Each invoice includes a secure payment link. See our <a href="pay.html">payment page</a> for terms.</p></details>
+      <details><summary>How much does testing cost?</summary><p>$10 for 20 test cases. One test case is one scenario checked from start to finish, such as "a user can apply a promo code at checkout". Need more than 20? Each extra pack of 20 is another $10, so 45 test cases cost $30. We send you the list and the total before we start. Automation setup and dedicated QA get a custom quote. See <a href="pricing.html#packs">how test packs work</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 id="contact-h">Start your free trial</h2>
+      <p class="intro">Tell us what you're building. We'll reply within one working day to agree on the flow we'll test. One free trial per company.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></li>
+        <li style="color:#C5CFDD">Mumbai, India · Working with clients worldwide</li>
+      </ul>
+      <h3 class="next-h">What happens next</h3>
+      <ol class="next-steps">
+        <li>We reply within one working day.</li>
+        <li>A short call to pick the flow we'll test.</li>
+        <li>You get your free trial report, with no obligation.</li>
+      </ol>
+    </div>
+
+    <form class="form" id="contact-form" novalidate>
+      <input type="hidden" name="access_key" value="8da16305-ba6c-4f7c-911b-04127a0006d0">
+      <input type="hidden" name="subject" value="New enquiry from testershub.in">
+      <input type="hidden" name="from_name" value="TestersHub website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="row">
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Work email<input type="email" name="email" autocomplete="email" required></label>
+      </div>
+      <label>What would you like?
+        <select name="request_type">
+          <option>Free trial (one per company)</option>
+          <option>Test pack ($10 for 20 test cases)</option>
+          <option>Custom project or quote</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>Company<input type="text" name="company" autocomplete="organization"></label>
+        <label>What needs testing?
+          <select name="service">
+            <option>Web application</option>
+            <option>Mobile app (Android / iOS)</option>
+            <option>API</option>
+            <option>Pre-launch QA (all of the above)</option>
+            <option>Accessibility audit</option>
+            <option>Automation setup</option>
+          </select>
+        </label>
+      </div>
+      <label><span>Tools you use <span class="optional">(optional)</span></span><input type="text" name="tools" id="tools-field" placeholder="e.g. Playwright, Postman, Jira"></label>
+      <label>About your product<textarea name="message" placeholder="Link to your app, tech stack, launch date…" required></textarea></label>
+      <button class="btn btn-primary" type="submit" id="submit-btn">Send request</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      <p class="small">We only use your details to reply to this request.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div style="max-width:340px">
+        <h2>TestersHub</h2>
+        <p>Web, mobile and API testing for teams that want to ship with confidence.</p>
+        <p style="margin-top:12px"><a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <div><h3>Services</h3><ul><li><a href="#services">Web app testing</a></li><li><a href="#services">Mobile app testing</a></li><li><a href="#services">API testing</a></li><li><a href="#offers">Accessibility audit</a></li><li><a href="#report">Sample report</a></li></ul></div>
+        <div><h3>Company</h3><ul><li><a href="about.html">About us</a></li><li><a href="#process">How we work</a></li><li><a href="#work">Our work</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+        <div><h3>Payments &amp; policies</h3><ul><li><a href="pay.html">Pay an invoice</a></li><li><a href="terms.html">Terms and conditions</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="refund-policy.html">Cancellation and refunds</a></li></ul></div>
+      </nav>
+    </div>
+    <p class="legal">© <span id="year">2026</span> TestersHub. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script>
+// Mobile menu
+(function(){
+  var btn=document.getElementById('menu-btn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  document.querySelectorAll('#nav-links a').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('nav-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open menu');});
+  });
+})();
+
+// Service tabs (keyboard accessible)
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on=x===t;
+      x.setAttribute('aria-selected',on);
+      x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t);});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight')select(tabs[(i+1)%tabs.length]);
+      if(e.key==='ArrowLeft')select(tabs[(i-1+tabs.length)%tabs.length]);
+    });
+  });
+})();
+
+// Contact form via Web3Forms
+(function(){
+  var form=document.getElementById('contact-form'),
+      status=document.getElementById('form-status'),
+      btn=document.getElementById('submit-btn');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.className='form-status';
+    if(!form.checkValidity()){
+      status.textContent='Please fill in your name, a valid email and a few words about your product.';
+      status.classList.add('err');
+      form.reportValidity();
+      return;
+    }
+    btn.disabled=true; btn.textContent='Sending…';
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d.success){
+          status.textContent='Request sent. We\'ll reply within one working day.';
+          status.classList.add('ok'); form.reset();
+        } else { throw new Error(d.message||'Failed'); }
+      })
+      .catch(function(){
+        status.textContent='Your request didn\'t go through. Email us at gauravprasad@testershub.in.';
+        status.classList.add('err');
+      })
+      .finally(function(){btn.disabled=false; btn.textContent='Send request';});
+  });
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+
+// Selectable tools -> prefill the contact form
+(function(){
+  var chips=[].slice.call(document.querySelectorAll('#tools .chip-btn')),
+      summary=document.getElementById('tool-summary'),
+      request=document.getElementById('tool-request'),
+      clear=document.getElementById('tool-clear'),
+      field=document.getElementById('tools-field');
+  function selected(){return chips.filter(function(c){return c.getAttribute('aria-pressed')==='true';}).map(function(c){return c.dataset.tool;});}
+  function update(){
+    var list=selected();
+    summary.textContent=list.length?('Selected ('+list.length+'): '+list.join(', ')):'No tools selected yet.';
+    request.disabled=clear.disabled=!list.length;
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');
+      update();
+    });
+  });
+  clear.addEventListener('click',function(){chips.forEach(function(c){c.setAttribute('aria-pressed','false');});update();});
+  request.addEventListener('click',function(){
+    field.value=selected().join(', ');
+    document.getElementById('contact').scrollIntoView();
+    document.querySelector('#contact-form input[name="name"]').focus({preventScroll:true});
+  });
+
+})();
+</script>
+</body>
+</html>

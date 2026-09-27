@@ -1,0 +1,87 @@
+name: Test and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "30 3 * * *"   # every day at 9:00 AM IST: check the live site
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    name: Playwright tests
+    runs-on: ubuntu-latest
+    env:
+      # Daily scheduled runs test the live site; everything else tests the code in the repo.
+      BASE_URL: ${{ github.event_name == schedule && https://testershub.in || http://localhost:4173 }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
+
+  lighthouse:
+    name: Lighthouse audit
+    if: github.event_name != schedule
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx lhci autorun
+
+  deploy:
+    name: Deploy to Netlify
+    # Only deploy from main, and only when every test has passed.
+    if: github.event_name == push && github.ref == refs/heads/main
+    needs: [playwright, lighthouse]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx --yes netlify-cli@17 deploy --dir=site --prod --message "Deploy ${{ github.sha }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+  postman:
+    name: Postman live site checks
+    # Runs after every successful deploy, every morning, and on demand.
+    needs: [deploy]
+    if: >-
+      always() && (
+        github.event_name == 'schedule' ||
+        github.event_name == 'workflow_dispatch' ||
+        needs.deploy.result == 'success'
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Wait for the new deploy to go live
+        if: needs.deploy.result == 'success'
+        run: sleep 30
+      - run: npm run test:api
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: postman-report
+          path: newman/report.html
+          retention-days: 14

@@ -1,0 +1,26 @@
+{
+  "name": "testershub-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TestersHub website with Playwright, axe, Lighthouse and Postman quality checks",
+  "scripts": {
+    "serve": "http-server site -p 4173 -s",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:prod": "cross-env BASE_URL=https://testershub.in playwright test",
+    "report": "playwright show-report",
+    "lighthouse": "lhci autorun",
+    "test:api": "newman run postman/testershub-live.postman_collection.json -e postman/production.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export newman/report.html",
+    "demo": "node scripts/record-demo.js",
+    "demo:tests": "playwright test -c playwright.demo.config.ts && python3 scripts/build-test-video.py"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@lhci/cli": "^0.14.0",
+    "@playwright/test": "1.56.0",
+    "cross-env": "^7.0.3",
+    "http-server": "^14.1.1",
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
