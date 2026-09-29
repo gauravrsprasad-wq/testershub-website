@@ -68,3 +68,17 @@ table.plain th{background:var(--mist);font-weight:600}
 .site-footer .legal{border-top:1px solid #243349;padding-top:18px;margin:0}
 .prose .methods,.prose .steps,.prose .foot-links{padding-left:0}
 .prose .methods li{margin:0}
+
+/* service framework pages */
+.lead-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.code-wrap{margin:8px 0 22px}
+.code-label{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+pre.code{margin:0;background:#0E1A2C;color:#E6ECF5;padding:20px 22px;border-radius:12px;overflow-x:auto;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;tab-size:2}
+pre.code:focus-visible{outline:3px solid var(--mark)}
+.code .c{color:#8FA3BF}.code .k{color:#FFD84D}.code .s{color:#9FE0B8}
+.svc-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:12px 0 8px}
+.svc-link{display:block;border:1px solid var(--line);border-radius:14px;padding:20px 22px;text-decoration:none;color:var(--ink);background:#fff}
+.svc-link:hover{border-color:var(--ink);color:var(--ink)}
+.svc-link strong{display:block;font-family:var(--display);font-size:20px;margin-bottom:4px}
+.svc-link span{color:var(--ink-2);font-size:15px}
+@media (max-width:640px){.svc-links{grid-template-columns:1fr}}

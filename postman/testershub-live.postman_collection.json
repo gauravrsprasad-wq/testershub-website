@@ -388,6 +388,116 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Service pages",
+      "description": "The three service framework pages.",
+      "item": [
+        {
+          "name": "web-application-testing.html",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/web-application-testing.html"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(`Responds in under ${pm.variables.get(\"maxResponseMs\")} ms`, () => {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.variables.get(\"maxResponseMs\")));",
+                  "});",
+                  "pm.test(\"Has the heading \\\"Web application testing\\\"\", () => pm.expect(pm.response.text()).to.include(\"<h1>Web application testing</h1>\"));",
+                  "pm.test(\"Explains the testing framework\", () => pm.expect(pm.response.text()).to.include('id=\"framework\"'));",
+                  "pm.test(\"Shows a code example\", () => pm.expect(pm.response.text()).to.include('class=\"code\"'));",
+                  "pm.test(\"Free trial button pre-selects this service\", () => pm.expect(pm.response.text()).to.include(\"index.html?service=web#contact-form\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "api-testing.html",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api-testing.html"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(`Responds in under ${pm.variables.get(\"maxResponseMs\")} ms`, () => {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.variables.get(\"maxResponseMs\")));",
+                  "});",
+                  "pm.test(\"Has the heading \\\"API testing\\\"\", () => pm.expect(pm.response.text()).to.include(\"<h1>API testing</h1>\"));",
+                  "pm.test(\"Explains the testing framework\", () => pm.expect(pm.response.text()).to.include('id=\"framework\"'));",
+                  "pm.test(\"Shows a code example\", () => pm.expect(pm.response.text()).to.include('class=\"code\"'));",
+                  "pm.test(\"Free trial button pre-selects this service\", () => pm.expect(pm.response.text()).to.include(\"index.html?service=api#contact-form\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "mobile-app-testing.html",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/mobile-app-testing.html"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(`Responds in under ${pm.variables.get(\"maxResponseMs\")} ms`, () => {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.variables.get(\"maxResponseMs\")));",
+                  "});",
+                  "pm.test(\"Has the heading \\\"Mobile app testing\\\"\", () => pm.expect(pm.response.text()).to.include(\"<h1>Mobile app testing</h1>\"));",
+                  "pm.test(\"Explains the testing framework\", () => pm.expect(pm.response.text()).to.include('id=\"framework\"'));",
+                  "pm.test(\"Shows a code example\", () => pm.expect(pm.response.text()).to.include('class=\"code\"'));",
+                  "pm.test(\"Free trial button pre-selects this service\", () => pm.expect(pm.response.text()).to.include(\"index.html?service=mobile#contact-form\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "google-play-closed-testing.html",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/google-play-closed-testing.html"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status is 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(`Responds in under ${pm.variables.get(\"maxResponseMs\")} ms`, () => {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(Number(pm.variables.get(\"maxResponseMs\")));",
+                  "});",
+                  "pm.test(\"Has the closed testing heading\", () => pm.expect(pm.response.text()).to.include(\"Real testers for Google Play's 12-tester rule\"));",
+                  "pm.test(\"Links to Google's official rule\", () => pm.expect(pm.response.text()).to.include(\"support.google.com/googleplay/android-developer/answer/14151465\"));",
+                  "pm.test(\"Shows both prices\", () => { pm.expect(pm.response.text()).to.include(\"$19\"); pm.expect(pm.response.text()).to.include(\"$39\"); });",
+                  "pm.test(\"Start button pre-selects closed testing\", () => pm.expect(pm.response.text()).to.include(\"index.html?service=play#contact-form\"));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "variable": [

@@ -428,6 +428,21 @@ details p{padding:0 0 22px;color:var(--ink-2)}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 .form .optional{font-weight:400;color:var(--muted)}
 
+/* choose a service */
+.choose{padding-top:72px}
+.choose-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.choose-card{display:flex;flex-direction:column;gap:12px;padding:30px;border:2px solid var(--line);border-radius:18px;background:#fff;color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}
+.choose-card:hover,.choose-card:focus-visible{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.choose-icon{width:52px;height:52px;border-radius:12px;background:var(--ink);color:var(--mark);display:flex;align-items:center;justify-content:center}
+.choose-card h3{font-size:26px}
+.choose-card p{color:var(--ink-2)}
+.choose-card ul{margin:0;padding-left:20px;color:var(--ink-2);font-size:15px}
+.choose-card li{margin-bottom:4px}
+.choose-go{margin-top:auto;padding-top:8px;font-weight:600;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.panel-link{display:inline-block;margin-top:6px;font-weight:600}
+@media (max-width:1100px){.choose-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.choose-grid{grid-template-columns:1fr}}
+
 /* footer */
 .site-footer{background:#0E1A2C;color:#AEB9C9;padding:56px 0 32px;font-size:15px}
 .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
@@ -451,12 +466,12 @@ details p{padding:0 0 22px;color:var(--ink-2)}
       TestersHub
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#work">Our work</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#report">Sample report</a></li>
-      <li><a href="#process">How we work</a></li>
+      <li><a href="web-application-testing.html">Web testing</a></li>
+      <li><a href="api-testing.html">API testing</a></li>
+      <li><a href="mobile-app-testing.html">Mobile testing</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#work">Our work</a></li>
+      <li><a href="google-play-closed-testing.html">Play Store testing</a></li>
       <li class="menu-cta"><a class="btn btn-primary" href="#contact-form">Start your free trial</a></li>
     </ul>
     <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
@@ -476,7 +491,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
       <p class="lead">Independent testing for web applications, mobile apps and APIs. We test like your customers, automate what you repeat every release, and report issues your developers can fix the same day.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
-        <a class="btn btn-ghost" href="#offers">See packages</a>
+        <a class="btn btn-ghost" href="#choose">Choose a service</a>
       </div>
       <ul class="trust">
         <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>NDA signed before we see your product</li>
@@ -486,6 +501,46 @@ details p{padding:0 0 22px;color:var(--ink-2)}
     </div>
   </div>
 </div>
+
+<!-- CHOOSE A SERVICE -->
+<section class="choose" id="choose" aria-labelledby="choose-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="choose-h">What do you need tested?</h2>
+      <p>Pick a service to see exactly what we test, how we work, and what you get.</p>
+    </div>
+    <div class="choose-grid">
+      <a class="choose-card" href="web-application-testing.html">
+        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M7 21h10"/></svg></span>
+        <h3>Web application testing</h3>
+        <p>Browsers, screen sizes and full user journeys.</p>
+        <ul><li>Cross-browser and responsive</li><li>Regression and accessibility</li><li>Playwright or Selenium automation</li></ul>
+        <span class="choose-go">Explore web testing</span>
+      </a>
+      <a class="choose-card" href="api-testing.html">
+        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+        <h3>API testing</h3>
+        <p>Correct data, safe access and speed on every endpoint.</p>
+        <ul><li>REST and GraphQL</li><li>Schema, security and load checks</li><li>Postman and REST Assured automation</li></ul>
+        <span class="choose-go">Explore API testing</span>
+      </a>
+      <a class="choose-card" href="mobile-app-testing.html">
+        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <h3>Mobile app testing</h3>
+        <p>Real Android and iOS devices, real-world conditions.</p>
+        <ul><li>Budget phones and slow networks</li><li>OTP, payments and notifications</li><li>Appium automation</li></ul>
+        <span class="choose-go">Explore mobile testing</span>
+      </a>
+      <a class="choose-card" href="google-play-closed-testing.html">
+        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/><path d="M5 3.5l9.5 9.5M5 20.5l9.5-9.5"/></svg></span>
+        <h3>Google Play closed testing</h3>
+        <p>15 real testers for Google's 12-tester, 14-day rule.</p>
+        <ul><li>Real Android phones, daily use</li><li>Same-day tester replacement</li><li>Feedback report and draft answers</li></ul>
+        <span class="choose-go">Explore closed testing</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- OFFERS -->
 <section id="offers" aria-labelledby="offers-h">
@@ -555,6 +610,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <dt>Tools</dt><dd>Playwright, Selenium, Cypress, BrowserStack</dd>
           <dt>You receive</dt><dd>Test plan, bug reports in your tracker, and an automated suite in your repository</dd>
         </dl>
+        <a class="panel-link" href="web-application-testing.html">See our web testing framework</a>
       </div>
       <ul class="checks">
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Functional and end-to-end user journeys</li>
@@ -573,6 +629,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <dt>Tools</dt><dd>Appium, Espresso, XCUITest, real-device cloud</dd>
           <dt>You receive</dt><dd>Device coverage matrix, screen recordings for every bug, and an automated regression pack</dd>
         </dl>
+        <a class="panel-link" href="mobile-app-testing.html">See our mobile testing framework</a>
       </div>
       <ul class="checks">
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Real devices across Android and iOS versions</li>
@@ -591,6 +648,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <dt>Tools</dt><dd>Postman, REST Assured, Playwright API testing, k6, JMeter</dd>
           <dt>You receive</dt><dd>API test collection, a CI-ready test suite, and a security and load summary</dd>
         </dl>
+        <a class="panel-link" href="api-testing.html">See our API testing framework</a>
       </div>
       <ul class="checks">
         <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Schema and response validation for REST and GraphQL</li>
@@ -931,6 +989,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
           <option>Free trial (one per company)</option>
           <option>Test pack ($10 for 20 test cases)</option>
           <option>Custom project or quote</option>
+          <option>Google Play closed testing</option>
         </select>
       </label>
       <div class="row">
@@ -943,6 +1002,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
             <option>Pre-launch QA (all of the above)</option>
             <option>Accessibility audit</option>
             <option>Automation setup</option>
+            <option>Google Play closed testing (12+ testers)</option>
           </select>
         </label>
       </div>
@@ -966,7 +1026,7 @@ details p{padding:0 0 22px;color:var(--ink-2)}
         <p style="margin-top:12px"><a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
       </div>
       <nav aria-label="Footer">
-        <div><h3>Services</h3><ul><li><a href="#services">Web app testing</a></li><li><a href="#services">Mobile app testing</a></li><li><a href="#services">API testing</a></li><li><a href="#offers">Accessibility audit</a></li><li><a href="#report">Sample report</a></li></ul></div>
+        <div><h3>Services</h3><ul><li><a href="web-application-testing.html">Web application testing</a></li><li><a href="api-testing.html">API testing</a></li><li><a href="mobile-app-testing.html">Mobile app testing</a></li><li><a href="google-play-closed-testing.html">Google Play closed testing</a></li><li><a href="#offers">Accessibility audit</a></li><li><a href="#report">Sample report</a></li></ul></div>
         <div><h3>Company</h3><ul><li><a href="about.html">About us</a></li><li><a href="#process">How we work</a></li><li><a href="#work">Our work</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
         <div><h3>Payments &amp; policies</h3><ul><li><a href="pay.html">Pay an invoice</a></li><li><a href="terms.html">Terms and conditions</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="refund-policy.html">Cancellation and refunds</a></li></ul></div>
       </nav>
@@ -1041,6 +1101,10 @@ details p{padding:0 0 22px;color:var(--ink-2)}
       .finally(function(){btn.disabled=false; btn.textContent='Send request';});
   });
   document.getElementById('year').textContent=new Date().getFullYear();
+  var service=new URLSearchParams(location.search).get('service');
+  if(service==='play'){var rt=form.querySelector('select[name="request_type"]'); if(rt){rt.value='Google Play closed testing';}}
+  var wanted={web:'Web application',api:'API',mobile:'Mobile app (Android / iOS)',play:'Google Play closed testing (12+ testers)'}[new URLSearchParams(location.search).get('service')];
+  if(wanted){form.querySelector('select[name="service"]').value=wanted;}
 })();
 
 // Selectable tools -> prefill the contact form

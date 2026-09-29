@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile app testing | TestersHub</title>
+<meta name="description" content="Mobile app testing by TestersHub: Android and iOS apps tested on real devices, including budget phones and slow networks, automated with Appium.">
+<link rel="canonical" href="https://testershub.in/mobile-app-testing.html">
+<meta name="theme-color" content="#14233A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314233A'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%23FFD84D' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="TestersHub home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14233A"/><path d="M9 16.5l4.5 4.5L23 11" stroke="#FFD84D" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>TestersHub</a>
+    <div class="nav-right">
+      <a class="home" href="index.html">Home</a>
+      <a class="btn btn-primary" href="index.html#contact-form">Start your free trial</a>
+    </div>
+  </div>
+</header>
+<div class="page-head">
+  <div class="wrap narrow">
+    <h1>Mobile app testing</h1>
+    <p>Native, hybrid, React Native or Flutter. We test on real Android and iOS devices, including the budget phones and patchy networks many of your users actually have.</p>
+    <div class="lead-actions"><a class="btn btn-primary" href="index.html?service=mobile#contact-form">Start your free trial</a><a class="btn btn-ghost" href="#framework">See our framework</a></div>
+  </div>
+</div>
+<main class="content" id="main">
+  <div class="wrap narrow prose">
+<h2>What we test</h2><ul><li>Complete user journeys: onboarding, OTP login, payments, notifications</li><li>Real devices across Android and iOS versions, including budget phones</li><li>Slow networks, going offline, incoming calls and switching apps</li><li>Permissions, push notifications, deep links and app updates</li><li>Battery, memory and performance on low-end devices</li><li>Layout on different screen sizes and in dark mode</li></ul>
+<h2 id="framework">Our mobile testing framework</h2><p>Mobile tests are the hardest to keep stable. Our framework is built around real devices and the interruptions real users face.</p><div class="table-wrap" tabindex="0" role="region" aria-label="Mobile testing framework layers"><table class="plain"><thead><tr><th scope="col">Layer</th><th scope="col">What it does</th></tr></thead><tbody><tr><td><strong>Test design</strong></td><td>User journeys including interruptions: calls, network loss, backgrounding and restarts.</td></tr><tr><td><strong>Screen objects</strong></td><td>Each screen is modelled once, and shared between Android and iOS where the app allows.</td></tr><tr><td><strong>Device matrix</strong></td><td>An agreed list of real Android and iOS devices and OS versions, weighted to what your users own.</td></tr><tr><td><strong>Execution</strong></td><td>Appium with UiAutomator2 (Android) and XCUITest (iOS), on local devices or the BrowserStack device cloud.</td></tr><tr><td><strong>Evidence</strong></td><td>Screen recordings and device logs attached to every bug.</td></tr><tr><td><strong>CI/CD</strong></td><td>Runs on every new build of your app, with an HTML report.</td></tr></tbody></table></div>
+<h2>What a test looks like</h2><p>An example in Java with Appium and TestNG:</p><div class="code-wrap"><p class="code-label">Example: LoginTest.java (Appium)</p><pre class="code" tabindex="0" role="region" aria-label="Appium code example"><code>@Test
+public void userCanLogInWithOtp() {
+    HomeScreen home = new LoginScreen(driver)
+            .enterPhoneNumber(&quot;9876543210&quot;)
+            .requestOtp()
+            .enterOtp(TestOtp.valid())
+            .submit();
+
+    assertEquals(home.greeting(), &quot;Welcome back, Asha&quot;);
+}
+
+@Test
+public void loginWorksAfterTheNetworkDrops() {
+    LoginScreen login = new LoginScreen(driver).enterPhoneNumber(&quot;9876543210&quot;);
+    Network.goOffline(driver);
+    assertEquals(login.requestOtp().errorMessage(), &quot;No internet connection. Try again.&quot;);
+    Network.goOnline(driver);
+    assertTrue(login.requestOtp().isOtpScreenShown());
+}</code></pre></div>
+<h2>Tools</h2><ul><li>Appium (UiAutomator2 and XCUITest), Espresso, XCUITest</li><li>Real Android and iOS devices, and the BrowserStack device cloud</li><li>Android Studio and Xcode tooling for logs and performance</li><li>GitHub Actions, GitLab CI, Jenkins, Azure DevOps</li></ul>
+<h2>What you get</h2><ul><li>The device list and test cases, approved by you before we start</li><li>Bugs logged in your tracker with screen recordings and device logs</li><li>A release readiness report with a go or no-go recommendation</li><li>Optional: the Appium suite in your repository, running on every build</li></ul>
+<h2>Pricing</h2><p><strong>$10 for 20 test cases.</strong> Need more? Add another pack of 20 for $10. Not sure yet? Start with a <strong>free trial</strong>: we test one key flow free, once per company. See <a href="pricing.html">full pricing</a>.</p><p><a class="btn btn-primary" href="index.html?service=mobile#contact-form">Start your free trial</a></p>
+<h2>Our other services</h2><div class="svc-links"><a class="svc-link" href="web-application-testing.html"><strong>Web application testing</strong><span>Browsers, screen sizes and full user journeys, automated with Playwright or Selenium.</span></a><a class="svc-link" href="api-testing.html"><strong>API testing</strong><span>Correct data, safe access and behaviour under load, checked on every endpoint.</span></a></div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="web-application-testing.html">Web application testing</a></li><li><a href="api-testing.html">API testing</a></li><li><a href="mobile-app-testing.html">Mobile app testing</a></li><li><a href="google-play-closed-testing.html">Google Play closed testing</a></li><li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="pay.html">Pay an invoice</a></li><li><a href="contact.html">Contact us</a></li><li><a href="terms.html">Terms and conditions</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="refund-policy.html">Cancellation and refunds</a></li></ul></nav>
+    <p class="legal">© 2026 TestersHub. All rights reserved. Email: <a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
+  </div>
+</footer>
+</body>
+</html>

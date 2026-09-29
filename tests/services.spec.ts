@@ -16,7 +16,7 @@ test.describe("Service tabs", () => {
   ]) {
     test(`clicking "${tab}" shows ${heading}`, async ({ page }) => {
       await page.getByRole("tab", { name: tab }).click();
-      await expect(page.getByRole("heading", { name: heading })).toBeVisible();
+      await expect(page.getByRole("tabpanel").getByRole("heading", { name: heading })).toBeVisible();
       await expect(page.getByRole("tab", { name: tab })).toHaveAttribute("aria-selected", "true");
     });
   }
