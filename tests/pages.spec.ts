@@ -83,42 +83,21 @@ test.describe("Pay page", () => {
 });
 
 test.describe("Pricing", () => {
-  test("home page shows the free trial and the $10 test pack", async ({ page }) => {
-    await page.goto("/#pricing");
-    const pricing = page.locator("#pricing");
-    await expect(pricing.getByRole("heading", { name: "Free trial" })).toBeVisible();
-    await expect(pricing.getByText("One free trial per company", { exact: true })).toBeVisible();
-    const pack = pricing.locator(".plan", { has: page.getByRole("heading", { name: "Test pack" }) });
-    await expect(pack.locator(".price")).toHaveText(/\$10\s+for 20 test cases/);
-    await expect(pack.getByText("20 test cases written and run")).toBeVisible();
-  });
-
-  test("test pack rules are explained and linked", async ({ page }) => {
-    await page.goto("/#pricing");
-    await page.getByRole("link", { name: "See how test packs work" }).click();
-    await expect(page).toHaveURL(/pricing\.html#packs$/);
-    const rules = page.locator("#packs + ul");
-    await expect(rules).toContainText("20 test cases");
-    await expect(rules).toContainText("25 test cases need 2 packs");
-  });
-
-  test("the worked example adds up", async ({ page }) => {
+  test("pricing page lists the two closed testing plans", async ({ page }) => {
     await page.goto("/pricing.html");
-    await expect(page.getByText("3 × $10 =")).toContainText("$30");
+    const table = page.getByRole("region", { name: "Prices" });
+    await expect(table.locator("tbody tr")).toHaveCount(2);
+    await expect(table.getByRole("row", { name: /^12 testers/ })).toContainText("₹800");
+    await expect(table.getByRole("row", { name: /^15 testers/ })).toContainText("₹1,200");
   });
 
-  test("every page states the same price", async ({ page }) => {
-    for (const path of ["/", "/pricing.html", "/pay.html", "/terms.html", "/refund-policy.html"]) {
+  test("every page that states a price uses the same two prices", async ({ page }) => {
+    for (const path of ["/", "/pricing.html", "/pay.html", "/terms.html"]) {
       await page.goto(path);
       const text = await page.locator("body").innerText();
-      expect(text, `${path} mentions the price`).toMatch(/\$10 for 20 test cases/);
-      expect(text, `${path} still mentions an old price`).not.toMatch(/\$10 one-time|\$\d+ per test case/);
-      expect(text, `${path} still mentions unlimited testing`).not.toMatch(/unlimited/i);
+      expect(text, `${path} mentions ₹800`).toContain("₹800");
+      expect(text, `${path} mentions ₹1,200`).toContain("₹1,200");
+      expect(text, `${path} mentions an old price`).not.toMatch(/\$\d+|test pack/i);
     }
-  });
-
-  test("pricing page has no leftover contact-for-quote pricing", async ({ page }) => {
-    await page.goto("/pricing.html");
-    await expect(page.getByText("Contact for quote")).toHaveCount(0);
   });
 });

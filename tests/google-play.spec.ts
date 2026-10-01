@@ -1,14 +1,11 @@
 import { test, expect } from "./fixtures";
 
-const PAGE = "/google-play-closed-testing.html";
-
-test.describe("Google Play closed testing page", () => {
+test.describe("Closed testing content on the home page", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto(PAGE);
+    await page.goto("/");
   });
 
-  test("explains the offer and links to Google's official rule", async ({ page }) => {
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Real testers for Google Play's 12-tester rule");
+  test("links to Google's official rule", async ({ page }) => {
     await expect(page.getByRole("link", { name: /App testing requirements for new personal developer accounts/ }))
       .toHaveAttribute("href", "https://support.google.com/googleplay/android-developer/answer/14151465");
   });
@@ -30,19 +27,22 @@ test.describe("Google Play closed testing page", () => {
     });
   }
 
-  test("the second question only appears for personal accounts", async ({ page }) => {
-    await expect(page.getByRole("group", { name: "When did you create it?" })).toBeHidden();
+  test("the checker's button goes to the request form", async ({ page }) => {
     await page.getByLabel("Personal account").check();
-    await expect(page.getByRole("group", { name: "When did you create it?" })).toBeVisible();
-    await page.getByLabel("Organization account").check();
-    await expect(page.getByRole("group", { name: "When did you create it?" })).toBeHidden();
+    await page.getByLabel("On or after 13 November 2023").check();
+    await page.locator("#gp-result").getByRole("link", { name: "Start my closed test" }).click();
+    await expect(page.locator("#contact-form")).toBeInViewport();
   });
 
-  test("shows both plans and the retest promise", async ({ page }) => {
+  test("offers 12 testers for ₹800 and 15 testers for ₹1,200", async ({ page }) => {
     const plans = page.locator(".gp-plan");
     await expect(plans).toHaveCount(2);
-    await expect(plans.nth(0).locator(".price")).toContainText("$19");
-    await expect(plans.nth(1).locator(".price")).toContainText("$39");
+    await expect(plans.nth(0).getByRole("heading")).toHaveText("12 testers");
+    await expect(plans.nth(0).locator(".price")).toContainText("₹800");
+    await expect(plans.nth(1).getByRole("heading")).toHaveText("15 testers");
+    await expect(plans.nth(1).locator(".price")).toContainText("₹1,200");
+    await expect(plans.nth(1)).toContainText("Recommended");
+    await expect(plans.nth(0).locator(".plan-note")).toContainText("at no extra cost");
     await expect(page.locator(".gp-promise")).toContainText("another 14-day closed test for free");
   });
 
@@ -50,43 +50,27 @@ test.describe("Google Play closed testing page", () => {
     await expect(page.locator(".gp-timeline .when")).toHaveText(["Day 0", "Days 1 to 2", "Days 2 to 16", "Weekly", "Day 16", "After"]);
   });
 
-  test("Start my closed test opens the form with closed testing selected", async ({ page }) => {
-    await page.locator(".gp-hero").getByRole("link", { name: "Start my closed test" }).click();
-    await expect(page).toHaveURL(/index\.html\?service=play#contact-form$/);
-    await expect(page.getByLabel("What needs testing?")).toHaveValue("Google Play closed testing (12+ testers)");
-    await expect(page.getByLabel("What would you like?")).toHaveValue("Google Play closed testing");
-    await expect(page.locator("#contact-form")).toBeInViewport();
-  });
-
   test("the get-started bar stays on screen while scrolling", async ({ page }) => {
     await page.locator("#gpfaq-h").scrollIntoViewIfNeeded();
     await expect(page.locator(".gp-bar").getByRole("link", { name: "Start my closed test" })).toBeInViewport();
+  });
+
+  test("the get-started bar hides while the request form is on screen", async ({ page }) => {
+    await page.locator("#contact-form").scrollIntoViewIfNeeded();
+    await expect(page.locator(".gp-bar")).toBeHidden();
+    await page.locator("#how-h").scrollIntoViewIfNeeded();
+    await expect(page.locator(".gp-bar")).toBeVisible();
   });
 
   test("never promises that Google will approve the app", async ({ page }) => {
     const text = (await page.locator("body").innerText()).toLowerCase();
     expect(text).not.toMatch(/guaranteed approval|approval guaranteed|100% approval|guarantee approval/);
   });
-});
 
-test.describe("Linked from the rest of the site", () => {
-  test("home page offers it as a fourth service", async ({ page }) => {
-    await page.goto("/#choose");
-    await expect(page.locator("#choose .choose-card")).toHaveCount(4);
-    await page.locator("#choose").getByRole("link", { name: /Google Play closed testing/ }).click();
-    await expect(page).toHaveURL(/google-play-closed-testing\.html$/);
-  });
-
-  test("menu link opens the page", async ({ page, isMobile }) => {
-    await page.goto("/");
-    if (isMobile) await page.getByRole("button", { name: "Open menu" }).click();
-    await page.locator("#nav-links").getByRole("link", { name: "Play Store testing" }).click();
-    await expect(page).toHaveURL(/google-play-closed-testing\.html$/);
-  });
-
-  test("pricing and refund pages cover it", async ({ page }) => {
+  test("pricing and refund pages cover closed testing", async ({ page }) => {
     await page.goto("/pricing.html");
-    await expect(page.getByRole("row", { name: /Google Play closed testing/ })).toContainText("$19");
+    await expect(page.getByRole("row", { name: /^12 testers/ })).toContainText("₹800");
+    await expect(page.getByRole("row", { name: /^15 testers/ })).toContainText("₹1,200");
     await page.goto("/refund-policy.html");
     await expect(page.getByRole("heading", { name: "Google Play closed testing" })).toBeVisible();
   });

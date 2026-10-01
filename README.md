@@ -14,7 +14,8 @@ The website for [testershub.in](https://testershub.in), with a full quality pipe
 
 ```
 site/                    The website (this is what gets deployed)
-  index.html             Home page
+  index.html             Home page: Google Play closed testing (12 testers ₹800, 15 testers ₹1,200)
+  _redirects             Sends old page addresses to the home page
   pay.html               Pay an invoice (Razorpay and PayPal)
   pricing.html, about.html, contact.html,
   terms.html, privacy.html, refund-policy.html
@@ -22,16 +23,12 @@ site/                    The website (this is what gets deployed)
   assets/pages.css       Styles for the inner pages
   _headers               Security headers Netlify adds to every page
 tests/                   Playwright tests
-  home.spec.ts           Page loads, links, layout, mobile menu, no phone number exposed
-  services.spec.ts       Service tabs (click + keyboard) and FAQ
-  contact.spec.ts        Form validation, successful send, service-down message
-  accessibility.spec.ts  axe WCAG 2.2 AA scan and keyboard access
+  home.spec.ts           Home page (Google Play closed testing): headline, links, layout, no phone number
+  google-play.spec.ts    Eligibility checker, ₹800 / ₹1,200 plans, timeline, bottom bar, no approval promises
+  contact.spec.ts        Request form: plan pre-selection, validation, sending, service-down message
+  pages.spec.ts          Payment and policy pages, pricing page, footer links, consistent prices
+  accessibility.spec.ts  axe WCAG 2.2 AA scans and keyboard access
   seo.spec.ts            Meta tags, structured data, robots.txt, sitemap
-  pages.spec.ts          Payment and policy pages, footer links, payment buttons
-  work.spec.ts           "Our work" section; in CI, checks every linked GitHub repo is public
-  sections.spec.ts       Six-step process, test depth prices, release readiness numbers, tool groups
-  tools.spec.ts          Selectable tools, and that they reach the contact form and the enquiry email
-postman/                 Postman collection and environments for the live site checks
 playwright.config.ts     Browsers, devices and local web server
 lighthouserc.json        Lighthouse score thresholds
 netlify.toml             Netlify settings
@@ -53,10 +50,6 @@ npm run test:ui             # open Playwright's visual test runner
 npm run report              # open the HTML report from the last run
 npm run test:prod           # run the tests against the live testershub.in
 npm run lighthouse          # run the Lighthouse audit
-npm run demo                # record walkthrough videos (start `npm run serve` first)
-npm run demo:tests          # record the test suite running in Chromium as one captioned video
-                            # (Linux, macOS or WSL, with ffmpeg and Python 3 + Pillow;
-                            # saved to demo-results/)
 npm run test:api            # run the Postman checks against the live site
                             # (HTML report is saved to newman/report.html)
 ```

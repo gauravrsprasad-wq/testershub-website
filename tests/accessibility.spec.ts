@@ -1,7 +1,7 @@
 import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
 
-for (const path of ["/", "/pay.html", "/pricing.html", "/refund-policy.html", "/web-application-testing.html", "/api-testing.html", "/mobile-app-testing.html", "/google-play-closed-testing.html"]) {
+for (const path of ["/", "/pay.html", "/pricing.html", "/refund-policy.html", "/about.html"]) {
 test(`${path} has no serious or critical accessibility issues (WCAG 2.2 AA)`, async ({ page }) => {
   await page.goto(path);
   const results = await new AxeBuilder({ page })

@@ -3,1137 +3,376 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TestersHub | Web, Mobile &amp; API Testing Services in India</title>
-<meta name="description" content="Independent QA for web applications, mobile apps and APIs. Pre-launch testing for startups and AI-built apps, WCAG accessibility audits, and Playwright, Appium and API automation. Try it free, then $10 for 20 test cases.">
-<meta name="keywords" content="software testing services India, web application testing, mobile app testing, API testing services, accessibility audit, Playwright automation, QA for startups">
+<title>Google Play Closed Testing: 12 Testers for 14 Days | TestersHub</title>
+<meta name="description" content="Launching on Google Play? Pass the 12-tester, 14-day closed testing rule with real testers on real Android phones: 12 testers for ₹800 or 15 testers for ₹1,200 per app.">
 <link rel="canonical" href="https://testershub.in/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TestersHub | Web, Mobile &amp; API Testing Services">
-<meta property="og:description" content="Find the bugs before your users do. Independent QA for web apps, mobile apps and APIs.">
-<meta property="og:url" content="https://testershub.in/">
-<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#14233A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314233A'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='%23FFD84D' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "TestersHub",
-  "description": "Web application, mobile app and API testing services.",
-  "url": "https://testershub.in/",
-  "email": "gauravprasad@testershub.in",
-  "areaServed": "Worldwide",
-  "priceRange": "$10 for 20 test cases",
-  "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN" }
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "What's included in the free trial?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "We agree on one important flow in your product, such as sign-up or checkout, write and run the test cases for it, and send you a full report of what we find, with steps to reproduce. It's free, with no obligation, and available once per company."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Do you do manual or automated testing?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Both. Manual and exploratory testing finds the issues scripts miss; automation keeps your regression checks fast. Most projects use a mix."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Our app was built with AI coding tools. Can you test it?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes, and it's worth doing. AI-generated code often works on the happy path but fails on edge cases, permissions and security. Our pre-launch QA package is designed for exactly this."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Do you test on real phones?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes. We test on real Android and iOS devices and use a device cloud when you need wider model and OS coverage."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Will you work with our tools and pipeline?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes. We log bugs in your tracker and run automated suites in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or whatever you already use."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Can you sign an NDA?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes. We're happy to sign your NDA before we see your product or test environment."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What do you need from us to get started?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "A link to your app or a test build, test accounts, and a description of what to test. That can be a Jira ticket, a Figma design, a screen recording or a few sentences. No formal specification needed."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How do we know when we're ready to release?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Every test cycle ends with a release readiness report: results for every test case, open bugs by severity, anything we couldn't test, and a clear go or no-go recommendation with the reasons."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How can I pay?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Online by UPI, debit or credit card, net banking or wallet through Razorpay, or by PayPal for international clients. Each invoice includes a secure payment link. See our payment page for terms."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How much does testing cost?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "$10 for 20 test cases. One test case is one scenario checked from start to finish, such as \"a user can apply a promo code at checkout\". Need more than 20? Each extra pack of 20 is another $10, so 45 test cases cost $30. We send you the list and the total before we start. Automation setup and dedicated QA get a custom quote. See how test packs work."
-   }
-  }
- ]
-}
-</script>
-
+<link rel="stylesheet" href="assets/pages.css">
 <style>
-:root{
-  --ink:#14233A;
-  --ink-2:#2B3C55;
-  --muted:#51607A;
-  --paper:#FFFFFF;
-  --mist:#EEF2F7;
-  --line:#D5DCE6;
-  --blue:#1F5FD1;
-  --blue-dark:#1848A3;
-  --mark:#FFD84D;
-  --flag:#C2361F;
-  --ok:#1D7A4E;
-  --display:'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
-  --body:'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  --wrap:1180px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
-img,svg{max-width:100%}
-a{color:var(--blue)}
-a:hover{color:var(--blue-dark)}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-0.02em}
-p{margin:0}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
-.skip:focus{left:8px}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
-.btn-primary{background:var(--blue);color:#fff}
-.btn-primary:hover{background:var(--blue-dark);color:#fff}
-.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
-.btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
-
-/* header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink);text-decoration:none}
-.logo:hover{color:var(--ink)}
-.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-.nav-links a{color:var(--ink-2);text-decoration:none;font-weight:500}
-.nav-links a:hover{color:var(--blue)}
-.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:48px;height:48px;cursor:pointer;color:var(--ink)}
-@media (max-width:900px){
-  .nav-links,.nav .btn{display:none}
-  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
-  .nav-open .nav-links{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;padding:12px 24px 24px;border-bottom:1px solid var(--line);gap:4px}
-  .nav-open .nav-links a{display:block;padding:12px 0;font-size:18px}
-}
-
-/* hero */
-.hero{padding:72px 0 112px;border-bottom:1px solid var(--line)}
-.hero-grid{display:block}
-.hero h1{font-size:clamp(40px,6vw,76px);font-weight:800;max-width:16ch;text-wrap:balance}
-.hero .lead{font-size:20px;color:var(--ink-2);margin-top:22px;max-width:52ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero-note{margin-top:22px;color:var(--muted);font-size:15px}
-
-
-
-/* sections */
-section{padding:96px 0}
-.section-head{max-width:760px;margin-bottom:48px}
-.section-head h2{font-size:clamp(32px,4.2vw,50px);font-weight:800}
-.section-head p{font-size:19px;color:var(--ink-2);margin-top:16px}
-
-/* offers */
-.offers{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px}
-.offer{border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;background:#fff}
-.offer.lead-offer{background:var(--ink);color:#fff;border-color:var(--ink)}
-.offer.lead-offer p,.offer.lead-offer li{color:#D3DBE8}
-.offer h3{font-size:26px}
-.offer p{color:var(--ink-2)}
-.offer ul{margin:4px 0 0;padding-left:20px;color:var(--ink-2)}
-.offer li{margin-bottom:6px}
-.offer .btn{margin-top:auto;align-self:flex-start}
-.offer.lead-offer .btn{background:var(--mark);color:var(--ink)}
-.offer.lead-offer .btn:hover{background:#FFE580}
-.for-who{font-size:15px;font-weight:600;color:var(--blue)}
-.lead-offer .for-who{color:var(--mark)}
-@media (max-width:980px){.offers{grid-template-columns:1fr}}
-
-/* services tabs */
-.services{background:var(--mist)}
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-.tab{min-height:48px;padding:10px 22px;border-radius:10px;border:1px solid var(--line);background:#fff;font:600 17px var(--body);color:var(--ink);cursor:pointer}
-.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.panel[hidden]{display:none}
-.panel h3{font-size:32px;margin-bottom:14px}
-.panel p{color:var(--ink-2)}
-.meta{margin-top:22px}
-.meta dt{font-size:14px;font-weight:600;color:var(--muted)}
-.meta dd{margin:2px 0 14px;font-weight:500}
-.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-.checks li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
-.checks svg{flex:none;margin-top:3px;color:var(--ok)}
-@media (max-width:860px){.panel{grid-template-columns:1fr;padding:28px;gap:28px}}
-
-/* testing types */
-.types{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.type{background:#fff;padding:26px}
-.type h3{font-size:20px;margin-bottom:6px}
-.type p{font-size:15px;color:var(--ink-2)}
-@media (max-width:900px){.types{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.types{grid-template-columns:1fr}}
-
-/* process */
-.process{background:var(--ink);color:#fff}
-.process .section-head p{color:#C5CFDD}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;counter-reset:step}
-.steps li{counter-increment:step;border-top:3px solid var(--mark);padding-top:20px}
-.steps li::before{content:"Step " counter(step);display:block;color:var(--mark);font-weight:600;font-size:15px;margin-bottom:8px}
-.steps h3{font-size:24px;margin-bottom:10px}
-.steps p{color:#C5CFDD;font-size:16px}
-@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
-
-/* tools */
-.tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px}
-.tools-grid h3{font-size:17px;font-family:var(--body);font-weight:600;color:var(--muted);letter-spacing:0;margin-bottom:10px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.chips li{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:500;font-size:16px}
-@media (max-width:700px){.tools-grid{grid-template-columns:1fr}}
-
-/* pricing */
-.pricing{background:var(--mist)}
-.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:12px}
-.plan h3{font-size:24px}
-.plan .price{font-family:var(--display);font-weight:800;font-size:34px}
-.plan .price.custom{font-size:26px}
-.plan .price small{font-family:var(--body);font-size:16px;font-weight:500;color:var(--muted)}
-.plan p{color:var(--ink-2)}
-.plan ul{padding-left:20px;margin:4px 0 8px;color:var(--ink-2)}
-.plan .btn{margin-top:auto}
-@media (max-width:900px){.plans{grid-template-columns:1fr}}
-
-/* testimonials */
-.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.quote{border-left:4px solid var(--mark);padding:6px 0 6px 22px}
-.quote p{font-size:18px}
-.quote footer{margin-top:14px;color:var(--muted);font-size:15px}
-@media (max-width:900px){.quotes{grid-template-columns:1fr}}
-
-/* faq */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-details{border-bottom:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-weight:600;font-size:18px;position:relative}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:6px;top:18px;font-size:26px;color:var(--blue);font-weight:400}
-details[open] summary::after{content:"\2212"}
-details p{padding:0 0 22px;color:var(--ink-2)}
-@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:24px}}
-
-/* contact */
-.contact{background:var(--ink);color:#fff}
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-.contact h2{font-size:clamp(34px,4.5vw,52px);font-weight:800}
-.contact .intro{color:#C5CFDD;font-size:19px;margin-top:16px}
-.contact-list{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column;gap:12px;font-size:18px}
-.contact-list a{color:#fff}
-.contact-list a:hover{color:var(--mark)}
-.form{background:#fff;color:var(--ink);border-radius:18px;padding:32px;display:grid;gap:16px}
-.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
-.form input,.form select,.form textarea{font:inherit;font-weight:400;border:1px solid #B9C3D1;border-radius:10px;padding:12px 14px;min-height:48px;background:#fff;color:var(--ink)}
-.form textarea{resize:vertical;min-height:120px}
-.form .hp{position:absolute;left:-9999px}
-.form-status{font-weight:500;min-height:1.6em}
+.gp{--gp-dark:#14233A;--gp-green:#1D7A4E;}
+.gp section{padding:72px 0}
+.gp h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:0 0 12px}
+.gp .lead{font-size:19px;color:var(--ink-2);max-width:62ch}
+.gp-hero{background:var(--gp-dark);color:#fff;padding:72px 0 80px!important}
+.gp-hero .kicker{display:inline-block;background:var(--mark);color:var(--ink);font-weight:700;font-size:14px;border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.gp-hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;max-width:18ch;text-wrap:balance;margin:0}
+.gp-hero .lead{color:#D3DBE8;margin-top:18px}
+.gp-hero .btn-primary{background:var(--mark);color:var(--ink)}
+.gp-hero .btn-primary:hover{background:#FFE580;color:var(--ink)}
+.gp-hero .btn-ghost{background:transparent;color:#fff;border-color:#3A4B66}
+.gp-hero .btn-ghost:hover{border-color:#fff;color:#fff}
+.gp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.gp-facts{list-style:none;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gp-facts li{background:#1D2F4A;border:1px solid #2E4262;border-radius:14px;padding:16px}
+.gp-facts strong{display:block;font-family:var(--display);font-size:28px;color:var(--mark)}
+.gp-facts span{color:#D3DBE8;font-size:15px}
+.gp-official{margin-top:22px;font-size:15px;color:#AEBBD0}
+.gp-official a{color:#fff}
+.gp-alt{background:var(--mist)}
+.gp-checker{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:28px}
+.gp-q{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff}
+.gp-q fieldset{border:0;padding:0;margin:0 0 18px}
+.gp-q legend{font-weight:700;font-size:17px;margin-bottom:10px}
+.gp-opt{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:8px;cursor:pointer;font-weight:500}
+.gp-opt:has(input:checked){border-color:var(--ink);background:var(--mist)}
+.gp-opt input{width:20px;height:20px;accent-color:var(--ink)}
+.gp-result{border-radius:16px;padding:24px;border:2px dashed var(--line);background:#fff;min-height:100%}
+.gp-result[data-state="applies"]{border:2px solid #C2361F;background:#FDF1EE}
+.gp-result[data-state="exempt"]{border:2px solid var(--gp-green);background:#EEF8F2}
+.gp-result[data-state="unsure"]{border:2px solid #B07A00;background:#FFF8E6}
+.gp-result h3{font-size:22px;margin-bottom:8px}
+.gp-result .btn{margin-top:8px}
+.gp-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.gp-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.gp-card h3{font-size:21px;margin-bottom:6px}
+.gp-card .fix{margin-top:12px;padding:12px 14px;border-left:4px solid var(--mark);background:#FFFBEA;font-size:15px}
+.gp-timeline{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px;counter-reset:gp}
+.gp-timeline li{display:grid;grid-template-columns:150px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.gp-timeline .when{font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink)}
+.gp-timeline h3{font-size:19px;margin-bottom:4px}
+.gp-timeline p{color:var(--ink-2);margin:0}
+.gp-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px;max-width:900px}
+.gp-plan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column;gap:12px}
+.gp-plan.featured{border:2px solid var(--ink)}
+.gp-plan .badge{align-self:flex-start;background:var(--mark);font-weight:700;font-size:13px;border-radius:999px;padding:3px 10px}
+.gp-plan h3{font-size:24px}
+.gp-plan .price{font-family:var(--display);font-weight:800;font-size:44px;line-height:1}
+.gp-plan .price small{font-family:var(--body);font-size:16px;font-weight:500;color:var(--muted)}
+.gp-plan ul{padding-left:20px;margin:6px 0 10px;color:var(--ink-2)}
+.gp-plan li{margin-bottom:6px}
+.gp-plan .btn{margin-top:auto}
+.plan-note{font-size:14px;color:var(--ink-2);background:var(--mist);border-radius:10px;padding:10px 12px;margin:0}
+.gp-intl{margin-top:12px;font-size:15px;color:var(--muted)}
+.gp-promise{margin-top:22px;max-width:900px;padding:18px 22px;border-radius:14px;background:#EEF8F2;border:1px solid #B9DEC8}
+.gp-rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.gp-rules div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.gp-rules h3{font-size:18px;margin-bottom:6px}
+.gp-rules p{color:var(--ink-2);font-size:15px;margin:0}
+.gp-need{columns:2;column-gap:40px;padding-left:20px;color:var(--ink-2)}
+.gp-need li{margin-bottom:8px;break-inside:avoid}
+.gp-faq{max-width:820px;margin-top:20px}
+.gp-faq details{border-bottom:1px solid var(--line)}
+.gp-faq summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font-weight:600;font-size:18px;position:relative}
+.gp-faq summary::-webkit-details-marker{display:none}
+.gp-faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:26px;color:var(--blue)}
+.gp-faq details[open] summary::after{content:"\2212"}
+.gp-faq p{color:var(--ink-2);padding-bottom:18px;margin:0}
+.gp-final{background:var(--gp-dark);color:#fff;text-align:center}
+.gp-final h2{color:#fff}
+.gp-final p{color:#D3DBE8;max-width:56ch;margin:0 auto}
+.gp-final .btn-primary{background:var(--mark);color:var(--ink);margin-top:24px}
+.gp-bar{position:sticky;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px -18px rgba(20,35,58,.5)}
+.gp-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:10px;padding-bottom:10px}
+.gp-bar p{margin:0;font-weight:600;font-size:15px}
+.gp-bar p span{color:var(--muted);font-weight:500}
+@media (max-width:900px){.gp-facts{grid-template-columns:1fr 1fr}.gp-checker,.gp-cards,.gp-plans,.gp-rules{grid-template-columns:1fr}.gp-need{columns:1}}
+@media (max-width:600px){.gp-timeline li{grid-template-columns:1fr;gap:6px}.gp section{padding:56px 0}.gp-bar p span{display:none}}
+</style><style>
+.gp-contact{background:var(--gp-dark);color:#fff}
+.gp-contact .lead{color:#D3DBE8}
+.gp-contact h2{color:#fff}
+.gp-contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.gp-next{padding-left:22px;color:#DCE3EE;font-size:17px;margin:20px 0}
+.gp-next li{margin-bottom:8px}
+.gp-mail a{color:#fff}
+.gp-form{background:#fff;color:var(--ink);border-radius:18px;padding:28px;display:grid;gap:14px}
+.gp-form .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.gp-form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px;min-width:0}
+.gp-form input,.gp-form select,.gp-form textarea{font:inherit;font-weight:400;border:1px solid #B9C3D1;border-radius:10px;padding:12px 14px;min-height:48px;background:#fff;color:var(--ink);width:100%;min-width:0;max-width:100%}
+.gp-form textarea{resize:vertical}
+.gp-form .hp{position:absolute;left:-9999px}
+.gp-form .optional{font-weight:400;color:var(--muted)}
+.gp-form .btn{width:100%}
+.form-status{font-weight:500;min-height:1.4em;margin:0}
 .form-status.ok{color:var(--ok)}
-.form-status.err{color:var(--flag)}
-.small{font-size:14px;color:var(--muted)}
-@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
-@media (max-width:520px){.form .row{grid-template-columns:1fr}.form{padding:22px}}
-
-/* trust list */
-.trust{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:8px;color:var(--ink-2);font-size:16px}
-.trust li{display:flex;align-items:center;gap:10px}
-.trust svg{color:var(--ok);flex:none}
-.menu-cta{display:none}
-@media (max-width:900px){.nav-open .menu-cta{display:block;margin-top:10px}.nav-open .menu-cta .btn{display:flex;color:#fff;width:100%}}
-
-/* sample report */
-.report-sec{background:var(--ink);color:#fff}
-.report-sec .section-head p{color:#C5CFDD}
-.report-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
-.report-grid .section-head{margin-bottom:0}
-.report-points{margin:24px 0 30px;padding-left:20px;color:#DCE3EE;font-size:17px}
-.report-points li{margin-bottom:8px}
-.report-sec .btn-primary{background:var(--mark);color:var(--ink)}
-.report-sec .btn-primary:hover{background:#FFE580;color:var(--ink)}
-.bug{background:#fff;color:var(--ink);border-radius:18px;padding:30px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.bug-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.bug-id{font-weight:600;color:var(--muted);font-size:15px}
-.sev{font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px}
-.sev-high{background:#FBE3DF;color:#9E2A17}
-.bug h3{font-size:22px;line-height:1.25;margin-bottom:16px}
-.bug h4{font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);margin:16px 0 6px}
-.bug ol{margin:0;padding-left:20px;font-size:16px}
-.bug-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:14px;background:var(--mist);border-radius:10px}
-.bug-meta dt{font-size:13px;color:var(--muted);font-weight:600}
-.bug-meta dd{margin:2px 0 0;font-size:15px}
-.bug-cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.bug-cmp p{font-size:15px}
-.bug-fix{margin-top:16px;padding:12px 14px;border-left:4px solid var(--mark);background:#FFFBEA;font-size:15px}
-.bug-ev{margin-top:12px;font-size:14px;color:var(--muted)}
-@media (max-width:980px){.report-grid{grid-template-columns:1fr}}
-@media (max-width:520px){.bug{padding:22px}.bug-meta,.bug-cmp{grid-template-columns:1fr}}
-
-/* why */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.why .section-head{margin-bottom:0}
-.ind-h{font-family:var(--body);font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0;margin:28px 0 12px}
-.promises{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.promise{border:1px solid var(--line);border-radius:14px;padding:24px}
-.promise h3{font-size:20px;margin-bottom:8px}
-.promise p{font-size:15px;color:var(--ink-2)}
-@media (max-width:900px){.why-grid{grid-template-columns:1fr}}
-@media (max-width:520px){.promises{grid-template-columns:1fr}}
-
-/* contact next steps */
-.next-h{font-family:var(--body);font-size:16px;font-weight:600;color:var(--mark);letter-spacing:0;margin:36px 0 12px}
-.next-steps{margin:0;padding-left:22px;color:#DCE3EE;font-size:17px}
-.next-steps li{margin-bottom:8px}
-
-.plan.featured{border:2px solid var(--ink)}
-.tc-note{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px}
-.tc-note p{color:var(--ink-2);font-size:16px}
-.tc-note p+p{margin-top:10px}
-
-/* sample work */
-.work{background:var(--mist)}
-.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.work-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px}
-.work-target{font-size:14px;font-weight:600;color:var(--muted)}
-.work-card h3{font-size:24px}
-.work-stack li{font-size:14px;padding:5px 12px}
-.work-stat{font-weight:600;color:var(--ink);border-left:4px solid var(--mark);padding-left:12px}
-.work-points{margin:0;padding-left:20px;color:var(--ink-2);font-size:15px}
-.work-points li{margin-bottom:6px}
-.work-link{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;color:var(--ink);min-height:44px}
-.work-link:hover{color:var(--blue)}
-.work-link span{text-decoration:underline;text-underline-offset:3px}
-@media (max-width:980px){.work-grid{grid-template-columns:1fr}}
-
-/* six-step process */
-.steps.steps-6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
-.opt{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);background:var(--mark);border-radius:999px;padding:2px 9px;vertical-align:middle;letter-spacing:0}
-@media (max-width:900px){.steps.steps-6{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps.steps-6{grid-template-columns:1fr}}
-
-/* test depth */
-.depth{padding-bottom:40px}
-.depth-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.depth-card{border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;background:#fff}
-.depth-card h3{font-size:22px}
-.depth-card p{font-size:15px;color:var(--ink-2)}
-.depth-card dl{margin:auto 0 0;padding-top:12px;border-top:1px dashed var(--line);display:grid;gap:8px}
-.depth-card dt{font-size:13px;font-weight:600;color:var(--muted)}
-.depth-card dd{margin:0;font-size:15px;font-weight:500}
-.depth-note{margin-top:18px;font-size:15px;color:var(--muted)}
-@media (max-width:980px){.depth-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.depth-grid{grid-template-columns:1fr}}
-
-/* release readiness */
-.ready-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
-.ready-grid .section-head{margin-bottom:0}
-.report-points.dark{color:var(--ink-2)}
-.ready-card{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;box-shadow:0 24px 48px -32px rgba(20,35,58,.45)}
-.ready-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.ready-kicker{font-size:13px;font-weight:600;color:var(--muted)}
-.ready-card h3{font-size:22px;margin-top:2px}
-.verdict{font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;flex:none}
-.verdict-hold{background:#FDECC8;color:#7A4B00}
-.ready-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 14px}
-.ready-stats div{background:var(--mist);border-radius:10px;padding:12px}
-.ready-stats dt{font-size:13px;color:var(--muted);font-weight:600}
-.ready-stats dd{margin:2px 0 0;font-family:var(--display);font-size:28px;font-weight:800}
-.ready-stats .ok{color:var(--ok)}.ready-stats .bad{color:#9E2A17}.ready-stats .warn{color:#7A4B00}
-.ready-bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--mist)}
-.ready-bar .seg.ok{background:var(--ok)}.ready-bar .seg.bad{background:#C2361F}.ready-bar .seg.warn{background:#E0A100}
-.ready-card h4{font-family:var(--body);font-size:14px;font-weight:600;color:var(--muted);margin:18px 0 8px}
-.bug-counts{list-style:none;display:flex;flex-wrap:wrap;gap:18px;padding:0;margin:0;font-weight:500}
-.bug-counts li{display:flex;align-items:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.dot.bad{background:#C2361F}.dot.warn{background:#E0A100}.dot.minor{background:#8A96A8}
-.ready-rec{margin-top:18px;padding:12px 14px;border-left:4px solid var(--mark);background:#FFFBEA;font-size:15px}
-@media (max-width:980px){.ready-grid{grid-template-columns:1fr}}
-@media (max-width:520px){.ready-stats{grid-template-columns:1fr 1fr}.ready-card{padding:22px}}
-
-/* selectable tools */
-.tools-hint{margin-top:10px;font-size:17px;font-weight:600;color:var(--ink)}
-.chips.selectable li{border:0;padding:0}
-.chip-btn{font:500 16px var(--body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;min-height:40px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.chip-btn:hover{border-color:var(--ink)}
-.chip-btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.chip-btn[aria-pressed="true"]::before{content:"";width:14px;height:14px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10.5l4 4 8-9' stroke='%23FFD84D' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
-.tool-bar{margin-top:32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--mist)}
-.tool-bar p{font-weight:500;color:var(--ink-2)}
-.tool-actions{display:flex;gap:10px;flex-wrap:wrap}
-.btn:disabled{opacity:.55;cursor:not-allowed}
-.form .optional{font-weight:400;color:var(--muted)}
-
-/* choose a service */
-.choose{padding-top:72px}
-.choose-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.choose-card{display:flex;flex-direction:column;gap:12px;padding:30px;border:2px solid var(--line);border-radius:18px;background:#fff;color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}
-.choose-card:hover,.choose-card:focus-visible{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
-.choose-icon{width:52px;height:52px;border-radius:12px;background:var(--ink);color:var(--mark);display:flex;align-items:center;justify-content:center}
-.choose-card h3{font-size:26px}
-.choose-card p{color:var(--ink-2)}
-.choose-card ul{margin:0;padding-left:20px;color:var(--ink-2);font-size:15px}
-.choose-card li{margin-bottom:4px}
-.choose-go{margin-top:auto;padding-top:8px;font-weight:600;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
-.panel-link{display:inline-block;margin-top:6px;font-weight:600}
-@media (max-width:1100px){.choose-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:640px){.choose-grid{grid-template-columns:1fr}}
-
-/* footer */
-.site-footer{background:#0E1A2C;color:#AEB9C9;padding:56px 0 32px;font-size:15px}
-.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.foot h2{font-size:22px;color:#fff;margin-bottom:8px}
-.foot nav{display:flex;gap:56px;flex-wrap:wrap}
-.foot nav h3{font-family:var(--body);font-size:15px;color:#fff;letter-spacing:0;margin-bottom:10px}
-.foot nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.foot a{color:#AEB9C9;text-decoration:none}
-.foot a:hover{color:#fff}
-.legal{border-top:1px solid #243349;margin-top:40px;padding-top:20px}
-
-</style>
-</head>
+.form-status.err{color:#9E2A17}
+.gp-form .small{font-size:14px;color:var(--muted);margin:0}
+@media (max-width:900px){.gp-contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.gp-form .row{grid-template-columns:minmax(0,1fr)}.gp-form{padding:22px}}
+@media (max-width:760px){.nav-right .home{display:none}}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><meta property="og:type" content="website"><meta property="og:title" content="TestersHub | Google Play closed testing: 12 testers for 14 days"><meta property="og:description" content="Real testers on real Android phones for Google Play's 12-tester, 14-day rule. 12 testers ₹800, 15 testers ₹1,200."><meta property="og:url" content="https://testershub.in/"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "TestersHub", "description": "Google Play closed testing for app launches: real testers on real Android phones for Google's 12-tester, 14-day requirement.", "url": "https://testershub.in/", "email": "gauravprasad@testershub.in", "areaServed": "Worldwide", "address": {"@type": "PostalAddress", "addressLocality": "Mumbai", "addressCountry": "IN"}, "makesOffer": [{"@type": "Offer", "name": "Google Play closed testing: 12 testers for 14 days", "price": "800", "priceCurrency": "INR"}, {"@type": "Offer", "name": "Google Play closed testing: 15 testers for 14 days", "price": "1200", "priceCurrency": "INR"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the 12-tester rule apply to my account?", "acceptedAnswer": {"@type": "Answer", "text": "It applies to personal Google Play developer accounts created after 13 November 2023. Organization accounts and older personal accounts are exempt. Use the checker above, or look at the Production access card on your Play Console dashboard."}}, {"@type": "Question", "name": "Should I choose 12 or 15 testers?", "acceptedAnswer": {"@type": "Answer", "text": "Google needs at least 12 testers opted in for 14 days in a row. With 12, one dropout can restart that count; we replace testers the same day and keep going at no extra cost, but it can add days. With 15, three spare testers keep you above 12 even if someone drops out, so we recommend 15 if your launch date matters."}}, {"@type": "Question", "name": "What happens if a tester drops out?", "acceptedAnswer": {"@type": "Answer", "text": "We check tester activity every day and bring in a replacement the same day. On the 15-tester plan your count stays above 12. On the 12-tester plan, if Google's count restarts because one of our testers left, we keep testing until you have 14 full days at no extra cost."}}, {"@type": "Question", "name": "Can you guarantee that Google approves my app?", "acceptedAnswer": {"@type": "Answer", "text": "No one honestly can: Google makes that decision and also reviews your app itself. What we promise is genuine testing. If Google asks for more testing because tester engagement was too low, we run another 14 days free."}}, {"@type": "Question", "name": "Are your testers real people on real phones?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every tester is a real person with their own Google account and their own Android phone. We never use emulators, bots or several accounts for one person."}}, {"@type": "Question", "name": "Is using a testing service allowed?", "acceptedAnswer": {"@type": "Answer", "text": "Google asks for real testers who genuinely use your app, and suggests recruiting through your networks and communities. We provide exactly that: real people who test your app properly for the full 14 days."}}, {"@type": "Question", "name": "Do you need my source code?", "acceptedAnswer": {"@type": "Answer", "text": "No. We only need your closed testing opt-in link, a test login if your app has one, and a short note on what to focus on."}}, {"@type": "Question", "name": "How do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "Online by UPI, card, net banking or PayPal once we confirm your start date. See payment options and our refund policy."}}]}</script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
 <header class="site-header">
-  <div class="wrap nav" id="nav">
-    <a class="logo" href="#top" aria-label="TestersHub home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14233A"/><path d="M9 16.5l4.5 4.5L23 11" stroke="#FFD84D" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      TestersHub
-    </a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="web-application-testing.html">Web testing</a></li>
-      <li><a href="api-testing.html">API testing</a></li>
-      <li><a href="mobile-app-testing.html">Mobile testing</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#work">Our work</a></li>
-      <li><a href="google-play-closed-testing.html">Play Store testing</a></li>
-      <li class="menu-cta"><a class="btn btn-primary" href="#contact-form">Start your free trial</a></li>
-    </ul>
-    <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
-    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="TestersHub home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14233A"/><path d="M9 16.5l4.5 4.5L23 11" stroke="#FFD84D" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>TestersHub</a>
+    <div class="nav-right">
+      <a class="home" href="#how-h">How it works</a><a class="home" href="#gp-pricing">Pricing</a><a class="home" href="#gpfaq-h">FAQ</a>
+      <a class="btn btn-primary" href="#contact-form">Start my closed test</a>
+    </div>
   </div>
 </header>
-
-<main id="main">
-
-<!-- HERO -->
-<div class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Find the bugs before your users do.</h1>
-      <p class="lead">Independent testing for web applications, mobile apps and APIs. We test like your customers, automate what you repeat every release, and report issues your developers can fix the same day.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
-        <a class="btn btn-ghost" href="#choose">Choose a service</a>
-      </div>
-      <ul class="trust">
-        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>NDA signed before we see your product</li>
-        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Fixed quote before any work starts</li>
-        <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Free retest of every fix</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- CHOOSE A SERVICE -->
-<section class="choose" id="choose" aria-labelledby="choose-h">
+<main id="main" class="gp">
+<section class="gp-hero">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="choose-h">What do you need tested?</h2>
-      <p>Pick a service to see exactly what we test, how we work, and what you get.</p>
+    <span class="kicker">Google Play closed testing</span>
+    <h1>Real testers for Google Play's 12-tester rule</h1>
+    <p class="lead">New personal developer accounts must run a closed test with at least 12 testers for 14 days before publishing. Choose 12 testers for ₹800 or 15 testers for ₹1,200. Real people on real Android phones use your app every day, and you get the feedback Google asks about.</p>
+    <div class="gp-actions">
+      <a class="btn btn-primary" href="#contact-form">Start my closed test</a>
+      <a class="btn btn-ghost" href="#checker">Does the rule apply to me?</a>
     </div>
-    <div class="choose-grid">
-      <a class="choose-card" href="web-application-testing.html">
-        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M7 21h10"/></svg></span>
-        <h3>Web application testing</h3>
-        <p>Browsers, screen sizes and full user journeys.</p>
-        <ul><li>Cross-browser and responsive</li><li>Regression and accessibility</li><li>Playwright or Selenium automation</li></ul>
-        <span class="choose-go">Explore web testing</span>
-      </a>
-      <a class="choose-card" href="api-testing.html">
-        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
-        <h3>API testing</h3>
-        <p>Correct data, safe access and speed on every endpoint.</p>
-        <ul><li>REST and GraphQL</li><li>Schema, security and load checks</li><li>Postman and REST Assured automation</li></ul>
-        <span class="choose-go">Explore API testing</span>
-      </a>
-      <a class="choose-card" href="mobile-app-testing.html">
-        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
-        <h3>Mobile app testing</h3>
-        <p>Real Android and iOS devices, real-world conditions.</p>
-        <ul><li>Budget phones and slow networks</li><li>OTP, payments and notifications</li><li>Appium automation</li></ul>
-        <span class="choose-go">Explore mobile testing</span>
-      </a>
-      <a class="choose-card" href="google-play-closed-testing.html">
-        <span class="choose-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5v17l14-8.5z"/><path d="M5 3.5l9.5 9.5M5 20.5l9.5-9.5"/></svg></span>
-        <h3>Google Play closed testing</h3>
-        <p>15 real testers for Google's 12-tester, 14-day rule.</p>
-        <ul><li>Real Android phones, daily use</li><li>Same-day tester replacement</li><li>Feedback report and draft answers</li></ul>
-        <span class="choose-go">Explore closed testing</span>
-      </a>
+    <ul class="gp-facts"><li><strong>12 or 15</strong><span>real testers, your choice</span></li><li><strong>14</strong><span>days of daily, genuine use</span></li><li><strong>100%</strong><span>real Android phones, no emulators</span></li><li><strong>1</strong><span>report with feedback and questionnaire answers</span></li></ul>
+    <p class="gp-official">Read Google's rule: <a href="https://support.google.com/googleplay/android-developer/answer/14151465" target="_blank" rel="noopener">App testing requirements for new personal developer accounts</a></p>
+  </div>
+</section>
+
+<section class="gp-alt" id="checker" aria-labelledby="checker-h">
+  <div class="wrap">
+    <h2 id="checker-h">Does the 12-tester rule apply to you?</h2>
+    <p class="lead">Answer two questions to find out.</p>
+    <div class="gp-checker">
+      <form class="gp-q" id="gp-form" onsubmit="return false">
+        <fieldset>
+          <legend>What type of Google Play developer account do you have?</legend>
+          <label class="gp-opt"><input type="radio" name="type" value="personal"> Personal account</label>
+          <label class="gp-opt"><input type="radio" name="type" value="organization"> Organization account</label>
+        </fieldset>
+        <fieldset id="gp-when" hidden>
+          <legend>When did you create it?</legend>
+          <label class="gp-opt"><input type="radio" name="when" value="after"> On or after 13 November 2023</label>
+          <label class="gp-opt"><input type="radio" name="when" value="before"> Before 13 November 2023</label>
+          <label class="gp-opt"><input type="radio" name="when" value="unsure"> I'm not sure</label>
+        </fieldset>
+      </form>
+      <div class="gp-result" id="gp-result" data-state="none" aria-live="polite">
+        <h3>Your answer appears here</h3>
+        <p>Choose your account type to see whether you need a closed test.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- OFFERS -->
-<section id="offers" aria-labelledby="offers-h">
+<section aria-labelledby="fail-h">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="offers-h">Three ways to start.</h2>
-      <p>Clear scope, a fixed price and a written report. Pick the one that matches where your product is today.</p>
-    </div>
-    <div class="offers">
-      <article class="offer lead-offer">
-        <span class="for-who">For startups and AI-built apps</span>
-        <h3>Pre-launch QA</h3>
-        <p>Built your app fast with AI tools or a small team? We test it end to end before real users and real money touch it.</p>
+    <h2 id="fail-h">Why closed tests fail, and how we prevent it</h2>
+    <p class="lead">Most rejections come from a handful of avoidable mistakes. Our process is built around each one.</p>
+    <div class="gp-cards"><article class="gp-card"><h3>Testers drop below 12</h3><p>If even one tester leaves before day 14, the clock restarts.</p><p class="fix"><strong>What we do:</strong> We start with 15 testers and replace anyone who goes quiet the same day.</p></article><article class="gp-card"><h3>Testers never properly opted in</h3><p>People install from the store link instead of the opt-in link, so Google doesn't count them.</p><p class="fix"><strong>What we do:</strong> We check the opt-in list with you on day 1, tester by tester.</p></article><article class="gp-card"><h3>Installed, but never really used</h3><p>Google looks for genuine use, not just installs.</p><p class="fix"><strong>What we do:</strong> Testers get short daily tasks, so your app is used across the whole 14 days.</p></article><article class="gp-card"><h3>Vague answers on the production access form</h3><p>"Testers liked the app" doesn't show a real testing process.</p><p class="fix"><strong>What we do:</strong> You get a feedback report and draft answers with devices, issues found and what changed.</p></article></div>
+  </div>
+</section>
+
+<section class="gp-alt" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">How it works, day by day</h2>
+    <p class="lead">You stay in control of your Play Console. We handle the testers and the testing.</p>
+    <ol class="gp-timeline"><li><span class="when">Day 0</span><div><h3>You share your opt-in link</h3><p>Add our testers' emails to your closed testing track, or send us the opt-in link. Tell us what to focus on.</p></div></li><li><span class="when">Days 1 to 2</span><div><h3>Your testers opt in</h3><p>Each tester opts in and installs on their own phone. We confirm with you that every one appears in Play Console.</p></div></li><li><span class="when">Days 2 to 16</span><div><h3>14 days of genuine testing</h3><p>Testers use your app every day with short tasks. Bugs are reported with the device, Android version, steps and screenshots. Dropouts are replaced the same day.</p></div></li><li><span class="when">Weekly</span><div><h3>Progress updates</h3><p>A short summary each week: who's active, what testers found, and what's worth fixing now so you can push an update during the test.</p></div></li><li><span class="when">Day 16</span><div><h3>Report and draft answers</h3><p>A final feedback report, plus draft answers for Google's production access questions based on what actually happened.</p></div></li><li><span class="when">After</span><div><h3>You apply to Google</h3><p>You submit your production access request. Google reviews it, usually within about a week.</p></div></li></ol>
+  </div>
+</section>
+
+<section id="gp-pricing" aria-labelledby="price-h">
+  <div class="wrap">
+    <h2 id="price-h">Pricing</h2>
+    <p class="lead">One price per app, for the full 14-day closed test.</p>
+    <div class="gp-plans">
+      <article class="gp-plan">
+        <h3>12 testers</h3>
+        <p>Exactly what Google requires.</p>
+        <div class="price">₹800 <small>per app</small></div>
         <ul>
-          <li>Web, mobile and API functional testing</li>
-          <li>Security basics: login, permissions, exposed keys and data</li>
-          <li>Real-device checks on budget and flagship phones</li>
-          <li>Prioritised bug report and one free retest</li>
+          <li>12 real testers on real Android phones</li>
+          <li>14 days of daily, genuine use</li>
+          <li>Opt-in check with you on day 1</li>
+          <li>Same-day replacement if a tester drops out</li>
+          <li>Feedback report and draft answers for Google's production access questions</li>
         </ul>
-        <a class="btn" href="#contact-form">Plan my launch test</a>
+        <p class="plan-note">With exactly 12 testers, one dropout can restart Google's 14-day count. If that happens because one of our testers left, we keep testing until you have 14 full days, at no extra cost.</p>
+        <a class="btn btn-ghost" href="index.html?plan=12#contact-form">Choose 12 testers</a>
       </article>
-      <article class="offer">
-        <span class="for-who">For EU, UK and US-facing products</span>
-        <h3>Accessibility audit</h3>
-        <p>Manual testing against WCAG 2.2 with screen readers and keyboard-only use, the issues automated scanners miss.</p>
+      <article class="gp-plan featured">
+        <span class="badge">Recommended</span>
+        <h3>15 testers</h3>
+        <p>12 testers plus 3 spare, so one dropout doesn't cost you time.</p>
+        <div class="price">₹1,200 <small>per app</small></div>
         <ul>
-          <li>Key pages and user journeys</li>
-          <li>Fix guidance for your developers</li>
-          <li>Evidence for compliance and procurement</li>
+          <li>15 real testers on real Android phones</li>
+          <li>3 spare testers keep you above 12 at all times</li>
+          <li>14 days of daily, genuine use</li>
+          <li>Opt-in check with you on day 1</li>
+          <li>Same-day replacement if a tester drops out</li>
+          <li>Feedback report and draft answers for Google's production access questions</li>
         </ul>
-        <a class="btn btn-ghost" href="#contact-form">Request an audit</a>
-      </article>
-      <article class="offer">
-        <span class="for-who">For teams releasing often</span>
-        <h3>Automation setup</h3>
-        <p>A maintainable test suite in your repository that runs on every build. You own every line.</p>
-        <ul>
-          <li>Playwright for web, Appium for mobile</li>
-          <li>Postman or REST Assured for APIs</li>
-          <li>Wired into your CI/CD pipeline</li>
-        </ul>
-        <a class="btn btn-ghost" href="#contact-form">Start automating</a>
+        <a class="btn btn-primary" href="index.html?plan=15#contact-form">Choose 15 testers</a>
       </article>
     </div>
+    <p class="gp-promise"><strong>Our promise:</strong> if Google asks for more testing because tester engagement was too low, we run another 14-day closed test for free.</p>
+    <p class="gp-intl">Paying from outside India? We'll invoice the equivalent amount in US dollars, payable by PayPal or card.</p>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services" aria-labelledby="services-h">
+<section class="gp-alt" aria-labelledby="rules-h">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="services-h">What we test</h2>
-      <p>One QA partner for every surface your product runs on. Bugs land straight in Jira, Linear, GitHub Issues or whatever tracker you use.</p>
-    </div>
-
-    <div class="tabs" role="tablist" aria-label="Testing services">
-      <button class="tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="true">Web apps</button>
-      <button class="tab" role="tab" id="tab-mobile" aria-controls="panel-mobile" aria-selected="false" tabindex="-1">Mobile apps</button>
-      <button class="tab" role="tab" id="tab-api" aria-controls="panel-api" aria-selected="false" tabindex="-1">APIs</button>
-    </div>
-
-    <div class="panel" role="tabpanel" id="panel-web" aria-labelledby="tab-web">
-      <div>
-        <h3>Web application testing</h3>
-        <p>We test your web app the way real users use it: across browsers, screen sizes and complete journeys. Then we automate the flows you check every release, so regressions are caught in minutes.</p>
-        <dl class="meta">
-          <dt>Tools</dt><dd>Playwright, Selenium, Cypress, BrowserStack</dd>
-          <dt>You receive</dt><dd>Test plan, bug reports in your tracker, and an automated suite in your repository</dd>
-        </dl>
-        <a class="panel-link" href="web-application-testing.html">See our web testing framework</a>
-      </div>
-      <ul class="checks">
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Functional and end-to-end user journeys</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Cross-browser and responsive layouts</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Regression automation with Playwright, including Selenium migrations</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Accessibility testing against WCAG 2.2</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Page speed and load checks on key pages</li>
-      </ul>
-    </div>
-
-    <div class="panel" role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" hidden>
-      <div>
-        <h3>Mobile app testing</h3>
-        <p>Native, hybrid, React Native or Flutter. We test on real Android and iOS devices, including the budget phones and patchy networks many of your users actually have.</p>
-        <dl class="meta">
-          <dt>Tools</dt><dd>Appium, Espresso, XCUITest, real-device cloud</dd>
-          <dt>You receive</dt><dd>Device coverage matrix, screen recordings for every bug, and an automated regression pack</dd>
-        </dl>
-        <a class="panel-link" href="mobile-app-testing.html">See our mobile testing framework</a>
-      </div>
-      <ul class="checks">
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Real devices across Android and iOS versions</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Slow network, offline, calls and app-switch interruptions</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Payments, OTP login and fintech user flows</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Permissions, push notifications and app updates</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Battery, memory and performance on low-end phones</li>
-      </ul>
-    </div>
-
-    <div class="panel" role="tabpanel" id="panel-api" aria-labelledby="tab-api" hidden>
-      <div>
-        <h3>API testing</h3>
-        <p>Your APIs are the contract every app depends on. We check each endpoint for correct data, safe access and behaviour under load, before a broken response reaches production.</p>
-        <dl class="meta">
-          <dt>Tools</dt><dd>Postman, REST Assured, Playwright API testing, k6, JMeter</dd>
-          <dt>You receive</dt><dd>API test collection, a CI-ready test suite, and a security and load summary</dd>
-        </dl>
-        <a class="panel-link" href="api-testing.html">See our API testing framework</a>
-      </div>
-      <ul class="checks">
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Schema and response validation for REST and GraphQL</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Security checks based on the OWASP API Security Top 10</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Authentication, permissions and rate limits</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Invalid, missing and edge-case data</li>
-        <li><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Load testing on your busiest endpoints</li>
-      </ul>
+    <h2 id="rules-h">Testing Google can trust</h2>
+    <p class="lead">Fake installs put your developer account at risk. We only do it the honest way.</p>
+    <div class="gp-rules">
+      <div><h3>Real people</h3><p>Every tester is a real person using their own Google account. Never one person with several accounts.</p></div>
+      <div><h3>Real phones</h3><p>A mix of real Android phones and Android versions. Never emulators or device farms.</p></div>
+      <div><h3>Real use</h3><p>Testers explore your app with daily tasks and report what they find. Not install-and-forget.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SAMPLE REPORT -->
-<section class="report-sec" id="report" aria-labelledby="report-h">
-  <div class="wrap report-grid">
-    <div class="section-head">
-      <h2 id="report-h">See exactly what you'll get</h2>
-      <p>Every issue we find is logged like this: clear steps, evidence, how serious it is, and where to look in the code. Your developers can fix it without a single follow-up question.</p>
-      <ul class="report-points">
-        <li>Severity and priority, so you fix what matters first</li>
-        <li>Steps anyone on your team can repeat</li>
-        <li>Screenshots, screen recordings and API logs</li>
-        <li>Logged straight into Jira, Linear or GitHub Issues</li>
-      </ul>
-      <a class="btn btn-primary" href="#contact-form">Try it free</a>
-    </div>
-    <article class="bug" aria-label="Example bug report">
-      <header class="bug-head">
-        <span class="bug-id">TH-042</span>
-        <span class="sev sev-high">High severity</span>
-      </header>
-      <h3>Promo code applied twice when "Pay now" is double-tapped</h3>
-      <dl class="bug-meta">
-        <div><dt>Platform</dt><dd>Android 14, Redmi Note 12, app v2.3.1</dd></div>
-        <div><dt>Area</dt><dd>Checkout, payments API</dd></div>
-      </dl>
-      <h4>Steps to reproduce</h4>
-      <ol>
-        <li>Add any item over ₹999 to the cart.</li>
-        <li>Apply promo code SAVE20.</li>
-        <li>Double-tap "Pay now" quickly on a slow 3G connection.</li>
-      </ol>
-      <div class="bug-cmp">
-        <div><h4>Expected</h4><p>One discount, one order.</p></div>
-        <div><h4>Actual</h4><p>40% discount applied; two POST /orders requests sent.</p></div>
-      </div>
-      <p class="bug-fix"><b>Suggested fix:</b> disable the button after the first tap and make the order endpoint idempotent.</p>
-      <p class="bug-ev">Evidence: screen recording, network log</p>
-    </article>
-  </div>
-</section>
-
-<!-- RELEASE READINESS -->
-<section class="ready" id="readiness" aria-labelledby="ready-h">
-  <div class="wrap ready-grid">
-    <div class="section-head">
-      <h2 id="ready-h">Know when it's safe to ship</h2>
-      <p>Every test cycle ends with a release readiness report. Not just pass or fail, but a clear recommendation you can take into your release meeting.</p>
-      <ul class="report-points dark">
-        <li>Results for every test case you approved</li>
-        <li>Open bugs grouped by severity</li>
-        <li>What wasn't tested, and why</li>
-        <li>A go or no-go recommendation, with the reasons</li>
-      </ul>
-    </div>
-    <article class="ready-card" aria-label="Example release readiness report">
-      <header class="ready-head">
-        <div><p class="ready-kicker">Sample report</p><h3>Release readiness: Checkout v2.4</h3></div>
-        <span class="verdict verdict-hold">Hold</span>
-      </header>
-      <dl class="ready-stats">
-        <div><dt>Test cases</dt><dd>40</dd></div>
-        <div><dt>Passed</dt><dd class="ok">34</dd></div>
-        <div><dt>Failed</dt><dd class="bad">4</dd></div>
-        <div><dt>Blocked</dt><dd class="warn">2</dd></div>
-      </dl>
-      <div class="ready-bar" role="img" aria-label="34 passed, 4 failed, 2 blocked out of 40">
-        <span class="seg ok" style="width:85%"></span><span class="seg bad" style="width:10%"></span><span class="seg warn" style="width:5%"></span>
-      </div>
-      <h4>Open bugs</h4>
-      <ul class="bug-counts">
-        <li><span class="dot bad"></span>1 critical</li>
-        <li><span class="dot warn"></span>2 major</li>
-        <li><span class="dot minor"></span>1 minor</li>
-      </ul>
-      <p class="ready-rec"><strong>Recommendation:</strong> fix TH-042 (promo code applied twice) before release. The 2 blocked tests need the test login restored; everything else is ready to ship.</p>
-    </article>
-  </div>
-</section>
-
-<!-- TESTING TYPES -->
-<section aria-labelledby="types-h">
+<section aria-labelledby="need-h">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="types-h">Testing we cover</h2>
-    </div>
-    <div class="types">
-      <div class="type"><h3>Functional</h3><p>Every feature does what it's meant to.</p></div>
-      <div class="type"><h3>Regression</h3><p>New releases don't break what already worked.</p></div>
-      <div class="type"><h3>Automation</h3><p>Repeatable tests that run on every build.</p></div>
-      <div class="type"><h3>Performance</h3><p>Speed and stability under real traffic.</p></div>
-      <div class="type"><h3>Security basics</h3><p>Login, permissions and exposed data.</p></div>
-      <div class="type"><h3>Cross-browser</h3><p>Chrome, Safari, Firefox and Edge behave alike.</p></div>
-      <div class="type"><h3>Usability</h3><p>The confusing moments real users hit.</p></div>
-      <div class="type"><h3>Accessibility</h3><p>Screen readers, keyboard use and contrast.</p></div>
-    </div>
+    <h2 id="need-h">What we need from you</h2>
+    <ul class="gp-need">
+      <li>Your app uploaded to a closed testing track in Play Console</li>
+      <li>The opt-in link, or permission to add testers by email</li>
+      <li>A test login, if your app needs one</li>
+      <li>A few lines on the main features to try</li>
+      <li>Updates pushed to the track when you fix things</li>
+      <li>Your chosen start date</li>
+    </ul>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process" id="process" aria-labelledby="process-h">
+<section class="gp-alt" aria-labelledby="gpfaq-h">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="process-h">From requirement to release, in six steps</h2>
-      <p>You approve what we test and what it costs. We tell you when it's safe to ship.</p>
-    </div>
-    <ol class="steps steps-6">
-      <li><h3>Share</h3><p>Send whatever you have: a Jira ticket, a Figma design, a screen recording or a plain description. No formal spec needed.</p></li>
-      <li><h3>Plan</h3><p>We write the test cases and pick the depth: smoke, feature, regression or full regression. You approve the list and the price.</p></li>
-      <li><h3>Test</h3><p>We run every test case on real browsers and devices. Bugs go into your tracker as we find them, with steps and evidence.</p></li>
-      <li><h3>Report</h3><p>You get a release readiness report: what passed, what failed, what's still open, and our go or no-go recommendation.</p></li>
-      <li><h3>Retest</h3><p>Your team fixes the bugs, we retest every fix free, and we update the report until you're ready to ship.</p></li>
-      <li><h3>Automate <span class="opt">optional</span></h3><p>Turn your approved test cases into Playwright, Selenium or Appium scripts that run on every commit in your CI/CD pipeline.</p></li>
-    </ol>
+    <h2 id="gpfaq-h">Questions developers ask</h2>
+    <div class="gp-faq"><details><summary>Does the 12-tester rule apply to my account?</summary><p>It applies to personal Google Play developer accounts created after 13 November 2023. Organization accounts and older personal accounts are exempt. Use the checker above, or look at the Production access card on your Play Console dashboard.</p></details><details><summary>Should I choose 12 or 15 testers?</summary><p>Google needs at least 12 testers opted in for 14 days in a row. With 12, one dropout can restart that count; we replace testers the same day and keep going at no extra cost, but it can add days. With 15, three spare testers keep you above 12 even if someone drops out, so we recommend 15 if your launch date matters.</p></details><details><summary>What happens if a tester drops out?</summary><p>We check tester activity every day and bring in a replacement the same day. On the 15-tester plan your count stays above 12. On the 12-tester plan, if Google's count restarts because one of our testers left, we keep testing until you have 14 full days at no extra cost.</p></details><details><summary>Can you guarantee that Google approves my app?</summary><p>No one honestly can: Google makes that decision and also reviews your app itself. What we promise is genuine testing. If Google asks for more testing because tester engagement was too low, we run another 14 days free.</p></details><details><summary>Are your testers real people on real phones?</summary><p>Yes. Every tester is a real person with their own Google account and their own Android phone. We never use emulators, bots or several accounts for one person.</p></details><details><summary>Is using a testing service allowed?</summary><p>Google asks for real testers who genuinely use your app, and suggests recruiting through your networks and communities. We provide exactly that: real people who test your app properly for the full 14 days.</p></details><details><summary>Do you need my source code?</summary><p>No. We only need your closed testing opt-in link, a test login if your app has one, and a short note on what to focus on.</p></details><details><summary>How do I pay?</summary><p>Online by UPI, card, net banking or PayPal once we confirm your start date. See <a href="pay.html">payment options</a> and our <a href="refund-policy.html">refund policy</a>.</p></details></div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools" aria-labelledby="tools-h">
+<section class="gp-final" aria-labelledby="final-h">
   <div class="wrap">
-    <div class="section-head">
-      <h2 id="tools-h">Works with the tools you already use</h2>
-      <p>Automated tests live in your repository and run in your pipeline. Bugs and reports land where your team already looks.</p>
-      <p class="tools-hint">Select the tools your team uses, and we'll plan your testing around them.</p>
-    </div>
-    <div class="tools-grid">
-      <div><h3>Test automation</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Playwright">Playwright</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Selenium">Selenium</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Cypress">Cypress</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Appium">Appium</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Espresso">Espresso</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="XCUITest">XCUITest</button></li></ul></div>
-      <div><h3>API and performance</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Postman">Postman</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="REST Assured">REST Assured</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="k6">k6</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="JMeter">JMeter</button></li></ul></div>
-      <div><h3>CI/CD pipelines</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitHub Actions">GitHub Actions</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitLab CI">GitLab CI</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Jenkins">Jenkins</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Azure DevOps">Azure DevOps</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="CircleCI">CircleCI</button></li></ul></div>
-      <div><h3>Bug tracking and projects</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Jira">Jira</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Linear">Linear</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="GitHub Issues">GitHub Issues</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Azure Boards">Azure Boards</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Trello">Trello</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="ClickUp">ClickUp</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="monday.com">monday.com</button></li></ul></div>
-      <div><h3>Team chat and reports</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Slack">Slack</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Microsoft Teams">Microsoft Teams</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Google Chat">Google Chat</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Email">Email</button></li></ul></div>
-      <div><h3>Browsers and devices</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Chrome">Chrome</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Safari">Safari</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Firefox">Firefox</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Edge">Edge</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Real Android and iOS devices">Real Android and iOS devices</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="BrowserStack">BrowserStack</button></li></ul></div>
-      <div><h3>Apps built with AI coding tools</h3><ul class="chips selectable"><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Claude Code">Claude Code</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Cursor">Cursor</button></li><li><button type="button" class="chip-btn" aria-pressed="false" data-tool="Codex">Codex</button></li></ul></div>
-    </div>
-    <div class="tool-bar" id="tool-bar">
-      <p id="tool-summary" aria-live="polite">No tools selected yet.</p>
-      <div class="tool-actions">
-        <button type="button" class="btn btn-ghost" id="tool-clear" disabled>Clear</button>
-        <button type="button" class="btn btn-primary" id="tool-request" disabled>Request testing with these tools</button>
-      </div>
-    </div>
+    <h2 id="final-h">Ready to start your closed test?</h2>
+    <p>Tell us about your app and your preferred start date. We'll confirm within one working day.</p>
+    <a class="btn btn-primary" href="#contact-form">Start my closed test</a>
   </div>
 </section>
-
-<!-- TEST DEPTH -->
-<section class="depth" id="depth" aria-labelledby="depth-h">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 id="depth-h">Pick how deep to test</h2>
-      <p>Every order starts with one of four test plans, priced in packs of 20 test cases for $10.</p>
-    </div>
-    <div class="depth-grid">
-      <article class="depth-card">
-        <h3>Smoke</h3>
-        <p>Critical paths only: sign-up, login, checkout and payment. The fastest check that nothing major is broken.</p>
-        <dl>
-          <div><dt>Typical size</dt><dd>10 to 20 test cases</dd></div>
-          <div><dt>Price</dt><dd>1 pack · $10</dd></div>
-          <div><dt>Best for</dt><dd>Every release and hotfix</dd></div>
-        </dl>
-      </article>
-      <article class="depth-card">
-        <h3>Feature</h3>
-        <p>One new feature tested end to end, including edge cases and error messages.</p>
-        <dl>
-          <div><dt>Typical size</dt><dd>20 to 40 test cases</dd></div>
-          <div><dt>Price</dt><dd>1 to 2 packs · $10 to $20</dd></div>
-          <div><dt>Best for</dt><dd>A new feature before launch</dd></div>
-        </dl>
-      </article>
-      <article class="depth-card">
-        <h3>Regression</h3>
-        <p>All your key user flows retested, so a new release doesn't break what already worked.</p>
-        <dl>
-          <div><dt>Typical size</dt><dd>40 to 100 test cases</dd></div>
-          <div><dt>Price</dt><dd>2 to 5 packs · $20 to $50</dd></div>
-          <div><dt>Best for</dt><dd>Major releases</dd></div>
-        </dl>
-      </article>
-      <article class="depth-card">
-        <h3>Full regression</h3>
-        <p>Every flow, edge case and error path, across your agreed browsers and devices.</p>
-        <dl>
-          <div><dt>Typical size</dt><dd>100+ test cases</dd></div>
-          <div><dt>Price</dt><dd>5+ packs · from $50</dd></div>
-          <div><dt>Best for</dt><dd>Big launches and redesigns</dd></div>
-        </dl>
-      </article>
-    </div>
-    <p class="depth-note">Sizes are typical. We confirm the exact list of test cases and the number of packs with you before we start.</p>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing" aria-labelledby="pricing-h">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 id="pricing-h">Simple, transparent pricing</h2>
-      <p>One simple price: $10 for 20 test cases. Try us free first: one free trial per company.</p>
-    </div>
-    <div class="plans">
-      <article class="plan featured">
-        <h3>Free trial</h3>
-        <p>See the quality of our work before you pay anything.</p>
-        <div class="price">$0 <small>one time</small></div>
-        <ul><li>One key user flow, such as sign-up or checkout</li><li>Web, mobile or API</li><li>Full bug report with evidence</li><li>One free trial per company</li></ul>
-        <a class="btn btn-primary" href="#contact-form">Start your free trial</a>
-      </article>
-      <article class="plan">
-        <h3>Test pack</h3>
-        <p>Web, mobile, API and accessibility testing. Add as many packs as you need.</p>
-        <div class="price">$10 <small>for 20 test cases</small></div>
-        <ul><li>20 test cases written and run</li><li>Bugs logged with steps and evidence</li><li>Free retests of every fix</li><li>Clients in India billed in INR</li></ul>
-        <a class="btn btn-ghost" href="#contact-form">Order a test pack</a>
-      </article>
-      <article class="plan">
-        <h3>Custom projects</h3>
-        <p>Automation setup, dedicated QA and ongoing work.</p>
-        <div class="price custom">Custom quote</div>
-        <ul><li>Playwright or Appium suite in your repo</li><li>A tester in your sprints</li><li>CI/CD integration</li><li>Fixed quote before we start</li></ul>
-        <a class="btn btn-ghost" href="#contact-form">Get a quote</a>
-      </article>
-    </div>
-    <div class="tc-note">
-      <p><strong>How test packs work:</strong> one test case is one scenario checked from start to finish, for example "a user can apply a promo code at checkout". Need more than 20? Add packs: 45 test cases need 3 packs, which is $30. You approve the list and the total before we start. <a href="pricing.html#packs">See how test packs work</a>.</p>
-      <p>Pay online by UPI, card, net banking or PayPal. <a href="pay.html">See payment options</a> or read the <a href="pricing.html">full pricing details</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SAMPLE WORK -->
-<section class="work" id="work" aria-labelledby="work-h">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 id="work-h">Our work, in the open</h2>
-      <p>Before you trust us with your product, see how we build test automation. These projects are public on GitHub, and each one runs automatically on every change.</p>
-    </div>
-    <div class="work-grid">
-      <article class="work-card">
-        <p class="work-target">Sauce Demo e-commerce app</p>
-        <h3>Playwright UI framework</h3>
-        <ul class="chips work-stack" aria-label="Tools used"><li>Playwright</li><li>TypeScript</li><li>GitHub Actions</li></ul>
-        <p class="work-stat">33 tests on Chromium, run on every push and every night</p>
-        <ul class="work-points"><li>Page objects injected through typed fixtures</li><li>Logs in once and reuses the session in every test</li><li>Smoke and regression tags for fast or full runs</li></ul>
-        <a class="work-link" href="https://github.com/gauravrsprasad-wq/playwright-saucedemo-framework" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>View code on GitHub</span></a>
-      </article>
-      <article class="work-card">
-        <p class="work-target">testershub.in</p>
-        <h3>This website's quality pipeline</h3>
-        <ul class="chips work-stack" aria-label="Tools used"><li>Playwright</li><li>axe</li><li>Lighthouse</li><li>Postman</li></ul>
-        <p class="work-stat">Every change is tested before it goes live</p>
-        <ul class="work-points"><li>Browser tests on desktop, Android and iPhone</li><li>Accessibility, speed and SEO checked on every release</li><li>Live site checked every morning</li></ul>
-        <a class="work-link" href="https://github.com/gauravrsprasad-wq/testershub-website" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>View code on GitHub</span></a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section class="why" aria-labelledby="why-h">
-  <div class="wrap why-grid">
-    <div class="section-head">
-      <h2 id="why-h">Why teams choose TestersHub</h2>
-      <p>You work directly with the engineer testing your product. No account managers, no hand-offs, no surprises on the invoice.</p>
-      <h3 class="ind-h">Products we test</h3>
-      <ul class="chips">
-        <li>SaaS platforms</li><li>Fintech and payments</li><li>E-commerce</li><li>EdTech</li><li>HealthTech</li><li>Apps built with AI coding tools</li>
-      </ul>
-    </div>
-    <div class="promises">
-      <div class="promise"><h3>One clear price</h3><p>$10 for 20 test cases. You approve the list and the total before we start.</p></div>
-      <div class="promise"><h3>Your code stays yours</h3><p>Every automated test we write lives in your repository. No lock-in, ever.</p></div>
-      <div class="promise"><h3>Confidential by default</h3><p>We sign your NDA before we see your product, and only use the test accounts you give us.</p></div>
-      <div class="promise"><h3>Fixes verified</h3><p>We retest every fix for free, so you ship knowing it's actually resolved.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" aria-labelledby="faq-h" style="padding-top:0">
-  <div class="wrap faq-grid">
-    <div class="section-head"><h2 id="faq-h">Common questions</h2></div>
+<section class="gp-contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap gp-contact-grid">
     <div>
-      <details open><summary>What's included in the free trial?</summary><p>We agree on one important flow in your product, such as sign-up or checkout, write and run the test cases for it, and send you a full report of what we find, with steps to reproduce. It's free, with no obligation, and available once per company.</p></details>
-      <details><summary>Do you do manual or automated testing?</summary><p>Both. Manual and exploratory testing finds the issues scripts miss; automation keeps your regression checks fast. Most projects use a mix.</p></details>
-      <details><summary>Our app was built with AI coding tools. Can you test it?</summary><p>Yes, and it's worth doing. AI-generated code often works on the happy path but fails on edge cases, permissions and security. Our pre-launch QA package is designed for exactly this.</p></details>
-      <details><summary>Do you test on real phones?</summary><p>Yes. We test on real Android and iOS devices and use a device cloud when you need wider model and OS coverage.</p></details>
-      <details><summary>Will you work with our tools and pipeline?</summary><p>Yes. We log bugs in your tracker and run automated suites in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or whatever you already use.</p></details>
-      <details><summary>Can you sign an NDA?</summary><p>Yes. We're happy to sign your NDA before we see your product or test environment.</p></details>
-      <details><summary>What do you need from us to get started?</summary><p>A link to your app or a test build, test accounts, and a description of what to test. That can be a Jira ticket, a Figma design, a screen recording or a few sentences. No formal specification needed.</p></details>
-      <details><summary>How do we know when we're ready to release?</summary><p>Every test cycle ends with a release readiness report: results for every test case, open bugs by severity, anything we couldn't test, and a clear go or no-go recommendation with the reasons.</p></details>
-      <details><summary>How can I pay?</summary><p>Online by UPI, debit or credit card, net banking or wallet through Razorpay, or by PayPal for international clients. Each invoice includes a secure payment link. See our <a href="pay.html">payment page</a> for terms.</p></details>
-      <details><summary>How much does testing cost?</summary><p>$10 for 20 test cases. One test case is one scenario checked from start to finish, such as "a user can apply a promo code at checkout". Need more than 20? Each extra pack of 20 is another $10, so 45 test cases cost $30. We send you the list and the total before we start. Automation setup and dedicated QA get a custom quote. See <a href="pricing.html#packs">how test packs work</a>.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact" aria-labelledby="contact-h">
-  <div class="wrap contact-grid">
-    <div>
-      <h2 id="contact-h">Start your free trial</h2>
-      <p class="intro">Tell us what you're building. We'll reply within one working day to agree on the flow we'll test. One free trial per company.</p>
-      <ul class="contact-list">
-        <li><a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></li>
-        <li style="color:#C5CFDD">Mumbai, India · Working with clients worldwide</li>
-      </ul>
-      <h3 class="next-h">What happens next</h3>
-      <ol class="next-steps">
+      <h2 id="contact-h">Start your closed test</h2>
+      <p class="lead">Tell us about your app. We'll confirm your start date within one working day, then send a secure payment link.</p>
+      <ol class="gp-next">
         <li>We reply within one working day.</li>
-        <li>A short call to pick the flow we'll test.</li>
-        <li>You get your free trial report, with no obligation.</li>
+        <li>You add our testers, or share your opt-in link.</li>
+        <li>Your 14 days begin.</li>
       </ol>
+      <p class="gp-mail">Email: <a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
     </div>
-
-    <form class="form" id="contact-form" novalidate>
+    <form class="gp-form" id="contact-form" novalidate>
       <input type="hidden" name="access_key" value="8da16305-ba6c-4f7c-911b-04127a0006d0">
-      <input type="hidden" name="subject" value="New enquiry from testershub.in">
+      <input type="hidden" name="subject" value="New closed testing request from testershub.in">
       <input type="hidden" name="from_name" value="TestersHub website">
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
       <div class="row">
         <label>Name<input type="text" name="name" autocomplete="name" required></label>
-        <label>Work email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
       </div>
-      <label>What would you like?
+      <label>Plan
         <select name="request_type">
-          <option>Free trial (one per company)</option>
-          <option>Test pack ($10 for 20 test cases)</option>
-          <option>Custom project or quote</option>
-          <option>Google Play closed testing</option>
+          <option>15 testers for 14 days: ₹1,200</option>
+          <option>12 testers for 14 days: ₹800</option>
         </select>
       </label>
       <div class="row">
-        <label>Company<input type="text" name="company" autocomplete="organization"></label>
-        <label>What needs testing?
-          <select name="service">
-            <option>Web application</option>
-            <option>Mobile app (Android / iOS)</option>
-            <option>API</option>
-            <option>Pre-launch QA (all of the above)</option>
-            <option>Accessibility audit</option>
-            <option>Automation setup</option>
-            <option>Google Play closed testing (12+ testers)</option>
-          </select>
-        </label>
+        <label>App name<input type="text" name="app_name" required></label>
+        <label><span>Preferred start date <span class="optional">(optional)</span></span><input type="date" name="start_date"></label>
       </div>
-      <label><span>Tools you use <span class="optional">(optional)</span></span><input type="text" name="tools" id="tools-field" placeholder="e.g. Playwright, Postman, Jira"></label>
-      <label>About your product<textarea name="message" placeholder="Link to your app, tech stack, launch date…" required></textarea></label>
+      <label><span>Play Store or app link <span class="optional">(optional)</span></span><input type="url" name="app_link" placeholder="https://play.google.com/..."></label>
+      <label><span>Anything we should know? <span class="optional">(optional)</span></span><textarea name="message" rows="4" placeholder="Main features to test, test login, deadlines..."></textarea></label>
       <button class="btn btn-primary" type="submit" id="submit-btn">Send request</button>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      <p class="small">We only use your details to reply to this request.</p>
+      <p class="small">We only use your details to reply to this request. See our <a href="privacy.html">privacy policy</a>.</p>
     </form>
   </div>
 </section>
-
 </main>
-
+<div class="gp-bar" role="region" aria-label="Get started">
+  <div class="wrap">
+    <p>12 or 15 real testers · 14 days <span>· from ₹800 per app</span></p>
+    <a class="btn btn-primary" href="#contact-form">Start my closed test</a>
+  </div>
+</div>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot">
-      <div style="max-width:340px">
-        <h2>TestersHub</h2>
-        <p>Web, mobile and API testing for teams that want to ship with confidence.</p>
-        <p style="margin-top:12px"><a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
-      </div>
-      <nav aria-label="Footer">
-        <div><h3>Services</h3><ul><li><a href="web-application-testing.html">Web application testing</a></li><li><a href="api-testing.html">API testing</a></li><li><a href="mobile-app-testing.html">Mobile app testing</a></li><li><a href="google-play-closed-testing.html">Google Play closed testing</a></li><li><a href="#offers">Accessibility audit</a></li><li><a href="#report">Sample report</a></li></ul></div>
-        <div><h3>Company</h3><ul><li><a href="about.html">About us</a></li><li><a href="#process">How we work</a></li><li><a href="#work">Our work</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
-        <div><h3>Payments &amp; policies</h3><ul><li><a href="pay.html">Pay an invoice</a></li><li><a href="terms.html">Terms and conditions</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="refund-policy.html">Cancellation and refunds</a></li></ul></div>
-      </nav>
-    </div>
-    <p class="legal">© <span id="year">2026</span> TestersHub. All rights reserved.</p>
+    <nav aria-label="Footer"><ul class="foot-links"><li><a href="index.html">Google Play closed testing</a></li><li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="pay.html">Pay an invoice</a></li><li><a href="contact.html">Contact us</a></li><li><a href="terms.html">Terms and conditions</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="refund-policy.html">Cancellation and refunds</a></li></ul></nav>
+    <p class="legal">© 2026 TestersHub. All rights reserved. Email: <a href="mailto:gauravprasad@testershub.in">gauravprasad@testershub.in</a></p>
   </div>
 </footer>
-
-
 <script>
-// Mobile menu
 (function(){
-  var btn=document.getElementById('menu-btn'), nav=document.getElementById('nav');
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('nav-open');
-    btn.setAttribute('aria-expanded',open);
-    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
-  });
-  document.querySelectorAll('#nav-links a').forEach(function(a){
-    a.addEventListener('click',function(){nav.classList.remove('nav-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open menu');});
-  });
-})();
-
-// Service tabs (keyboard accessible)
-(function(){
-  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
-  function select(t){
-    tabs.forEach(function(x){
-      var on=x===t;
-      x.setAttribute('aria-selected',on);
-      x.tabIndex=on?0:-1;
-      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
-    });
-    t.focus();
+  var form=document.getElementById('gp-form'), when=document.getElementById('gp-when'), out=document.getElementById('gp-result');
+  var R={
+    applies:['The rule applies to you','You need a closed test with at least 12 testers opted in for 14 continuous days before you can apply for production access.',true],
+    exempt:['You are exempt','Organization accounts and personal accounts created before 13 November 2023 do not need the 12-tester closed test. Check the Production access card in Play Console to be sure.',false],
+    unsure:['Check your Play Console','Open your Play Console dashboard and look at the Production access card. If it mentions closed testing, the rule applies to you.',true]
+  };
+  function show(state){
+    var r=R[state]; out.dataset.state=state; out.replaceChildren();
+    var h=document.createElement('h3'); h.textContent=r[0];
+    var p=document.createElement('p'); p.textContent=r[1];
+    out.append(h,p);
+    if(r[2]){var a=document.createElement('a'); a.className='btn btn-primary'; a.href='#contact-form'; a.textContent='Start my closed test'; out.append(a);}
   }
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){select(t);});
-    t.addEventListener('keydown',function(e){
-      if(e.key==='ArrowRight')select(tabs[(i+1)%tabs.length]);
-      if(e.key==='ArrowLeft')select(tabs[(i-1+tabs.length)%tabs.length]);
-    });
+  form.addEventListener('change',function(){
+    var type=(form.querySelector('input[name=type]:checked')||{}).value;
+    when.hidden=type!=='personal';
+    if(type==='organization'){return show('exempt');}
+    var w=(form.querySelector('input[name=when]:checked')||{}).value;
+    if(type==='personal'&&w){show(w==='after'?'applies':w==='before'?'exempt':'unsure');}
   });
 })();
-
-// Contact form via Web3Forms
+</script><script>
 (function(){
-  var form=document.getElementById('contact-form'),
-      status=document.getElementById('form-status'),
-      btn=document.getElementById('submit-btn');
+  var form=document.getElementById('contact-form'), status=document.getElementById('form-status'), btn=document.getElementById('submit-btn');
+  // Hide the bottom "get started" bar while the form itself is on screen.
+  var bar=document.querySelector('.gp-bar');
+  if(bar&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){bar.hidden=entries[0].isIntersecting;}).observe(document.getElementById('contact'));
+  }
+  var plan=form.querySelector('select[name="request_type"]');
+  var q=new URLSearchParams(location.search);
+  if(q.get('plan')==='12'){plan.selectedIndex=1;}
+  if(q.get('plan')==='15'){plan.selectedIndex=0;}
   form.addEventListener('submit',function(e){
     e.preventDefault();
     status.className='form-status';
     if(!form.checkValidity()){
-      status.textContent='Please fill in your name, a valid email and a few words about your product.';
-      status.classList.add('err');
-      form.reportValidity();
-      return;
+      status.textContent='Please fill in your name, a valid email and your app name.';
+      status.classList.add('err'); form.reportValidity(); return;
     }
     btn.disabled=true; btn.textContent='Sending…';
     fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)})
       .then(function(r){return r.json();})
       .then(function(d){
-        if(d.success){
-          status.textContent='Request sent. We\'ll reply within one working day.';
-          status.classList.add('ok'); form.reset();
-        } else { throw new Error(d.message||'Failed'); }
+        if(!d.success){throw new Error(d.message||'Failed');}
+        status.textContent="Request sent. We'll reply within one working day.";
+        status.classList.add('ok'); form.reset();
       })
       .catch(function(){
-        status.textContent='Your request didn\'t go through. Email us at gauravprasad@testershub.in.';
+        status.textContent="Your request didn't go through. Email us at gauravprasad@testershub.in.";
         status.classList.add('err');
       })
       .finally(function(){btn.disabled=false; btn.textContent='Send request';});
   });
-  document.getElementById('year').textContent=new Date().getFullYear();
-  var service=new URLSearchParams(location.search).get('service');
-  if(service==='play'){var rt=form.querySelector('select[name="request_type"]'); if(rt){rt.value='Google Play closed testing';}}
-  var wanted={web:'Web application',api:'API',mobile:'Mobile app (Android / iOS)',play:'Google Play closed testing (12+ testers)'}[new URLSearchParams(location.search).get('service')];
-  if(wanted){form.querySelector('select[name="service"]').value=wanted;}
 })();
-
-// Selectable tools -> prefill the contact form
-(function(){
-  var chips=[].slice.call(document.querySelectorAll('#tools .chip-btn')),
-      summary=document.getElementById('tool-summary'),
-      request=document.getElementById('tool-request'),
-      clear=document.getElementById('tool-clear'),
-      field=document.getElementById('tools-field');
-  function selected(){return chips.filter(function(c){return c.getAttribute('aria-pressed')==='true';}).map(function(c){return c.dataset.tool;});}
-  function update(){
-    var list=selected();
-    summary.textContent=list.length?('Selected ('+list.length+'): '+list.join(', ')):'No tools selected yet.';
-    request.disabled=clear.disabled=!list.length;
-  }
-  chips.forEach(function(c){
-    c.addEventListener('click',function(){
-      c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');
-      update();
-    });
-  });
-  clear.addEventListener('click',function(){chips.forEach(function(c){c.setAttribute('aria-pressed','false');});update();});
-  request.addEventListener('click',function(){
-    field.value=selected().join(', ');
-    document.getElementById('contact-form').scrollIntoView();
-    document.querySelector('#contact-form input[name="name"]').focus({preventScroll:true});
-  });
-
-})();
-</script>
-</body>
+</script></body>
 </html>

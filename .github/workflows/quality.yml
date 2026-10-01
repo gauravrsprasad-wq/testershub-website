@@ -12,9 +12,10 @@ jobs:
   playwright:
     name: Playwright tests
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       # Daily scheduled runs test the live site; everything else tests the code in the repo.
-      BASE_URL: ${{ github.event_name == 'schedule' && 'https://testershub.in' || 'http://localhost:4173' }}  # FIXED
+      BASE_URL: ${{ github.event_name == 'schedule' && 'https://testershub.in' || 'http://localhost:4173' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,8 +34,9 @@ jobs:
 
   lighthouse:
     name: Lighthouse audit
-    if: github.event_name != 'schedule'  # FIXED
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,9 +49,10 @@ jobs:
   deploy:
     name: Deploy to Netlify
     # Only deploy from main, and only when every test has passed.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # FIXED
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [playwright, lighthouse]
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - run: npx --yes netlify-cli@17 deploy --dir=site --prod --message "Deploy ${{ github.sha }}"
@@ -68,6 +71,7 @@ jobs:
         needs.deploy.result == 'success'
       )
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

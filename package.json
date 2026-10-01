@@ -10,9 +10,7 @@
     "test:prod": "cross-env BASE_URL=https://testershub.in playwright test",
     "report": "playwright show-report",
     "lighthouse": "lhci autorun",
-    "test:api": "newman run postman/testershub-live.postman_collection.json -e postman/production.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export newman/report.html",
-    "demo": "node scripts/record-demo.js",
-    "demo:tests": "playwright test -c playwright.demo.config.ts && python3 scripts/build-test-video.py"
+    "test:api": "newman run postman/testershub-live.postman_collection.json -e postman/production.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export newman/report.html"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",
