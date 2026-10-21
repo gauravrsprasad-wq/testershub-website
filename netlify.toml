@@ -1,0 +1,5 @@
+# The website lives in the "site" folder. No build step is needed.
+# Security headers are in site/_headers so they also apply to drag-and-drop deploys.
+[build]
+  publish = "site"
+  command = ""
