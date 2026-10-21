@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Automation Testing Interview Questions, Answers and Experiences | AutoQA Prep</title>
+<meta name="description" content="Automation testing interview questions with answers, plus real interview experiences shared by testers. Selenium, Playwright, API testing, frameworks and CI/CD.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- AFTER ADSENSE APPROVAL: remove this comment wrapper and replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+<style>
+:root{--bg:#f5f7fa;--surface:#fff;--ink:#14233a;--muted:#59667a;--line:#dce2ea;--navy:#14233a;--accent:#1fa37a;--accent2:#e9f7f1;--link:#2447c9;--code:#edf1f6}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1626;--surface:#16233a;--ink:#e7edf8;--muted:#9aa8c2;--line:#27364f;--navy:#0a1220;--accent:#43d1a2;--accent2:#12332b;--link:#8fa8ff;--code:#0d1830}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;letter-spacing:-.015em;line-height:1.2}
+.w{max-width:900px;margin:0 auto;padding:0 20px}a{color:var(--link)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{background:var(--navy);color:#fff}
+nav{display:flex;align-items:center;gap:18px;padding:16px 0;flex-wrap:wrap}
+nav .logo{font:700 1.1rem Sora,sans-serif;color:#fff;text-decoration:none;margin-right:auto}
+nav a{color:#c9d4e8;text-decoration:none;font-size:.92rem}
+.btn{display:inline-block;background:var(--accent);color:#06241a;font-weight:600;padding:11px 20px;border-radius:8px;text-decoration:none;border:0;font:600 1rem Inter,sans-serif;cursor:pointer}
+nav .btn{padding:7px 14px;font-size:.9rem;color:#06241a}
+.hero{padding:36px 0 44px}.hero h1{font-size:clamp(1.9rem,5.5vw,3rem);margin:0 0 14px;max-width:20ch}
+.hero p{color:#c9d4e8;max-width:58ch;margin:0 0 22px;font-size:1.05rem}
+section{padding:44px 0 0}h2{font-size:1.55rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 18px}
+.tools{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+input,select,textarea{width:100%;font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.88rem;padding:5px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.meta{display:flex;justify-content:space-between;font-size:.88rem;color:var(--muted);margin-bottom:10px}
+.link{background:none;border:0;color:var(--link);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 16px;font-weight:600;list-style:none;display:flex;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font:500 1.1rem "JetBrains Mono",monospace;color:var(--accent);width:14px;flex:none}
+details[open] summary::before{content:"\2212"}
+.tag{margin-left:auto;flex:none;font:500 .72rem "JetBrains Mono",monospace;background:var(--accent2);color:var(--accent);padding:2px 8px;border-radius:4px;height:fit-content;white-space:nowrap}
+.ans{padding:0 16px 16px 42px}.ans p{margin:0 0 10px}.ans ul{margin:0 0 10px;padding-left:20px}
+.ans .by{color:var(--muted);font-size:.88rem}
+pre{background:var(--code);border-radius:8px;padding:12px 14px;overflow-x:auto;font:.83rem/1.5 "JetBrains Mono",monospace;margin:0 0 10px}
+code{font-family:"JetBrains Mono",monospace;font-size:.87em;background:var(--code);padding:1px 5px;border-radius:4px}pre code{background:none;padding:0}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.contact{background:var(--navy);color:#fff;border-radius:14px;padding:26px;margin-top:50px}
+.contact h2{margin:0 0 6px}.contact>p{color:#c9d4e8;margin:0 0 16px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}
+form label{font-size:.88rem;color:#c9d4e8;display:block;margin-bottom:4px}
+.contact input,.contact select,.contact textarea{background:#0d1a2e;border-color:#3a4c6a;color:#fff}
+.chk{display:flex;gap:10px;align-items:flex-start;color:#c9d4e8;font-size:.88rem}.chk input{width:auto;margin-top:4px}
+footer{margin:44px 0 0;border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:.88rem;display:flex;flex-wrap:wrap;gap:8px 22px}
+@media (max-width:640px){form{grid-template-columns:1fr}.ans{padding-left:16px}.tag{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w">
+<nav aria-label="Main"><a class="logo" href="#">AutoQA Prep</a><a href="#qa">Questions</a><a href="#exp">Experiences</a><a class="btn" href="#share">Share your experience</a></nav>
+<div class="hero"><h1>Automation testing interview questions and real experiences</h1>
+<p>Questions with short answers, plus interview experiences shared by testers: what was asked, how many rounds, and what helped.</p></div>
+</div></div>
+
+<main class="w">
+<section id="qa">
+<h2>Questions and answers</h2>
+<p class="sub">Search or filter by topic. Newest first.</p>
+<div class="tools"><input type="search" id="search" placeholder="Search, for example wait, locator or flaky" aria-label="Search questions"><div class="chips" id="chips" role="group" aria-label="Filter by topic"></div></div>
+<div class="meta"><span id="count"></span><button class="link" id="toggle">Expand all</button></div>
+<div id="list"></div>
+</section>
+
+<!-- AD SLOT: after approval, uncomment and set your ad unit ID
+<div style="padding-top:30px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+-->
+
+<section id="exp">
+<h2>Interview experiences</h2>
+<p class="sub">Shared by candidates. Open one to see the questions asked and the advice.</p>
+<div class="meta"><span id="ecount"></span></div>
+<div id="elist"></div>
+</section>
+
+<div class="contact" id="share">
+<h2>Share your interview experience</h2>
+<p>Attended an automation testing interview recently? Tell others what to expect. We review every submission before it appears here.</p>
+<form name="experience" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="experience">
+<p hidden><label>Leave this empty <input name="bot-field"></label></p>
+<div><label for="f1">Your name or nickname</label><input id="f1" name="name" type="text" required maxlength="60"></div>
+<div><label for="f2">Company (or type, e.g. product startup)</label><input id="f2" name="company" type="text" required maxlength="80"></div>
+<div><label for="f3">Role</label><input id="f3" name="role" type="text" placeholder="SDET, QA Automation Engineer" required maxlength="80"></div>
+<div><label for="f4">Your experience</label><select id="f4" name="years"><option>Fresher</option><option>1 to 3 years</option><option>3 to 6 years</option><option>6+ years</option></select></div>
+<div><label for="f5">Interview month and year</label><input id="f5" name="date" type="text" placeholder="October 2026" maxlength="30"></div>
+<div><label for="f6">Result</label><select id="f6" name="outcome"><option>Selected</option><option>Not selected</option><option>Waiting</option><option>Prefer not to say</option></select></div>
+<div class="full"><label for="f7">Questions asked (one per line)</label><textarea id="f7" name="questions" rows="5" required maxlength="3000"></textarea></div>
+<div class="full"><label for="f8">Rounds, difficulty and tips for others</label><textarea id="f8" name="notes" rows="4" maxlength="2000"></textarea></div>
+<div class="full chk"><input id="f9" type="checkbox" name="consent" required><label for="f9">I agree this can be published on this site. It contains no confidential company information or personal details of others.</label></div>
+<div class="full"><button class="btn" type="submit">Submit for review</button></div>
+</form></div>
+
+<footer><span>© 2026 AutoQA Prep</span><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy policy</a></footer>
+</main>
+
+<script>
+/* ===== QUESTIONS: copy a block to add one ===== */
+const QA=[
+{cat:'Selenium',date:'2026-10-18',q:'What is the difference between implicit, explicit and fluent wait?',a:'<ul><li><b>Implicit:</b> a global timeout for every element lookup.</li><li><b>Explicit:</b> waits for a condition on one element, such as clickable.</li><li><b>Fluent:</b> an explicit wait with custom polling and ignored exceptions.</li></ul><p>Prefer explicit waits and avoid mixing them with implicit waits.</p><pre><code>new WebDriverWait(driver, Duration.ofSeconds(10))\n  .until(ExpectedConditions.elementToBeClickable(By.id("login")));</code></pre>'},
+{cat:'Selenium',date:'2026-10-18',q:'How do you handle StaleElementReferenceException?',a:'<p>It occurs when the DOM refreshes after the element was found. Re-locate the element just before use, wait for a refreshed condition, or store locators rather than WebElements in page objects.</p>'},
+{cat:'Selenium',date:'2026-10-10',q:'What is new in Selenium 4?',a:'<ul><li>Relative locators such as <code>above</code> and <code>toLeftOf</code>.</li><li>Chrome DevTools Protocol access.</li><li><code>switchTo().newWindow()</code> for tabs and windows.</li><li>Element screenshots and a better Grid.</li></ul>'},
+{cat:'Selenium',date:'2026-09-28',q:'How do you handle iframes, alerts and multiple windows?',a:'<ul><li>Iframe: <code>switchTo().frame(...)</code>, then <code>defaultContent()</code>.</li><li>Alert: <code>switchTo().alert()</code> to accept, dismiss or read text.</li><li>Windows: loop through <code>getWindowHandles()</code> and switch by handle or title.</li></ul>'},
+{cat:'Playwright',date:'2026-10-20',q:'Why choose Playwright over Selenium?',a:'<ul><li>Auto-waiting reduces flaky tests.</li><li>One API for Chromium, Firefox and WebKit.</li><li>Browser contexts give fast, isolated sessions.</li><li>Trace viewer, codegen and network mocking are built in.</li></ul><p>Selenium still wins for wide language support and large existing suites.</p>'},
+{cat:'Playwright',date:'2026-10-20',q:'What is auto-waiting in Playwright?',a:'<p>Before an action, Playwright checks the element is attached, visible, stable, enabled and able to receive events. Assertions such as <code>expect(locator).toBeVisible()</code> retry until they pass or time out.</p>'},
+{cat:'Playwright',date:'2026-10-12',q:'How do you reuse login state across tests?',a:'<p>Log in once in a setup step, save it with <code>storageState</code> and point tests at that file.</p><pre><code>await page.context().storageState({ path: "auth.json" });\n// config\nuse: { storageState: "auth.json" }</code></pre>'},
+{cat:'Playwright',date:'2026-10-05',q:'How do you mock an API response?',a:'<pre><code>await page.route("**/api/users", route =>\n  route.fulfill({ status: 200, json: [{ id: 1 }] })\n);</code></pre><p>Useful for testing empty lists or server errors without a backend.</p>'},
+{cat:'API testing',date:'2026-10-15',q:'What do you validate in an API test?',a:'<ul><li>Status code and response time.</li><li>Body fields, types, values and schema.</li><li>Headers and authentication.</li><li>Negative cases: bad input, missing token, wrong method.</li></ul>'},
+{cat:'API testing',date:'2026-10-02',q:'PUT vs PATCH?',a:'<p><b>PUT</b> replaces the whole resource and is idempotent. <b>PATCH</b> updates only the fields you send.</p>'},
+{cat:'API testing',date:'2026-09-25',q:'How do you chain API calls, such as using a login token?',a:'<p>Extract the value from the first response and pass it in the next request header.</p><pre><code>String token = given().body(creds).post("/login").path("token");\ngiven().header("Authorization", "Bearer " + token).get("/profile");</code></pre>'},
+{cat:'Framework',date:'2026-10-14',q:'What is the Page Object Model and why use it?',a:'<p>Each page is a class holding its locators and actions, so tests call methods like <code>loginPage.login(u, p)</code>. When the UI changes, you update one class instead of every test.</p>'},
+{cat:'Framework',date:'2026-10-08',q:'How do you reduce flaky tests?',a:'<ul><li>Use proper waits, never fixed sleeps.</li><li>Use stable locators and independent test data.</li><li>Mock unstable third parties.</li><li>Track and fix flaky tests instead of blindly retrying.</li></ul>'},
+{cat:'Framework',date:'2026-09-30',q:'What is the test automation pyramid?',a:'<p>Many fast unit tests at the base, fewer API tests in the middle and a small number of UI tests on top. It keeps feedback fast and maintenance low.</p>'},
+{cat:'CI/CD',date:'2026-10-16',q:'How do you run automation in a CI/CD pipeline?',a:'<p>Trigger on pull request or merge, run headless in a container and in parallel, publish reports and screenshots, fail the build on critical failures and notify the team.</p>'},
+{cat:'CI/CD',date:'2026-10-01',q:'Why use Docker for test automation?',a:'<p>It gives a consistent, disposable environment for browsers and tools, so tests behave the same everywhere and scale easily.</p>'},
+{cat:'Programming',date:'2026-10-11',q:'How do you reverse a string in Java?',a:'<pre><code>String rev = new StringBuilder(s).reverse().toString();</code></pre><p>Also be ready to write the loop version without helpers.</p>'},
+{cat:'Programming',date:'2026-09-27',q:'How do you find duplicate characters in a string?',a:'<pre><code>Map&lt;Character,Integer&gt; m = new HashMap&lt;&gt;();\nfor (char c : s.toCharArray()) m.merge(c, 1, Integer::sum);\nm.forEach((k,v) -&gt; { if (v &gt; 1) System.out.println(k + " " + v); });</code></pre>'}
+];
+/* ===== EXPERIENCES: paste approved submissions here (newest first) =====
+   Template (copy, fill, add a comma between entries):
+   {name:'Asha',company:'Product startup',role:'SDET',years:'3 to 6 years',date:'October 2026',outcome:'Selected',
+    questions:['What is the Page Object Model?','Reverse a string in Java'],
+    notes:'Three rounds: coding, framework design, manager.'}
+*/
+const EXP=[];
+/* ======================================================================== */
+const $=id=>document.getElementById(id);
+const cats=['All',...new Set(QA.map(x=>x.cat))];
+let cat='All',term='',open=false;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=d=>new Date(d+'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+function chips(){$('chips').innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join('')}
+function render(){
+ const t=term.toLowerCase();
+ const it=QA.filter(x=>(cat==='All'||x.cat===cat)&&(!t||(x.q+' '+x.a.replace(/<[^>]+>/g,' ')).toLowerCase().includes(t))).sort((a,b)=>b.date.localeCompare(a.date));
+ $('count').textContent=it.length+(it.length===1?' question':' questions');
+ $('list').innerHTML=it.length?it.map(x=>`<details${open?' open':''}><summary><span>${esc(x.q)}</span><span class="tag">${x.cat} · ${fmt(x.date)}</span></summary><div class="ans">${x.a}</div></details>`).join(''):'<div class="empty">No questions match. Try another word or choose All.</div>';
+}
+function renderExp(){
+ $('ecount').textContent=EXP.length+(EXP.length===1?' experience':' experiences');
+ $('elist').innerHTML=EXP.length?EXP.map(e=>`<details><summary><span>${esc(e.company)} · ${esc(e.role)}</span><span class="tag">${esc(e.outcome)}</span></summary><div class="ans"><p class="by">${esc(e.name)} · ${esc(e.years)} · ${esc(e.date)}</p><p><b>Questions asked</b></p><ul>${e.questions.map(q=>`<li>${esc(q)}</li>`).join('')}</ul>${e.notes?`<p><b>Rounds and tips</b></p><p>${esc(e.notes)}</p>`:''}</div></details>`).join(''):'<div class="empty">No experiences yet. Be the first to <a href="#share">share yours</a>.</div>';
+}
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){cat=b.dataset.c;chips();render()}});
+$('search').addEventListener('input',e=>{term=e.target.value;render()});
+$('toggle').addEventListener('click',()=>{open=!open;$('toggle').textContent=open?'Collapse all':'Expand all';document.querySelectorAll('#list details').forEach(d=>d.open=open)});
+chips();render();renderExp();
+</script>
+</body>
+</html>
