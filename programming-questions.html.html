@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Automation testing programming interview questions and answers in Java, Selenium, TypeScript, Playwright, API testing and SQL.">
+<title>Automation Testing Programming Interview Question Bank | AutoQA Prep</title>
+<style>
+  :root { --ink:#172033; --muted:#5d6678; --line:#dfe5ee; --brand:#204e91; --soft:#f4f7fb; --code:#101827; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif; color:var(--ink); background:#fff; }
+  .aqa-wrap { max-width:1100px; margin:auto; padding:24px 18px 56px; }
+  .aqa-hero { padding:28px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(135deg,#f5f8ff,#fff); }
+  .aqa-hero h1 { margin:0 0 8px; line-height:1.2; font-size:clamp(1.8rem,4vw,2.6rem); color:var(--brand); }
+  .aqa-hero p { margin:8px 0; color:var(--muted); }
+  .aqa-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .aqa-tag { padding:4px 10px; border-radius:999px; background:#e9f0fb; color:#244c83; font-size:.88rem; }
+  .aqa-toc { margin:22px 0; padding:18px; border:1px solid var(--line); border-radius:12px; }
+  .aqa-toc h2 { margin:0 0 8px; font-size:1.15rem; }
+  .aqa-toc ul { columns:2; margin:0; padding-left:20px; }
+  .aqa-toc a { color:var(--brand); }
+  .aqa-section { margin-top:36px; scroll-margin-top:20px; }
+  .aqa-section h2 { color:var(--brand); padding-bottom:8px; border-bottom:2px solid var(--line); }
+  .aqa-section-intro { color:var(--muted); }
+  .aqa-q { margin:14px 0; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .aqa-q summary { padding:15px 18px; cursor:pointer; font-weight:700; background:#fff; }
+  .aqa-q summary:hover { background:var(--soft); }
+  .aqa-answer { padding:0 18px 18px; }
+  .aqa-answer h4 { margin:14px 0 5px; }
+  pre { margin:10px 0 14px; padding:15px; overflow:auto; border-radius:8px; background:var(--code); color:#f1f5f9; font:13.5px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace; tab-size:2; }
+  code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; }
+  p code, li code { background:#eef2f7; padding:1px 4px; border-radius:4px; color:#263650; }
+  .aqa-tip { padding:11px 14px; background:#f0f6ff; border-left:3px solid #4b79bb; border-radius:5px; }
+  .aqa-output { font-weight:600; }
+  .aqa-footer { margin-top:36px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
+
+  .aqa-feedback-card { padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--soft); }
+  .aqa-feedback-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+  .aqa-field { display:flex; flex-direction:column; gap:5px; }
+  .aqa-field label { font-weight:650; }
+  .aqa-field input, .aqa-field select, .aqa-field textarea { width:100%; padding:11px 12px; border:1px solid #cbd5e1; border-radius:8px; background:#fff; color:var(--ink); font:inherit; }
+  .aqa-field textarea { min-height:140px; resize:vertical; }
+  .aqa-feedback-submit { margin-top:14px; padding:11px 18px; border:0; border-radius:8px; background:var(--brand); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+  .aqa-feedback-submit:hover { filter:brightness(1.1); }
+  .aqa-feedback-note { color:var(--muted); font-size:.92rem; }
+  @media(max-width:650px) { .aqa-feedback-grid { grid-template-columns:1fr; } }
+
+  @media(max-width:650px) { .aqa-wrap{padding:14px 12px 36px}.aqa-hero{padding:20px}.aqa-toc ul{columns:1}pre{font-size:12.5px} }
+</style>
+</head>
+<body>
+<main class="aqa-wrap">
+<header class="aqa-hero">
+  <h1>Automation Testing Programming Interview Questions</h1>
+  <p>A practical question bank for QA Automation Engineer and SDET interviews, with Java, Selenium, TypeScript, Playwright, API testing, SQL, and framework engineering examples.</p>
+  <div class="aqa-tags"><span class="aqa-tag">Beginner</span><span class="aqa-tag">Intermediate</span><span class="aqa-tag">Advanced</span><span class="aqa-tag">Java + Selenium</span><span class="aqa-tag">TypeScript + Playwright</span></div>
+</header>
+
+<nav class="aqa-toc" aria-label="Question bank contents">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#java-core">Java core coding</a></li>
+    <li><a href="#typescript-core">TypeScript core coding</a></li>
+    <li><a href="#selenium">Selenium programming</a></li>
+    <li><a href="#playwright">Playwright programming</a></li>
+    <li><a href="#api">API testing</a></li>
+    <li><a href="#sql">SQL interview queries</a></li>
+    <li><a href="#framework">Framework and SDET utilities</a></li>
+    <li><a href="#feedback">Suggestions &amp; Feedback</a></li>
+  </ul>
+</nav>
+
+<section class="aqa-section" id="java-core">
+<h2>1. Java Core Programming</h2>
+<p class="aqa-section-intro">Practice strings, arrays, maps, algorithms, and object-oriented programming.</p>
+
+<details class="aqa-q"><summary>1. Reverse a string without using StringBuilder.reverse()</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p><p><strong>Solution:</strong></p>
+<pre><code>public class ReverseString {
+    public static String reverse(String input) {
+        StringBuilder result = new StringBuilder();
+        for (int i = input.length() - 1; i &gt;= 0; i--) {
+            result.append(input.charAt(i));
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverse("Playwright"));
+    }
+}</code></pre>
+<p class="aqa-output">Output: thgirwyalP</p>
+<p><strong>Explanation:</strong> Iterate from the last character to the first and append each character. Time complexity is O(n); auxiliary space is O(n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>2. Check whether a string is a palindrome</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p>
+<pre><code>public static boolean isPalindrome(String value) {
+    String normalized = value.replaceAll("[^A-Za-z0-9]", "")
+                             .toLowerCase();
+    int left = 0;
+    int right = normalized.length() - 1;
+
+    while (left &lt; right) {
+        if (normalized.charAt(left) != normalized.charAt(right)) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
+public static void main(String[] args) {
+    System.out.println(isPalindrome("Never odd or even"));
+}</code></pre>
+<p class="aqa-output">Output: true</p>
+<p><strong>Explanation:</strong> Normalize case and remove punctuation, then compare characters from both ends. Time complexity is O(n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>3. Find duplicate numbers in an integer array</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner–Intermediate</p>
+<pre><code>import java.util.*;
+
+public static Set&lt;Integer&gt; findDuplicates(int[] numbers) {
+    Set&lt;Integer&gt; seen = new HashSet&lt;&gt;();
+    Set&lt;Integer&gt; duplicates = new LinkedHashSet&lt;&gt;();
+
+    for (int number : numbers) {
+        if (!seen.add(number)) {
+            duplicates.add(number);
+        }
+    }
+    return duplicates;
+}
+
+// Example:
+System.out.println(findDuplicates(new int[]{2, 4, 2, 5, 4, 7}));</code></pre>
+<p class="aqa-output">Output: [2, 4]</p>
+<p><strong>Explanation:</strong> <code>Set.add()</code> returns false if the value already exists. Expected time complexity is O(n), with O(n) extra space.</p>
+</div></details>
+
+<details class="aqa-q"><summary>4. Move all zeros to the right while preserving other elements' order</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner–Intermediate</p>
+<pre><code>import java.util.Arrays;
+
+public static void moveZeros(int[] values) {
+    int write = 0;
+
+    for (int value : values) {
+        if (value != 0) {
+            values[write++] = value;
+        }
+    }
+
+    while (write &lt; values.length) {
+        values[write++] = 0;
+    }
+}
+
+public static void main(String[] args) {
+    int[] values = {1, 0, 3, 0, 4, 5};
+    moveZeros(values);
+    System.out.println(Arrays.toString(values));
+}</code></pre>
+<p class="aqa-output">Output: [1, 3, 4, 5, 0, 0]</p>
+<p><strong>Explanation:</strong> Copy non-zero values forward, then fill the remaining positions with zero. Time O(n), extra space O(1). Sorting is not suitable because it can change the order of non-zero elements.</p>
+</div></details>
+
+<details class="aqa-q"><summary>5. Find the second-largest distinct number without sorting</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>public static int secondLargest(int[] values) {
+    Integer largest = null;
+    Integer second = null;
+
+    for (int value : values) {
+        if (largest == null || value &gt; largest) {
+            if (largest == null || value != largest) {
+                second = largest;
+                largest = value;
+            }
+        } else if (value != largest &amp;&amp;
+                   (second == null || value &gt; second)) {
+            second = value;
+        }
+    }
+
+    if (second == null) {
+        throw new IllegalArgumentException(
+            "At least two distinct values are required");
+    }
+    return second;
+}
+
+// Example: secondLargest(new int[]{10, 5, 8, 10, 7}) == 8</code></pre>
+<p class="aqa-output">Output for the example: 8</p>
+<p><strong>Explanation:</strong> Track the largest and second-largest distinct values in one pass. Time O(n), extra space O(1).</p>
+</div></details>
+
+<details class="aqa-q"><summary>6. Count how many times each character appears in a string</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import java.util.*;
+
+public static Map&lt;Character, Integer&gt; characterCounts(String input) {
+    Map&lt;Character, Integer&gt; counts = new LinkedHashMap&lt;&gt;();
+    for (char ch : input.toCharArray()) {
+        counts.put(ch, counts.getOrDefault(ch, 0) + 1);
+    }
+    return counts;
+}
+
+// characterCounts("automation")</code></pre>
+<p class="aqa-output">Example counts: a=2, u=1, t=2, o=2, m=1, i=1, n=1</p>
+<p><strong>Explanation:</strong> A map stores each character and its running count. This version is case-sensitive and counts spaces if present. Time O(n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>7. Check whether two strings are anagrams</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import java.util.Arrays;
+
+public static boolean areAnagrams(String first, String second) {
+    char[] a = first.replaceAll("\\s+", "")
+                    .toLowerCase().toCharArray();
+    char[] b = second.replaceAll("\\s+", "")
+                     .toLowerCase().toCharArray();
+
+    if (a.length != b.length) return false;
+
+    Arrays.sort(a);
+    Arrays.sort(b);
+    return Arrays.equals(a, b);
+}
+
+// areAnagrams("listen", "silent") == true</code></pre>
+<p><strong>Explanation:</strong> After normalization, anagrams contain the same characters with the same frequencies. Sorting makes comparison straightforward. Time O(n log n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>8. Find the first non-repeating character in a string</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import java.util.*;
+
+public static Character firstUnique(String input) {
+    Map&lt;Character, Integer&gt; counts = new LinkedHashMap&lt;&gt;();
+
+    for (char ch : input.toCharArray()) {
+        counts.put(ch, counts.getOrDefault(ch, 0) + 1);
+    }
+
+    for (Map.Entry&lt;Character, Integer&gt; entry : counts.entrySet()) {
+        if (entry.getValue() == 1) return entry.getKey();
+    }
+    return null;
+}
+
+// firstUnique("swiss") returns 'w'</code></pre>
+<p><strong>Explanation:</strong> A LinkedHashMap preserves insertion order, allowing a second pass to return the first character whose count is one. Time O(n), space O(k) for distinct characters.</p>
+</div></details>
+
+<details class="aqa-q"><summary>9. Generate the Fibonacci sequence iteratively</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p>
+<pre><code>public static void printFibonacci(int count) {
+    long first = 0;
+    long second = 1;
+
+    for (int i = 0; i &lt; count; i++) {
+        System.out.print(first + (i + 1 == count ? "" : " "));
+        long next = first + second;
+        first = second;
+        second = next;
+    }
+}
+
+// printFibonacci(7)</code></pre>
+<p class="aqa-output">Output: 0 1 1 2 3 5 8</p>
+<p><strong>Explanation:</strong> Each term is the sum of the previous two. Time O(n), extra space O(1). The long type still has a finite range.</p>
+</div></details>
+
+<details class="aqa-q"><summary>10. Find the missing number from the range 1 to n</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>public static int missingNumber(int[] values, int n) {
+    long expected = (long) n * (n + 1) / 2;
+    long actual = 0;
+
+    for (int value : values) {
+        actual += value;
+    }
+    return Math.toIntExact(expected - actual);
+}
+
+// missingNumber(new int[]{1, 2, 4, 5}, 5) returns 3</code></pre>
+<p><strong>Explanation:</strong> Assumes values contain distinct integers from 1 through n with exactly one missing. The formula computes the expected total. Time O(n), extra space O(1).</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="typescript-core">
+<h2>2. TypeScript Core Programming</h2>
+<p class="aqa-section-intro">Practice language fundamentals used in Playwright tests and automation utilities.</p>
+
+<details class="aqa-q"><summary>11. Reverse a string in TypeScript</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p>
+<pre><code>function reverseString(value: string): string {
+  return Array.from(value).reverse().join("");
+}
+
+console.log(reverseString("Playwright"));</code></pre>
+<p class="aqa-output">Output: thgirwyalP</p>
+<p><strong>Explanation:</strong> Array.from handles Unicode code points better than splitting into UTF-16 code units, although complex emoji sequences may still need grapheme-aware processing. Time O(n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>12. Remove duplicate values from an array</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p>
+<pre><code>function uniqueNumbers(values: number[]): number[] {
+  return [...new Set(values)];
+}
+
+console.log(uniqueNumbers([1, 2, 2, 3, 1, 4]));</code></pre>
+<p class="aqa-output">Output: [1, 2, 3, 4]</p>
+<p><strong>Explanation:</strong> A Set stores unique values and preserves insertion order for iteration. Expected time O(n) and extra space O(n).</p>
+</div></details>
+
+<details class="aqa-q"><summary>13. Count the frequency of each word</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>function wordFrequency(sentence: string): Map&lt;string, number&gt; {
+  const counts = new Map&lt;string, number&gt;();
+  const words = sentence.toLowerCase().match(/[a-z0-9']+/g) ?? [];
+
+  for (const word of words) {
+    counts.set(word, (counts.get(word) ?? 0) + 1);
+  }
+  return counts;
+}
+
+console.log([...wordFrequency("Test well, test often!")]);</code></pre>
+<p><strong>Explanation:</strong> The regular expression extracts word-like tokens, normalizes case, and counts occurrences in a Map. Adjust tokenization for languages or punctuation rules your application needs.</p>
+</div></details>
+
+<details class="aqa-q"><summary>14. Explain async/await and handle errors in TypeScript</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>async function fetchUserName(url: string): Promise&lt;string&gt; {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
+  }
+
+  const data: unknown = await response.json();
+
+  if (
+    typeof data === "object" &amp;&amp;
+    data !== null &amp;&amp;
+    "name" in data &amp;&amp;
+    typeof data.name === "string"
+  ) {
+    return data.name;
+  }
+
+  throw new Error("Response did not contain a string name");
+}</code></pre>
+<p><strong>Explanation:</strong> An async function returns a Promise. Await pauses that function until the Promise settles. Check HTTP status explicitly; fetch does not reject solely because a server returns 404 or 500. Treat external JSON as unknown until validated.</p>
+</div></details>
+
+<details class="aqa-q"><summary>15. Group an array of test results by status</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>type TestResult = {
+  name: string;
+  status: "passed" | "failed" | "skipped";
+};
+
+function groupByStatus(results: TestResult[]) {
+  return results.reduce&lt;Record&lt;string, TestResult[]&gt;&gt;(
+    (groups, result) =&gt; {
+      (groups[result.status] ??= []).push(result);
+      return groups;
+    },
+    {}
+  );
+}
+
+const results: TestResult[] = [
+  { name: "login", status: "passed" },
+  { name: "checkout", status: "failed" },
+  { name: "profile", status: "passed" }
+];
+
+console.log(groupByStatus(results));</code></pre>
+<p><strong>Explanation:</strong> This utility groups test results by their status, which can be useful for building a simple test summary. The union type restricts status values at compile time.</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="selenium">
+<h2>3. Selenium WebDriver with Java</h2>
+
+<details class="aqa-q"><summary>16. Write an explicit wait for a clickable element</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner–Intermediate</p>
+<pre><code>import java.time.Duration;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+WebDriverWait wait = new WebDriverWait(
+    driver, Duration.ofSeconds(10));
+
+WebElement submit = wait.until(
+    ExpectedConditions.elementToBeClickable(
+        By.id("submit")
+    )
+);
+submit.click();</code></pre>
+<p><strong>Explanation:</strong> An explicit wait polls until the specified condition succeeds or times out. Do not mix implicit and explicit waits casually, because combined wait behavior can be difficult to predict.</p>
+</div></details>
+
+<details class="aqa-q"><summary>17. Find all broken or non-success HTTP links on a page</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Advanced</p>
+<pre><code>import java.net.URI;
+import java.net.http.*;
+import java.time.Duration;
+import java.util.List;
+import org.openqa.selenium.*;
+
+HttpClient client = HttpClient.newBuilder()
+    .connectTimeout(Duration.ofSeconds(5))
+    .followRedirects(HttpClient.Redirect.NORMAL)
+    .build();
+
+List&lt;WebElement&gt; links =
+    driver.findElements(By.cssSelector("a[href]"));
+
+for (WebElement link : links) {
+    String href = link.getAttribute("href");
+    if (href == null || href.isBlank()) continue;
+
+    try {
+        URI uri = URI.create(href);
+        if (!List.of("http", "https").contains(uri.getScheme())) continue;
+
+        HttpRequest request = HttpRequest.newBuilder(uri)
+            .timeout(Duration.ofSeconds(10))
+            .GET()
+            .build();
+
+        HttpResponse&lt;Void&gt; response = client.send(
+            request, HttpResponse.BodyHandlers.discarding());
+
+        if (response.statusCode() &gt;= 400) {
+            System.out.println("Potential broken link: " + href
+                + " status=" + response.statusCode());
+        }
+    } catch (Exception ex) {
+        System.out.println("Could not verify: " + href
+            + " reason=" + ex.getMessage());
+    }
+}</code></pre>
+<p><strong>Explanation:</strong> This is a starting point, not a universal broken-link oracle. Some servers reject automated requests, require authentication, or treat GET differently from HEAD. Use controlled test environments and distinguish inaccessible links from confirmed broken links.</p>
+</div></details>
+
+<details class="aqa-q"><summary>18. Switch to a newly opened browser window</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import java.util.Set;
+import org.openqa.selenium.*;
+
+String originalWindow = driver.getWindowHandle();
+
+driver.findElement(By.id("open-window")).click();
+
+new WebDriverWait(driver, Duration.ofSeconds(10))
+    .until(d -&gt; d.getWindowHandles().size() &gt; 1);
+
+Set&lt;String&gt; handles = driver.getWindowHandles();
+
+for (String handle : handles) {
+    if (!handle.equals(originalWindow)) {
+        driver.switchTo().window(handle);
+        break;
+    }
+}
+
+System.out.println(driver.getTitle());
+
+// When finished, close the child and return to parent:
+driver.close();
+driver.switchTo().window(originalWindow);</code></pre>
+<p><strong>Explanation:</strong> Wait for the second window instead of assuming it opens instantly. Close only the child window before switching back to the original one.</p>
+</div></details>
+
+<details class="aqa-q"><summary>19. Capture a screenshot when a Selenium test fails</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import org.openqa.selenium.*;
+import org.openqa.selenium.io.FileHandler;
+
+public static void captureScreenshot(
+        WebDriver driver, Path destination) throws Exception {
+    Files.createDirectories(destination.getParent());
+
+    File source = ((TakesScreenshot) driver)
+        .getScreenshotAs(OutputType.FILE);
+
+    FileHandler.copy(source, destination.toFile());
+}
+
+// Example:
+// captureScreenshot(driver, Path.of("artifacts", "failure.png"));</code></pre>
+<p><strong>Explanation:</strong> This helper creates the destination directory and saves a screenshot. Call it from a TestNG listener or failure-handling hook. Ensure the driver is still available when the failure is processed.</p>
+</div></details>
+
+<details class="aqa-q"><summary>20. Create a reusable Selenium Page Object</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
+
+public class LoginPage {
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+
+    private final By email = By.id("email");
+    private final By password = By.id("password");
+    private final By loginButton = By.id("login");
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(
+            driver, java.time.Duration.ofSeconds(10));
+    }
+
+    public void login(String userEmail, String userPassword) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(email))
+            .sendKeys(userEmail);
+        driver.findElement(password).sendKeys(userPassword);
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton))
+            .click();
+    }
+}</code></pre>
+<p><strong>Explanation:</strong> The page object encapsulates locators and user actions. Tests should verify outcomes, such as a dashboard heading or URL, rather than only checking that the click method returned.</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="playwright">
+<h2>4. Playwright with TypeScript</h2>
+
+<details class="aqa-q"><summary>21. Write a Playwright test using a role locator and assertion</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner</p>
+<pre><code>import { test, expect } from "@playwright/test";
+
+test("user can open the home page", async ({ page }) =&gt; {
+  await page.goto("https://example.com");
+
+  await expect(
+    page.getByRole("heading", { name: "Example Domain" })
+  ).toBeVisible();
+});</code></pre>
+<p><strong>Explanation:</strong> Role locators reflect how users and assistive technology identify elements. Web-first assertions automatically retry until the condition passes or the assertion times out.</p>
+</div></details>
+
+<details class="aqa-q"><summary>22. Create a custom Playwright fixture</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Advanced</p>
+<pre><code>import { test as base, expect } from "@playwright/test";
+
+type Fixtures = {
+  appUrl: string;
+};
+
+export const test = base.extend&lt;Fixtures&gt;({
+  appUrl: async ({}, use) =&gt; {
+    await use(process.env.APP_URL ?? "http://127.0.0.1:3000");
+  }
+});
+
+export { expect };
+
+// Usage in another test file:
+// import { test, expect } from "./fixtures";
+// test("app loads", async ({ page, appUrl }) =&gt; {
+//   await page.goto(appUrl);
+//   await expect(page.locator("body")).toBeVisible();
+// });</code></pre>
+<p><strong>Explanation:</strong> Fixtures centralize shared setup and dependencies. In real projects, validate required environment variables and avoid embedding secrets in source code.</p>
+</div></details>
+
+<details class="aqa-q"><summary>23. Handle a popup in Playwright</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import { test, expect } from "@playwright/test";
+
+test("opens a details popup", async ({ page }) =&gt; {
+  await page.goto("https://example.com");
+
+  const popupPromise = page.waitForEvent("popup");
+  await page.getByRole("link", { name: "Open popup" }).click();
+  const popup = await popupPromise;
+
+  await expect(popup).toHaveURL(/details/);
+});</code></pre>
+<p><strong>Explanation:</strong> Start waiting for the popup before clicking. Replace the example link and URL pattern with elements and routes from your application.</p>
+</div></details>
+
+<details class="aqa-q"><summary>24. Mock an API response in a Playwright UI test</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Advanced</p>
+<pre><code>import { test, expect } from "@playwright/test";
+
+test("renders mocked products", async ({ page }) =&gt; {
+  await page.route("**/api/products", async route =&gt; {
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify([
+        { id: 1, name: "Laptop" }
+      ])
+    });
+  });
+
+  await page.goto("http://127.0.0.1:3000/products");
+  await expect(page.getByText("Laptop")).toBeVisible();
+});</code></pre>
+<p><strong>Explanation:</strong> Route interception isolates the UI test from a live API response. The route must match the request made by the application, and it should be registered before that request occurs.</p>
+</div></details>
+
+<details class="aqa-q"><summary>25. Write a reusable Playwright Page Object</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import { type Locator, type Page } from "@playwright/test";
+
+export class LoginPage {
+  readonly page: Page;
+  readonly email: Locator;
+  readonly password: Locator;
+  readonly submit: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+    this.email = page.getByLabel("Email");
+    this.password = page.getByLabel("Password");
+    this.submit = page.getByRole("button", { name: "Login" });
+  }
+
+  async open() {
+    await this.page.goto("/login");
+  }
+
+  async login(email: string, password: string) {
+    await this.email.fill(email);
+    await this.password.fill(password);
+    await this.submit.click();
+  }
+}</code></pre>
+<p><strong>Explanation:</strong> A page object keeps selectors and actions in one place. Configure <code>baseURL</code> in Playwright so relative URLs such as <code>/login</code> resolve correctly.</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="api">
+<h2>5. API Testing Programming</h2>
+
+<details class="aqa-q"><summary>26. Validate an HTTP status and JSON response with Playwright API testing</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import { test, expect } from "@playwright/test";
+
+test("API returns a user", async ({ request }) =&gt; {
+  const response = await request.get(
+    "https://jsonplaceholder.typicode.com/users/1"
+  );
+
+  expect(response.status()).toBe(200);
+
+  const body: unknown = await response.json();
+  expect(body).toMatchObject({
+    id: 1,
+    username: expect.any(String)
+  });
+});</code></pre>
+<p><strong>Explanation:</strong> The request fixture sends HTTP requests without opening a browser page. In production tests, use your test environment and validate headers, schema, business rules, and negative cases too.</p>
+</div></details>
+
+<details class="aqa-q"><summary>27. Send a POST request with a JSON body</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>import { test, expect } from "@playwright/test";
+
+test("create a user", async ({ request }) =&gt; {
+  const response = await request.post(
+    "https://api.example.com/users",
+    {
+      data: {
+        name: "Alex",
+        role: "tester"
+      },
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+  );
+
+  expect(response.status()).toBe(201);
+  const body = await response.json();
+  expect(body.name).toBe("Alex");
+});</code></pre>
+<p><strong>Explanation:</strong> This illustrates a typical create operation. The endpoint must support POST and return the documented status and response shape; replace the placeholder domain with a test API.</p>
+</div></details>
+
+<details class="aqa-q"><summary>28. What should an API automation test validate beyond status code?</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate–Advanced</p>
+<p><strong>Answer:</strong> Validate response body fields and types, headers, schema, business rules, authentication and authorization, error messages, response time against an agreed threshold, and side effects where relevant.</p>
+<pre><code>const response = await request.get("/api/orders/123");
+
+expect(response.status()).toBe(200);
+expect(response.headers()["content-type"]).toContain("application/json");
+
+const order = await response.json();
+expect(order).toMatchObject({
+  id: "123",
+  status: "CONFIRMED"
+});
+expect(typeof order.total).toBe("number");</code></pre>
+<p><strong>Explanation:</strong> A 200 response alone does not establish correctness. Assertions should reflect the API contract and expected business behavior.</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="sql">
+<h2>6. SQL for Automation Testers</h2>
+
+<details class="aqa-q"><summary>29. Find duplicate email addresses in a users table</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner–Intermediate</p>
+<pre><code>SELECT email, COUNT(*) AS occurrences
+FROM users
+GROUP BY email
+HAVING COUNT(*) &gt; 1;</code></pre>
+<p><strong>Explanation:</strong> GROUP BY groups identical email values; HAVING filters groups with more than one row. If email comparison should ignore case or surrounding spaces, normalize values according to the database's rules.</p>
+</div></details>
+
+<details class="aqa-q"><summary>30. Find employees earning more than their department's average salary</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>SELECT e.employee_id, e.name, e.department_id, e.salary
+FROM employees e
+JOIN (
+    SELECT department_id, AVG(salary) AS avg_salary
+    FROM employees
+    GROUP BY department_id
+) d
+  ON d.department_id = e.department_id
+WHERE e.salary &gt; d.avg_salary;</code></pre>
+<p><strong>Explanation:</strong> The subquery calculates average salary by department, and the outer query returns employees whose salary is above that average. NULL department IDs do not match using ordinary equality.</p>
+</div></details>
+
+<details class="aqa-q"><summary>31. Find records present in one table but missing from another</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<pre><code>SELECT a.customer_id
+FROM source_customers a
+LEFT JOIN target_customers b
+  ON b.customer_id = a.customer_id
+WHERE b.customer_id IS NULL;</code></pre>
+<p><strong>Explanation:</strong> This is useful when validating ETL or data migration. It identifies source customer IDs that have no matching target record. Compare additional columns and account for duplicates when validating complete datasets.</p>
+</div></details>
+</section>
+
+<section class="aqa-section" id="framework">
+<h2>7. Framework Utilities and SDET Design</h2>
+
+<details class="aqa-q"><summary>32. How should test configuration and secrets be managed?</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Answer:</strong> Keep non-secret environment-specific settings in configuration and inject secrets through environment variables or a dedicated secrets manager. Avoid committing passwords, tokens, or authenticated storage files to source control.</p>
+<pre><code>// TypeScript example
+const baseURL = process.env.BASE_URL;
+if (!baseURL) {
+  throw new Error("BASE_URL environment variable is required");
+}
+
+export const config = { baseURL };</code></pre>
+<p><strong>Explanation:</strong> Configuration should be validated early so a missing value fails clearly rather than causing confusing downstream test failures.</p>
+</div></details>
+
+<details class="aqa-q"><summary>33. How do you make test data unique and reduce parallel-test conflicts?</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Advanced</p>
+<pre><code>import { randomUUID } from "node:crypto";
+
+export function createTestEmail(): string {
+  return `qa-${randomUUID()}@example.test`;
+}</code></pre>
+<p><strong>Explanation:</strong> Unique identifiers reduce collisions between parallel tests. Use a reserved test domain or a controlled test environment, and clean up created records where possible. Uniqueness alone does not replace test isolation or cleanup.</p>
+</div></details>
+
+<details class="aqa-q"><summary>34. What is the difference between unit, integration, and end-to-end tests?</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Beginner–Intermediate</p>
+<ul>
+<li><strong>Unit tests:</strong> Validate a small unit of code in isolation, usually quickly.</li>
+<li><strong>Integration tests:</strong> Verify interactions between components, such as an application and a database or service.</li>
+<li><strong>End-to-end tests:</strong> Validate complete user workflows across multiple application layers.</li>
+</ul>
+<p><strong>Example:</strong> Test a date-formatting utility with a unit test, verify an order service writes to a database with an integration test, and place an order through the browser with an end-to-end test.</p>
+<p><strong>Interview tip:</strong> Use the test level that gives reliable feedback at the lowest practical cost; not every business rule needs a full browser test.</p>
+</div></details>
+
+<details class="aqa-q"><summary>35. How do you design a reliable automation framework?</summary><div class="aqa-answer">
+<p><strong>Difficulty:</strong> Advanced</p>
+<p><strong>Answer:</strong> A maintainable framework separates test scenarios, page objects or screen abstractions, test data, configuration, reusable API clients, reporting, and environment setup. It also defines conventions for assertions, logging, retries, parallelism, and cleanup.</p>
+<p>A practical design checklist:</p>
+<ul>
+<li>Keep tests independent and deterministic.</li>
+<li>Use accessible locators and condition-based waits.</li>
+<li>Centralize configuration without hardcoding secrets.</li>
+<li>Capture useful artifacts on failures.</li>
+<li>Run a fast smoke suite and a broader regression suite in CI.</li>
+<li>Track flaky tests and fix their root causes instead of hiding them with retries.</li>
+</ul>
+<p><strong>Explanation:</strong> A good framework optimizes maintainability, diagnosability, execution speed, and trustworthy results—not merely the number of automated tests.</p>
+</div></details>
+</section>
+
+
+<section class="aqa-section" id="feedback">
+  <h2>8. Suggestions &amp; Feedback</h2>
+  <p class="aqa-section-intro">Help improve AutoQA Prep. Share a correction, suggest a question or topic, or tell us about your experience using this question bank.</p>
+  <div class="aqa-feedback-card">
+    <form name="autoqa-feedback" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="autoqa-feedback">
+      <p hidden>
+        <label>Leave this field empty: <input name="bot-field"></label>
+      </p>
+      <div class="aqa-feedback-grid">
+        <div class="aqa-field">
+          <label for="feedback-type">Feedback type <span aria-hidden="true">*</span></label>
+          <select id="feedback-type" name="feedback-type" required>
+            <option value="">Choose a type</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="correction">Correction or error</option>
+            <option value="new-topic">Request a new topic or question</option>
+            <option value="website-issue">Website issue</option>
+            <option value="other">Other feedback</option>
+          </select>
+        </div>
+        <div class="aqa-field">
+          <label for="feedback-topic">Related topic (optional)</label>
+          <input id="feedback-topic" name="topic" type="text" placeholder="e.g. Playwright fixtures">
+        </div>
+        <div class="aqa-field">
+          <label for="feedback-name">Name (optional)</label>
+          <input id="feedback-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="aqa-field">
+          <label for="feedback-email">Email (optional)</label>
+          <input id="feedback-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="aqa-field" style="margin-top:14px">
+        <label for="feedback-message">Your suggestion or feedback <span aria-hidden="true">*</span></label>
+        <textarea id="feedback-message" name="message" required maxlength="5000" placeholder="Tell us what should be improved, corrected, or added..."></textarea>
+      </div>
+      <button class="aqa-feedback-submit" type="submit">Submit feedback</button>
+      <p class="aqa-feedback-note">Please do not include passwords, access tokens, or other confidential information.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="aqa-footer">
+<p><strong>For candidates:</strong> Try each problem before opening the answer. Explain your approach, edge cases, time complexity, and trade-offs aloud as you would in an interview.</p>
+<p><strong>For site maintainers:</strong> This is a standalone HTML section. Review the content and styling against the existing AutoQA Prep website before integrating it. The examples are educational templates and may need application-specific URLs, locators, test data, imports, and configuration.</p>
+</footer>
+</main>
+</body>
+</html>
